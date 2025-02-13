@@ -5,35 +5,19 @@ navbar_entries:
   - title: blog
     url: blog
 
-  - title: website
-    url: https://www.abhinav.co
-
 project_entries:
-  - title: Project 1
-    url: overview-post
-    desc: This is an example project, configured in _data/home.yml
-
-  - title: Project 2
-    url: overview-post
-    desc: Projects are shown in card layout
-
-  - title: Project 3
-    url: overview-post
-    desc: You can control visibility from _config.yml file
-
-  - title: Project 4
-    url: overview-post
-    desc: This project uses highlight markup, configured in _data/home.yml
+  - title: Strom
+    url: https://github.com/Bloodwing1/Strom
+    desc: Python-based application to analyze energy prices and optimize heating decisions
     highlight: WIP
 
-  - title: Project 5
-    url: overview-post
-    desc: Moonwalk also has horizontal list (used in header and footer)
-    highlight: WIP
+  - title: Hanae
+    url: https://github.com/NuriaHB/hanae-y-la-reliquia-del-dragon
+    desc: Webpage for a friends art project, based on Jekyll and Github Pages
 
-  - title: Project 6
+  - title: 3 looks better than 2
     url: overview-post
-    desc: It also has a scalable vertical list (in case you need it)
+    desc: Yes, indeed
 
 old_project_entries:
   - title: Soopr
@@ -54,14 +38,12 @@ old_project_entries:
     desc: The better people know you, the better they collaborate
 
 footer_entries:
-  - title: abhinav's homepage
-    url: https://www.abhinav.co
 
-  - title: twitter
+  - title: linkedin
     url: https://twitter.com/abhinav
 
   - title: github
-    url: https://github.com/abhinavs
+    url: https://github.com/janbsc4
 
   - title: feed
     url: feed.xml
