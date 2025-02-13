@@ -5,22 +5,19 @@ navbar_entries:
   - title: blog
     url: blog
 
-  - title: website
-    url: https://www.abhinav.co
-
 project_entries:
   - title: Strom
-    url: overview-post
-    desc: This is an example project, configured in _data/home.yml
+    url: https://github.com/Bloodwing1/Strom
+    desc: Python-based application to analyze energy prices and optimize heating decisions
     highlight: WIP
 
-  - title: No SASS moonwalk
-    url: overview-post
-    desc: ble ble bal
+  - title: Hanae
+    url: https://github.com/NuriaHB/hanae-y-la-reliquia-del-dragon
+    desc: Webpage for a friends art project, based on Jekyll and Github Pages
 
-  - title: No idea
+  - title: 3 looks better than 2
     url: overview-post
-    desc: Hellooo heloo
+    desc: Yes, indeed
 
 old_project_entries:
   - title: Soopr
@@ -41,10 +38,8 @@ old_project_entries:
     desc: The better people know you, the better they collaborate
 
 footer_entries:
-  - title: the creator
-    url: https://www.abhinav.co
 
-  - title: LinkedIN
+  - title: linkedin
     url: https://twitter.com/abhinav
 
   - title: github
