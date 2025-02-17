@@ -1,8 +1,8 @@
 <script type="text/javascript">
   window.addEventListener('load', themeChange);
-  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-  if (currentTheme)
-    document.documentElement.setAttribute('data-theme', currentTheme);
+  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', currentTheme);
 
   function themeChange() {
     let button = document.querySelector('.theme-toggle');
