@@ -45,7 +45,7 @@ footer_entries:
   - title: github
     url: https://github.com/janbsc4
 
-  - title: feed
+  - title: rss
     url: feed.xml
 
 misc_entries:
