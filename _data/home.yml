@@ -8,11 +8,11 @@ navbar_entries:
 project_entries:
   - title: Strom
     url: https://github.com/Bloodwing1/Strom
-    desc: Python-based application to analyze energy prices and optimize heating decisions
+    desc: Python app to analyze energy prices and optimize heating decisions
     highlight: WIP
 
   - title: Hanae
-    url: https://github.com/NuriaHB/hanae-y-la-reliquia-del-dragon
+    url: https://nuriahb.github.io/hanae-y-la-reliquia-del-dragon
     desc: Webpage for a friends art project, based on Jekyll and Github Pages
 
   - title: 3 looks better than 2
