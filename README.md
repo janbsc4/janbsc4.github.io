@@ -4,6 +4,6 @@ Built with [moonwalk](https://github.com/abhinavs/moonwalk/), GH Pages and Jekyl
 
 
 ## Future Considerations
-[] Automatic dark/light theme
-[] Noodle ranking post
-[] Adding images
+- [] Automatic dark/light theme
+- [] Noodle ranking post
+- [] Adding images
