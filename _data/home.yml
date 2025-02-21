@@ -5,6 +5,9 @@ navbar_entries:
   - title: blog
     url: blog
 
+  - title: cv
+    url: cv
+
 project_entries:
   - title: Strom
     url: https://github.com/Bloodwing1/Strom
