@@ -2,7 +2,6 @@
 layout: post
 title: CV
 ---
-### About
 Web tracking and analytics consultant based in Barcelona.
 Former account lead for Volkswagen tracking. Experienced project and team lead.
 
