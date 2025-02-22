@@ -1,6 +1,6 @@
 :root {
-  --font-sans: "Inter", -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
-  --font-mono: "Roboto Mono", "Courier New", monospace;
+  --font-sans: -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
+  --font-mono: "Courier New", monospace;
   
   /* Light theme variables */
   --light-bg: #FFF;
