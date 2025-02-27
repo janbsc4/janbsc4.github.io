@@ -26,14 +26,14 @@
 }
 
 /* Roboto Mono Variable Font (Italic) */
-@font-face {
+/*@font-face {
   font-family: "Roboto Mono";
   src: url("/assets/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 700; /* Range for Roboto Mono’s wght axis */
+  font-weight: 100 700;
   font-style: italic;
   font-display: swap;
 }
-
+*/
 :root {
   --font-sans: "Inter", -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
   --font-mono: "Roboto Mono", "Courier New", monospace;
