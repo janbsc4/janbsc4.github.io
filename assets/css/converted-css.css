@@ -337,7 +337,7 @@ ul.horizontal-list li a {
 .card {
   padding: 1em;
   border: 1px var(--text) solid;
-  width: 9em;
+  width: 10em;
   height: auto;
   text-align: center;
   font-size: 1em;
