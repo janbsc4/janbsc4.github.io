@@ -1,3 +1,39 @@
+/* Inter Variable Font (Regular) */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 1 999; /* Full range, typically 100–900 for Inter */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter Variable Font (Italic) */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 1 999; /* Full range, typically 100–900 for Inter */
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Roboto Mono Variable Font (Regular) */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 700; /* Range for Roboto Mono’s wght axis */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Roboto Mono Variable Font (Italic) */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("assets/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 700; /* Range for Roboto Mono’s wght axis */
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --font-sans: "Inter", -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
   --font-mono: "Roboto Mono", "Courier New", monospace;
@@ -32,7 +68,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  font-size: 1.2rem;
+  font-size: 1.13rem;
   line-height: 2;
   margin: 0;
   min-height: 100%;
