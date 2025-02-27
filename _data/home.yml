@@ -13,16 +13,16 @@ navbar_entries:
 
 project_entries:
   - title: Strom
-    url: https://github.com/Bloodwing1/Strom
+    url: portfolio
     desc: Python app to analyze energy prices and optimize heating decisions
     highlight: WIP
 
   - title: DefaultCSS
-    url: https://github.com/janbsc4/defaultCSS
+    url: portfolio#DefaultCSS
     desc: CSS starting point with minimal styling for the most used HTML tags
 
   - title: Hanae
-    url: https://nuriahb.github.io/hanae-y-la-reliquia-del-dragon
+    url: portfolio
     desc: Webpage for a friends art project, built with Jekyll, deployed on GH pages
 
 old_project_entries:
