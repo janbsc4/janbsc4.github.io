@@ -2,7 +2,10 @@
 <html lang="{{ page.lang | default: "en" }}" class="html" data-theme="{{ site.theme_config.appearance | default: "auto" }}">
         {%- include head.html -%}
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.11/dist/turbo.es2017-umd.min.js" integrity="sha256-UZBTcG5Gk55lzRggVSr2EiGkaYJ9QT46mU/vZHmFPPA=" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/turbo-config.js' | relative_url }}"></script>
     <main class="page-content" aria-label="Content">
+
       <div class="w">
         {{ content }}
         {% if site.theme_config.appearance_toggle %}
