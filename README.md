@@ -1,11 +1,11 @@
 # Personal Blog
 
-Built with [moonwalk](https://github.com/abhinavs/moonwalk/), GH Pages and Jekyll.
+Built with [Moonwalk](https://github.com/abhinavs/moonwalk/), [Jekyll](https://github.com/jekyll/jekyll), and [Turbo](https://github.com/hotwired/turbo) hosted on [Github Pages](https://pages.github.com).
 
 
 ## Future Considerations
 - [ ] Automatic dark/light theme
 - [ ] Noodle ranking post
 - [ ] Adding images
-- [ ] Implement Turbo and CSS transitions
+- [X] Implement Turbo and CSS transitions
 - [ ] Offline support: service worker & manifest
