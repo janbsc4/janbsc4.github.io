@@ -42,4 +42,3 @@ highlighter: rouge
 
 plugins:
   - jekyll-feed
-  - jekyll-soopr-seo-tag
