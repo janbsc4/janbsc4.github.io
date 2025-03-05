@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-gem "jekyll"
+gem "jekyll", "~> 3.10"
 gem "jekyll-feed"
-gem "jekyll-soopr-seo-tag"
+gem 'jekyll-seo-tag', '~> 2.8'
 gem "rouge"
-gem "webrick"
+gem "webrick", "~> 1.9"
