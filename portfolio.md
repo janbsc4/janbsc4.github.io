@@ -2,8 +2,8 @@
 layout: post
 title: "Portfolio"
 ---
-## [Strom](https://janbalanya.com/strom-docs/getting-started)
-[![Drawn image of a lighning bolt](assets/images/strom.webp)](https://janbalanya.com/strom-docs/getting-started)
+## [Strom](https://janbalanya.com/strom-docs)
+[![Drawn image of a lighning bolt](assets/images/strom.webp)](https://janbalanya.com/strom-docs)
 Intelligent system that controls heating based on weather forecasts and electricity prices. Uses convex optimization to find cost-effective heating schedules while maintaining comfort, automatically controlling smart plugs to save energy costs.
 
 ## [DefaultCSS](https://github.com/janbsc4/defaultCSS)
