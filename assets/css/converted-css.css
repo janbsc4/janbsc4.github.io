@@ -374,33 +374,34 @@ ul.horizontal-list li a {
   }
 }
 
+/* Transitions*/
 
-/* Base transition for page content */
-main, .content, article {
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* State for when the page is loading */
-.turbo-loading {
-  opacity: 0.7;
-}
-
-/* Progress bar styling */
+/* Progress bar */
 .turbo-progress-bar {
   position: fixed;
   top: 0;
   left: 0;
-  height: 3px;
-  background-color: #3498db; /* Change to match your site's color scheme */
+  height: 2px;
+  background-color: #6366f1;
   z-index: 9999;
 }
 
-/* Optional: Add page transition effects */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Quick fade transition for content changes - slightly longer duration */
+.content-changing main,
+.content-changing .content,
+.content-changing article {
+  opacity: 0.85; /* Slightly more pronounced fade */
+  transition: opacity 0.25s ease; /* Extended from 0.15s to 0.25s */
 }
 
-.turbo-transition-fade-in {
-  animation: fadeIn 0.3s ease forwards;
+/* Remove all previous transition classes if they exist */
+.page-exiting,
+.page-entering,
+.turbo-loading {
+  /* Reset any previously defined styles */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.85; }
+  to { opacity: 1; }
 }

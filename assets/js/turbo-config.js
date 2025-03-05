@@ -1,32 +1,20 @@
 // /assets/js/turbo-config.js
 document.addEventListener("turbo:load", function() {
   console.log("Page loaded with Turbo!");
-  
   // This function runs whenever a new page is loaded via Turbo
-  // You can initialize any page-specific JavaScript here
 });
 
-// Add the loading class
-document.addEventListener("turbo:before-render", function(event) {
-  document.body.classList.add("turbo-loading");
+// Before content changes
+document.addEventListener("turbo:before-render", function() {
+  // Very minimal state change
+  document.body.classList.add("content-changing");
 });
 
-// Remove the loading class
+// After content changes
 document.addEventListener("turbo:render", function() {
-  // Remove the class after render, not after visit
-  document.body.classList.remove("turbo-loading");
+  // Remove the changing state
+  document.body.classList.remove("content-changing");
 });
-
-document.addEventListener("turbo:before-visit", function() {
-  // This runs when a user clicks a link but before navigation begins
-  // Good place to show loading indicators
-});
-
-document.addEventListener("turbo:visit", function() {
-  // This runs after navigation is complete
-  document.body.classList.remove("turbo-loading");
-});
-
 
 // Make forms work with Turbo
 document.addEventListener("turbo:load", function() {
