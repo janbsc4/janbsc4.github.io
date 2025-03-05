@@ -6,15 +6,15 @@ document.addEventListener("turbo:load", function() {
   // You can initialize any page-specific JavaScript here
 });
 
+// Add the loading class
 document.addEventListener("turbo:before-render", function(event) {
-  // This runs right before Turbo replaces the page content
-  // You can use this to trigger exit animations
   document.body.classList.add("turbo-loading");
 });
 
+// Remove the loading class
 document.addEventListener("turbo:render", function() {
-  // This runs after Turbo has replaced the body but before it's visible
-  // You can use this to prepare entry animations
+  // Remove the class after render, not after visit
+  document.body.classList.remove("turbo-loading");
 });
 
 document.addEventListener("turbo:before-visit", function() {
