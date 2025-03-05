@@ -59,3 +59,30 @@ document.addEventListener("turbo:load", function() {
     });
   });
 });
+
+// Img loadin
+document.addEventListener("turbo:load", function() {
+  // Handle image loading
+  const images = document.querySelectorAll('img');
+  
+  images.forEach(img => {
+    // If image is already loaded
+    if (img.complete) {
+      img.style.opacity = '1';
+    } else {
+      // Set initial state
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.7s ease';
+      
+      // When image loads
+      img.addEventListener('load', function() {
+        img.style.opacity = '1';
+      });
+      
+      // Fallback for errors
+      img.addEventListener('error', function() {
+        img.style.opacity = '0.5'; // Semi-transparent for failed images
+      });
+    }
+  });
+});
