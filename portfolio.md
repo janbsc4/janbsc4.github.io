@@ -2,8 +2,8 @@
 layout: post
 title: "Portfolio"
 ---
-## [Strom](https://github.com/Bloodwing1/Strom)
-[![Drawn image of a lighning bolt](assets/images/strom.webp)](https://github.com/Bloodwing1/Strom)
+## [Strom](https://janbalanya.com/strom-docs/getting-started)
+[![Drawn image of a lighning bolt](assets/images/strom.webp)](https://janbalanya.com/strom-docs/getting-started)
 Intelligent system that controls heating based on weather forecasts and electricity prices. Uses convex optimization to find cost-effective heating schedules while maintaining comfort, automatically controlling smart plugs to save energy costs.
 
 ## [DefaultCSS](https://github.com/janbsc4/defaultCSS)
