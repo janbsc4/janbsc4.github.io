@@ -2,7 +2,7 @@
 layout: post
 title: About
 ---
-I'm a german-spanish web consultant based in Barcelona. I like noodles and building nice websites.
+I'm a german-spanish web consultant based in Barcelona. I like noodles and building nice websites. Together with friends I work on [Strom](https://janbalanya.com/strom-docs/).
 
 I've studied business administration at the Free University of Berlin.
 
