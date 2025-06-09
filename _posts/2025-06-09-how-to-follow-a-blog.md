@@ -40,12 +40,12 @@ Alternatively, clicking the RSS symbol (if they have one) does the same thing.
   <figcaption class="image-caption">Tapping the RSS icon should open your installed RSS reader automatically</figcaption>
 </figure>
 
-It really is that simple. You then have a chronological, high-quality feed of the authors you enjoy reading. I haven't tested it, but [Feedly News Reader](https://feedly.com/news-reader) might be a good alternative on Android and the web.
+It really is that simple. You then have a chronological, high-quality feed of the authors you enjoy reading. You can also enable iCloud sync in the settings to have the same feed available on multiple devices. And I haven't tested it, but [Feedly News Reader](https://feedly.com/news-reader) might be a good alternative on Android and the web.
 
 ## Blog Recommendations
 These are some of the blogs I love reading.
 
-- [Marginal Revolution](https://marginalrevolution.com): Written by two economists, this is a blog <ins>broadly</ins> about economics. I can't count how often I've found interesting articles or studies through this blog.
+- [Marginal Revolution](https://marginalrevolution.com): Written by two economists, this is a blog <ins>broadly</ins> about economics. A great source of interesting articles and studies.
 - [Daring Fireball](https://daringfireball.net): Technology blog with a focus on Apple by John Gruber, the inventor of Markdown. His takes are always well thought-through and measured.
 - [Space-Biff](https://spacebiff.com/): I can't even begin to imagine how hard it must be to write entertaining reviews for boardgames. But Dan Thurot does it in Space-Biff.
 
