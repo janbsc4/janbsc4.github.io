@@ -2,6 +2,7 @@
 layout: post
 title: "Mimics & Scapegoats"
 ---
+*This text paraphrases and closely adheres to the ideas presented in [Wanting by Luke Burgis](https://en.wikipedia.org/wiki/Wanting:_The_Power_of_Mimetic_Desire_in_Everyday_Life), and the thoughts expressed are not my own.*
 
 Our desires are not our own. We imitate the desires of our models. Humans are great at mimicking others. Since we mimic the desires of others, we come into competition with each other. When this happens on a large scale, it causes a mimetic crisis. Mimetic crises can and have been temporarily solved via the scapegoating mechanism.
 
@@ -10,5 +11,3 @@ Some kind of priest or leader picks out a scapegoat that he or she blames for th
 Jesus and the Bible turned this mechanism on its head. The story of the crucifixion of Jesus is revolutionary because it is scapegoating told from the victim's side. The reader knows that Jesus is innocent and recognizes the scapegoating as barbaric. The scapegoating doesn’t even work properly in restoring peace for long, as Jesus’ followers talk about his innocence and resurrection.
 
 What has been seen cannot be unseen. Once the scapegoating mechanism has been shown to be unfair and cruel, it loses its power as a mechanism for restoring peace. Since then, we have progressively inverted the concept and seem to be in a competition to protect victims from arbitrary violence. Even secular states pride themselves on protecting the victim. That’s how they get into conflict with religious groups, because they compete on the same ground. Both one-up each other in protecting innocent victims.
-
-*This text paraphrases and closely adheres to the ideas presented in [Wanting by Luke Burgis](https://en.wikipedia.org/wiki/Wanting:_The_Power_of_Mimetic_Desire_in_Everyday_Life), and the thoughts expressed are not necessarily my own.*
