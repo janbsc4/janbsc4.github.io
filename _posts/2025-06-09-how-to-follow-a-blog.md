@@ -6,7 +6,7 @@ Blogs are pretty much the best thing ever. There are blogs full of insights and 
 
 On some blogs, you can leave your email address and they will email you all their new posts. I find that inconvenient, because the mail inbox gets flooded with emails. Another way to follow a blog is on social media, if they are on social media. But that’s inconvenient for other reasons.[^1]
 
-There is an extremely convenient and simple way to follow most blogs. It’s an old technology called RSS. With a RSS reader app, you can follow most blogs (including all blogs on Substack, Medium, Bluesky and Mastodon).
+There is an extremely convenient and simple way to follow most blogs. It’s an old technology called RSS. With a RSS reader app, you can follow most blogs (including <ins>all</ins> blogs on Substack, Medium, Bluesky and Mastodon).
 
 A good RSS reader for Apple devices is [NetNewsWire](https://netnewswire.com). With NetNewsWire installed, following a new blog is as simple as sharing the webpage of the blog to NetNewsWire from your browser.
 
@@ -40,7 +40,7 @@ Alternatively, clicking the RSS symbol (if they have one) does the same thing.
   <figcaption class="image-caption">Tapping the RSS icon should open your installed RSS reader automatically</figcaption>
 </figure>
 
-It really is that simple. You then have a chronological, high-quality feed of the authors you enjoy reading. You can also enable iCloud sync in the settings to have the same feed available on multiple devices. And I haven't tested it, but [Feedly News Reader](https://feedly.com/news-reader) might be a good alternative on Android and the web.
+It really is that simple. You then have a chronological, high-quality feed of the authors you enjoy reading. You can also enable iCloud sync in the settings to have the same feed on multiple devices. And I haven't tested it, but [Feedly News Reader](https://feedly.com/news-reader) might be a good alternative on Android and the web.
 
 ## Blog Recommendations
 These are some of the blogs I love reading.

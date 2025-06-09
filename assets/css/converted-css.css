@@ -181,13 +181,14 @@ h2 a {
   text-decoration: none;
 }
 
-p, strong, b, em, small, li, hr, table, figcaption {
+p, strong, b, em, small, li, hr, table {
   color: var(--text);
 }
 
 figcaption {
   font-style: italic;
   text-align: center;
+  color: var(--dark-text-secondary);
 }
 
 .highlight, pre code, blockquote {
