@@ -106,7 +106,7 @@ blockquote p {
 img {
   max-width: 50%;
   display: block;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
 }
 
 footer {
@@ -183,6 +183,11 @@ h2 a {
 
 p, strong, b, em, small, li, hr, table, figcaption {
   color: var(--text);
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
 }
 
 .highlight, pre code, blockquote {
@@ -334,30 +339,6 @@ ul.horizontal-list li a {
   font-weight: normal;
 }
 
-.card {
-  padding: 1em;
-  border: 1px var(--text) solid;
-  width: 10em;
-  height: auto;
-  text-align: center;
-  font-size: 1em;
-  align-items: center;
-  background-color: var(--bg-secondary);
-  margin-bottom: 0.6em;
-  border-radius: 0.5em;
-}
-
-.card .header {
-  color: var(--links);
-}
-
-.card .body {
-  font-size: 0.8em;
-}
-
-.card hr {
-  margin: 0.5em 0;
-}
 
 /* Responsive cards */
 @media screen and (max-width: 600px) {
@@ -386,7 +367,7 @@ ul.horizontal-list li a {
   z-index: 9999;
 }
 
-/* Quick fade transition for content changes - slightly longer duration */
+/* Quick fade transition for content changes */
 .content-changing main,
 .content-changing .content,
 .content-changing article {
@@ -404,72 +385,4 @@ ul.horizontal-list li a {
 @keyframes fadeIn {
   from { opacity: 0.85; }
   to { opacity: 1; }
-}
-
-/*Portfolio*/
-.portfolio-item {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background-color: var(--bg-secondary);
-  padding: 1.5rem;
-  border-radius: 0.75rem; /* Match card styling */
-  border: 1px solid var(--text-secondary); /* Subtle border for consistency */
-  margin-bottom: 2.5rem;
-  margin-top: 2.5rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.portfolio-item img {
-  width: 270px; /* Balanced size for consistency */
-  max-width: 50%;
-  height: auto;
-  border-radius: 0.5rem;
-}
-
-.portfolio-item .content {
-  flex: 1;
-  max-width: 55%; /* Keep text in a readable width */
-}
-
-.portfolio-item h2 {
-  margin-top: 0;
-  margin-bottom: 0.5rem; /* Consistent spacing */
-  font-size: 1.5rem; /* Match other card headings */
-}
-
-.portfolio-item h2 a {
-  color: var(--links);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.portfolio-item h2 a:hover {
-  text-decoration: underline;
-}
-
-.portfolio-item p {
-  color: var(--text); /* Match card text color */
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 900px) {
-  .portfolio-item {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .portfolio-item img {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .portfolio-item .content {
-    max-width: 100%;
-  }
 }
