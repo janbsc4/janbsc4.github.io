@@ -35,7 +35,7 @@ Alternatively, clicking the RSS symbol (if they have one) does the same thing.
 
 <figure>
   <img
-  src="{{ site.baseurl }}/assets/images/2025-06-09-how-to-follow-a-blog/how-to-follow-blog-4.PNG"
+  src="{{ site.baseurl }}/assets/images/2025-06-09-how-to-follow-a-blog/how-to-follow-blog-4.png"
   alt="Screenshot of the RSS symbol">
   <figcaption class="image-caption">Tapping the RSS icon should open your installed RSS reader automatically</figcaption>
 </figure>
