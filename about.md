@@ -8,7 +8,7 @@ I've studied business administration at the Free University of Berlin.
 
 Later I worked at a Berliner startup as an online marketing manager, working on analytics and conversion optimisation.
 
-After that I took web development courses and started my last job as a tracking and analytics consultant at [Credera](https://www.credera.com). There I worked as a project and team lead for web tracking projects for clients in the automotive industry.
+After that I took web development courses and started my last job as a tracking and analytics consultant at [Credera](https://www.credera.com/de-de). There I worked as a project and team lead for web tracking projects for clients in the automotive industry.
 
 You can find me on [LinkedIN](https://linkedin.com/in/jan-balanya-scholl).
 
