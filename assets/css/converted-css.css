@@ -111,6 +111,10 @@ img {
   border-radius: 16px;
 }
 
+.ponpon {
+  max-width: 10%;
+}
+
 footer {
   margin-top: 4rem;
 }

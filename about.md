@@ -11,3 +11,5 @@ Later I worked at a Berliner startup as an online marketing manager, working on 
 After that I took web development courses and started my last job as a tracking and analytics consultant at [Credera](https://www.credera.com). There I worked as a project and team lead for web tracking projects for clients in the automotive industry.
 
 You can find me on [LinkedIN](https://linkedin.com/in/jan-balanya-scholl).
+
+![Patapon Gif](/assets/images/ponpon.gif){: .ponpon}
