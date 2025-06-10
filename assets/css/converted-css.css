@@ -108,6 +108,7 @@ img {
   max-width: 50%;
   display: block;
   margin: 1.5rem auto;
+  border-radius: 16px;
 }
 
 footer {
