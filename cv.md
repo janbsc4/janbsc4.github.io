@@ -43,8 +43,6 @@ Former account lead for Volkswagen tracking. Experienced project and team lead.
 
 ## Education
 
-### B.Sc. in Business Administration  
-**Free University of Berlin** | 2013 - 2018
+**B.Sc. in Business Administration** - Free University of Berlin - 2018
 
-### High School Diploma  
-**German School of Barcelona** | 2013
+**High School Diploma** - German School of Barcelona - 2013
