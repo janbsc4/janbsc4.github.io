@@ -97,6 +97,7 @@ blockquote {
   font-style: italic;
   border: thin solid black;
   padding: 1em;
+  margin: 1em 0;
 }
 
 blockquote p { 
