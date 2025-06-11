@@ -1,9 +1,7 @@
 title: Jan Balanyà Scholl
 author: Jan Balanyà Scholl
 url: https://janbalanya.com # root address of the site
-description: > # description of the site (multiple lines allowed)
-  Hi! I'm Jan. Nice to meet you!
-
+description: Jan is a German-spanish web consultant based in Barcelona. Former account lead for Volkswagen web tracking. Experienced project and team lead. Find out more!
 permalink: /:slug
 
 favicon: "./logo.png" # relative path to site's favicon
