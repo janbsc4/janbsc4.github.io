@@ -7,7 +7,7 @@ Blogs are pretty much the best thing ever. There are blogs full of insights and 
 
 On some blogs, you can leave your email address and they will email you all their new posts. I find that inconvenient, because the mail inbox gets flooded with emails. Another way to follow a blog is on social media, if they are on social media. But that’s inconvenient for other reasons.[^1]
 
-There is an extremely convenient and simple way to follow most blogs (including <ins>all</ins> blogs on Substack, Medium, Bluesky and Mastodon). It’s an old technology called RSS. Think of it as podcasts for reading.
+There is an extremely convenient and simple way to follow most blogs (including <ins>all</ins> blogs on Substack[^2], Medium, Bluesky and Mastodon). It’s an old technology called RSS. Think of it as podcasts for reading.
 
 <figure>
   <img
@@ -58,3 +58,4 @@ Happy reading!
 
 <hr>
 [^1]: Maybe you don’t have or don't want the particular social media that a blog uses. Maybe the blog posts would get buried by the algorithm. Maybe you would miss them if you didn't check in on the app at the right time.
+[^2]: For Substack you need to make sure you are on the correct URL when you share. It should look like username.substack.com
