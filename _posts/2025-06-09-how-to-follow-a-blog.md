@@ -9,7 +9,7 @@ On some blogs, you can leave your email address and they will email you all thei
 
 There is an extremely convenient and simple way to follow most blogs. It’s an old technology called RSS. With a RSS reader app, you can follow most blogs (including <ins>all</ins> blogs on Substack, Medium, Bluesky and Mastodon).
 
-A good RSS reader for Apple devices is [NetNewsWire](https://netnewswire.com). With NetNewsWire installed, following a new blog is as simple as sharing the webpage of the blog to NetNewsWire from your browser.
+A good RSS reader for Apple devices is [NetNewsWire](https://apps.apple.com/us/app/netnewswire-rss-reader/id1480640210). With NetNewsWire installed, following a new blog is as simple as sharing the webpage of the blog to NetNewsWire from your browser.
 
 <figure>
   <img
@@ -41,7 +41,9 @@ Alternatively, clicking the RSS symbol (if they have one) does the same thing.
   <figcaption class="image-caption">Tapping the RSS icon should open your installed RSS reader automatically</figcaption>
 </figure>
 
-It really is that simple. You then have a chronological, high-quality feed of the authors you enjoy reading. You can also enable iCloud sync in the settings to have the same feed on multiple devices. And I haven't tested it, but [Feedly News Reader](https://feedly.com/news-reader) might be a good alternative on Android and the web.
+It really is that simple. You now have a chronological, high-quality feed of the authors you enjoy reading. You can also enable iCloud sync in the settings to have the same feed across devices. NetNewsWire is also available [for Mac](https://netnewswire.com).
+
+And I haven't tested it, but [Feedly News Reader](https://feedly.com/news-reader) might be a good alternative on Android and the web.
 
 ## Blog Recommendations
 These are some of the blogs I love reading.
