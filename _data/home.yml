@@ -53,6 +53,8 @@ footer_entries:
 
   - title: rss
     url: feed.xml
+  - title: rss?
+    url: how-to-follow-a-blog
 
 misc_entries:
   - title: this is an example vertical list
