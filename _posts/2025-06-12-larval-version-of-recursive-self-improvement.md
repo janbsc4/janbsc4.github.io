@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Larval Version of Recursive Self-improvement"
+title: "Larval Recursive Self-improvement"
 ---
 > From here on, the tools we have already built will help us find further scientific insights and aid us in creating better AI systems. Of course this isn’t the same thing as an AI system completely autonomously updating its own code, but nevertheless this is a larval version of recursive self-improvement.
 

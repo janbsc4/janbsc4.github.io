@@ -48,7 +48,7 @@ And I haven't tested it, but [Feedly News Reader](https://feedly.com/news-reader
 ## Blog Recommendations
 These are some of the blogs I love reading.
 
-- [Marginal Revolution](https://marginalrevolution.com): Written by two economists, this is a blog <ins>broadly</ins> about economics. A great source of interesting articles and studies.
+- [Marginal Revolution](https://marginalrevolution.com): Written by two economists, this is a blog *broadly* about economics. A great source of interesting articles and studies.
 - [Daring Fireball](https://daringfireball.net): Technology blog with a focus on Apple by John Gruber, the inventor of Markdown. His takes are always well thought-through and measured.
 - [Space-Biff](https://spacebiff.com/): I can't even begin to imagine how hard it must be to write entertaining reviews for boardgames. But Dan Thurot does it in Space-Biff.
 
