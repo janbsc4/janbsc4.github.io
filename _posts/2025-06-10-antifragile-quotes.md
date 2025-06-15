@@ -20,8 +20,6 @@ title: "Antifragile by Nassim Taleb - Quotes"
 
 > A man is honorable in proportion to the personal risks he takes for his opinion - in other words, the amount of downside he is exposed to.
 
-> I wonder why people don't realize the simple truism, that is, the fooled by randomness effect: mistaking the merely associative for the causal, that is, if rich countries are educated, immediately inferring that education makes a country rich, without even checking.
-
 > Clearly, it is unrigorous to equate skills at doing with skills at talking. My experience of good practitioners is that they can be totally incomprehensible — they do not have to put much energy into turning their insights and internal coherence into elegant style and narratives.
 
 > History has been written by those who want you to believe that reasoning has a monopoly or near monopoly on the production of knowledge.
