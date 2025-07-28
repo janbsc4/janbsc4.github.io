@@ -1,4 +1,4 @@
 ---
 layout: home
 ---
-Hi there! Nice to meet you! :)
+Hi there! Nice to meet you!
