@@ -2,8 +2,7 @@
 layout: post
 title: CV
 ---
-Web tracking and analytics consultant based in Barcelona.
-Former account lead for Volkswagen tracking at [Credera](https://www.credera.com/de-de). Experienced project and team lead.
+Experienced project and team lead based in Barcelona. Former web tracking and analytics account lead for Volkswagen at [Credera](https://www.credera.com/de-de).
 
 ## Skills
 
