@@ -104,7 +104,10 @@ blockquote {
 }
 
 blockquote p { 
-  margin: 0; 
+  margin: 0 0 1em 0; 
+}
+blockquote p:last-child { 
+  margin-bottom: 0; 
 }
 
 img {

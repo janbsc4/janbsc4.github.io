@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Abundance and Freedom Confusion"
+---
+> Some critics charge that there is no “real” free entry or free competition in a free market. For how can anyone compete or enter a field when an enormous amount of money is needed to invest in efficient plants and firms? It is easy to “enter” the pushcart peddling “industry” because so little capital is required, but it is almost impossible to establish a new automobile firm, with its heavy requirements of capital.
+> 
+> This argument is but another variant of the prevailing confusion between freedom and abundance. In this case, the abundance refers to the money capital which a man has been able to amass. Every man is perfectly free to become a baseball player; but this freedom does not imply that he will be as good a baseball player as the next man. A man’s range or power of action, dependent on his ability and the exchange-value of his property, is something completely distinct from his freedom. As we have said, a free society will in the long run lead to general abundance and is the necessary condition for that abundance. But the two must be kept conceptually distinct, and not confused by phrases such as “real freedom” or “true freedom.” Therefore, the fact that everyone is free to enter an industry does not mean that everyone is able, either in terms of personal qualities or monetary capital, to do so. In industries requiring more capital, fewer people will be able to take advantage of their freedom to set up a new firm than in those requiring less capital, just as fewer laborers will be able to take advantage of freedom of entry in a very highly skilled profession than in a menial position. There is no mystery about either situation.
+
+Murray N Rothbard in [Man, Economy, and State](https://jeffersonamericas.org/wp-content/uploads/2020/07/Roth3.pdf), page 655.
