@@ -30,4 +30,4 @@ title: "Antifragile by Nassim Taleb - Quotes"
 
 > Religion has invisible purposes beyond what the literal-minded scientistic-scientifiers identify - one of which is to protect us from scientism, that is, them.
 
-Nassim Nicholas Taleb in [Antifragile: Things that Gain from Disorder](https://en.wikipedia.org/wiki/Antifragile_(book))
+Nassim Nicholas Taleb in [Antifragile: Things that Gain from Disorder](https://en.wikipedia.org/wiki/Antifragile_(book)).
