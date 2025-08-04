@@ -29,3 +29,5 @@ title: "Antifragile by Nassim Taleb - Quotes"
 > Since one small observation can disprove a statement, while millions can hardly confirm it, disconfirmation is more rigorous than confirmation.
 
 > Religion has invisible purposes beyond what the literal-minded scientistic-scientifiers identify - one of which is to protect us from scientism, that is, them.
+
+Nassim Nicholas Taleb in [Antifragile: Things that Gain from Disorder](https://en.wikipedia.org/wiki/Antifragile_(book))
