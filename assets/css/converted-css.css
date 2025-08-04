@@ -97,9 +97,9 @@ pre code.highlighter-rouge {
 }
 
 blockquote {
-  border: thin solid black;
-  padding: 1em;
-  margin: 1em 0;
+  padding-left: 1em;
+  margin: 1em 0.4em;
+  border-left: 1.5px solid var(--text-secondary);
 }
 
 blockquote p { 
@@ -202,13 +202,8 @@ figcaption {
   color: var(--dark-text-secondary);
 }
 
-.highlight, pre code, blockquote {
+.highlight, pre code {
   border-radius: 0.5em;
-}
-
-blockquote {
-  background-color: var(--bg-secondary);
-  border: 1px var(--border) solid;
 }
 
 a {
