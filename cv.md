@@ -6,7 +6,7 @@ My name is Jan Balanyà Scholl and I'm an experienced digital marketing & web an
 
 ## Skills
 
-### Digital Marketng & Analytics
+### Digital Marketing & Analytics
 - Custom web analytics implementation (Adobe & Google)
 - Data source integration
 - Web personalization and testing
