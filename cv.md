@@ -2,7 +2,7 @@
 layout: post
 title: CV
 ---
-Experienced project and team lead based in Barcelona. Former web tracking and analytics account lead for Volkswagen at [Credera](https://www.credera.com/de-de).
+My name is Jan Balanyà Scholl and I'm an experienced digital marketing & web analytics consultant based in Barcelona. I've worked with small and large companies and have led the web tracking and analytics team for Volkswagen at Credera. My expertise spans marketing analytics, SEO, and account management.
 
 ## Skills
 
