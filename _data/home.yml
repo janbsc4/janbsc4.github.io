@@ -46,13 +46,14 @@ old_project_entries:
 footer_entries:
 
   - title: linkedin
-    url: https://twitter.com/abhinav
+    url: https://www.linkedin.com/in/jan-balanya-scholl
 
   - title: github
     url: https://github.com/janbsc4
 
   - title: rss
     url: feed.xml
+    
   - title: rss?
     url: how-to-follow-a-blog
 
