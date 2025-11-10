@@ -27,20 +27,19 @@ My name is Jan Balanyà Scholl and I'm an experienced digital marketing & web an
 
 ## Experience
 
-### Dev
-**Strom**
+### Dev - Strom [2025]
 - Built [Strom](https://janbalanya.com/strom-docs/), a Python-based open-source smart heating system optimizing
 energy use through weather and electricity price data. More info 
 
-### Team & Project Lead Tracking  
-**Credera** | 2021 - 2024
+### Team & Project Lead Tracking - Credera [2021 - 2024]
+
 - Project lead in data-driven projects for Volkswagen, across markets
 - Schema design for web tracking data layer, ensuring long-term accuracy, integrity, and scalability
 - Team lead for a seven-person tracking & tag management team
 - Client account management & revenue growth
 
-### Online Marketing Management  
-**Finment** | 2019 - 2020
+### Online Marketing Management - Finment [2019 - 2020]
+
 - Marketing controlling & KPI dashboard creation
 - Streamlining & automation of marketing processes
 - Affiliate marketing
@@ -48,6 +47,6 @@ energy use through weather and electricity price data. More info
 
 ## Education
 
-**B.Sc. in Business Administration** - Free University of Berlin - 2018
+**B.Sc. in Business Administration** - Freie Universität Berlin - 2018
 
 **High School Diploma** - German School of Barcelona - 2013
