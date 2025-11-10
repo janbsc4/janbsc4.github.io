@@ -2,22 +2,22 @@
 layout: post
 title: CV
 ---
-My name is Jan Balanyà Scholl and I'm an experienced digital marketing & web analytics consultant based in Barcelona. I've worked with small and large companies and have led the web tracking and analytics team for Volkswagen at Credera. My expertise spans marketing analytics, SEO and account management.
+My name is Jan Balanyà Scholl and I'm an experienced digital marketing & web analytics consultant based in Barcelona. I've worked with small and large companies and have led the web tracking and analytics team for Volkswagen at Credera. My expertise spans digital marketing and account management.
 
 ## Skills
 
 ### Digital Marketing & Analytics
 - Custom web analytics implementation (Adobe & Google)
-- Data source integration
+- Data integration
 - Web personalization and testing
 - Tag management governance
-- Search engine optimization
+- Search engine optimization (Ahrefs)
 
 ### Project Management
-- Account Management & Development
-- International product rollouts
-- Solution & use case design
-- Process design & optimization
+- Stakeholder Relations
+- Account Management
+- Project Leadership
+- Team Leadership
 
 ### Languages
 - German (Native)
@@ -26,6 +26,11 @@ My name is Jan Balanyà Scholl and I'm an experienced digital marketing & web an
 - English (Native)
 
 ## Experience
+
+### Dev
+**Strom**
+- Built [Strom](https://janbalanya.com/strom-docs/), a Python-based open-source smart heating system optimizing
+energy use through weather and electricity price data. More info 
 
 ### Team & Project Lead Tracking  
 **Credera** | 2021 - 2024
