@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Antifragile by Nassim Taleb - Quotes"
+title: "Quotes from 'Antifragile' by Nassim Taleb"
 ---
 > (...) Let us not confuse rationalizing with rational — the two are almost always exact opposites.
 

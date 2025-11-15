@@ -9,4 +9,4 @@ title: "The Constitution of Innovation"
 
 Great proposals for bringing Europe back to real growth: [The Constitution of Innovation](https://constitutionofinnovation.eu).
 
-Via [Marginal Revolution](https://marginalrevolution.com/marginalrevolution/2025/11/european-stagnation.html).
+(Via [Marginal Revolution](https://marginalrevolution.com/marginalrevolution/2025/11/european-stagnation.html).)

@@ -1,7 +1,7 @@
 title: Jan Balanyà Scholl
 author: Jan Balanyà Scholl
 url: https://janbalanya.com # root address of the site
-description: Jan is a German-spanish web consultant based in Barcelona. Former account lead for Volkswagen web tracking. Experienced project and team lead. Find out more!
+description: I am a web marketing consultant based in Barcelona. Former account lead for Volkswagen web tracking. Experienced project and team lead. Find out more!
 permalink: /:slug
 
 favicon: "./logo.png" # relative path to site's favicon
@@ -33,8 +33,6 @@ theme_config:
     title_blog: Blog
     title_old_projects: Old Projects
 
-soopr:
-  publish_token: "" # sign up at https://www.soopr.co to get your publish token and personalize share and reaction options
 
 highlighter: rouge
 

@@ -252,10 +252,7 @@ html.transition *:after {
 }
 
 mark {
-  padding: 0.4em;
   background-color: var(--highlight);
-  font-size: 0.6em;
-  letter-spacing: 1px;
 }
 
 .post-date {

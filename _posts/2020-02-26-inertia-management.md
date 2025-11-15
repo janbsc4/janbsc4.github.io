@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Inertia Management"
+title: "&#9733; Inertia Management"
 ---
 
 Have you ever improved some aspect of your life, only to wonder afterwards why you hadn't done it earlier? What was stopping you? 

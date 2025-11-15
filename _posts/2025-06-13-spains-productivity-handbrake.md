@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spain's Productivity Handbrake"
+title: "&#9733; Spain's Productivity Handbrake"
 ---
 Spain has a [~30% productivity gap](https://en.wikipedia.org/wiki/List_of_countries_by_labour_productivity) to countries like USA or Germany. Spaniards produce almost a third less value per hour worked than Americans or Germans. What makes such a large gap possible?
 

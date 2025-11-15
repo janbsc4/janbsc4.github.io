@@ -2,7 +2,7 @@
 layout: post
 title: "Mimics & Scapegoats"
 ---
-*This text paraphrases and closely adheres to the ideas presented in [Wanting by Luke Burgis](https://en.wikipedia.org/wiki/Wanting:_The_Power_of_Mimetic_Desire_in_Everyday_Life), and the thoughts expressed are not my own.*
+<mark>This text summarizes the ideas presented in <a href="https://en.wikipedia.org/wiki/Wanting:_The_Power_of_Mimetic_Desire_in_Everyday_Life">Wanting by Luke Burgis</a>, and the thoughts expressed are not my own.</mark>
 
 Our desires are not our own. We imitate the desires of our models. Humans are great at mimicking others. Since we mimic the desires of others, we come into competition with each other. When this happens on a large scale, it causes a mimetic crisis. Mimetic crises can and have been temporarily solved via the scapegoating mechanism.
 

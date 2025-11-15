@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Follow a Blog"
+title: "&#9733; How to Follow a Blog"
 description: "Easy guide on how to follow almost any blog with RSS like Substack, Bluesky or Medium. Includes blog recommendations to get started. Read it now!"
 ---
 Blogs are pretty much the best thing ever. There are blogs full of insights and original takes and blogs linking to interesting parts of the internet. I have [a couple favorite blogs listed below](#blog-recommendations), that I personally enjoy. But, how does one follow a blog?
