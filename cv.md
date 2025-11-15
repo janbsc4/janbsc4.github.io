@@ -29,7 +29,7 @@ My name is Jan Balanyà Scholl and I'm an experienced digital marketing & web an
 
 ### Dev - Strom [2025]
 - Built [Strom](https://janbalanya.com/strom-docs/), a Python-based open-source smart heating system optimizing
-energy use through weather and electricity price data. More info 
+energy use through weather and electricity price data.
 
 ### Team & Project Lead Tracking - Credera [2021 - 2024]
 
