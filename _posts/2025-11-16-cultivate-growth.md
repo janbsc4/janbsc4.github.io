@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Cultivate Growth"
+---
+>If man is not to do more harm than good in his efforts to improve the social order, he will have to learn that in this, as in all other fields where essential complexity of an organized kind prevails, he cannot acquire the full knowledge which would make mastery of the events possible. He will therefore have to use what knowledge he can achieve, not to shape the results as the craftsman shapes his handiwork, but rather to cultivate a growth by providing the appropriate environment, in the manner in which the gardener does this for his plants. There is danger in the exuberant feeling of ever growing power which the advance of the physical sciences has engendered and which tempts man to try, “dizzy with success”, to use a characteristic phrase of early communism, to subject not only our natural but also our human environment to the control of a human will. The recognition of the insuperable limits to his knowledge ought indeed to teach the student of society a lesson of humility which should guard him against becoming an accomplice in men’s fatal striving to control society – a striving which makes him not only a tyrant over his fellows, but which may well make him the destroyer of a civilization which no brain has designed but which has grown from the free efforts of millions of individuals.
+
+Friedrich Hayek in [The Pretence of Knowledge](https://www.nobelprize.org/prizes/economic-sciences/1974/hayek/lecture/).
