@@ -116,6 +116,10 @@ img {
   border-radius: 16px;
 }
 
+.big-image {
+  max-width: 100%;
+}
+
 footer {
   margin-top: 4rem;
 }
