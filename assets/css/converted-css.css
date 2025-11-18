@@ -120,6 +120,10 @@ img {
   max-width: 100%;
 }
 
+.see-more a {
+  text-decoration: none;
+}
+
 footer {
   margin-top: 4rem;
 }
