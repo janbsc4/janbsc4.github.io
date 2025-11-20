@@ -2,7 +2,7 @@
 layout: post
 title: CV
 ---
-My name is Jan Balanyà Scholl and I'm an experienced digital marketing & web analytics consultant based in Barcelona. I've worked with small and large companies and have led the web tracking and analytics team for Volkswagen at Credera. My expertise spans digital marketing and account management.
+Experienced account manager and team lead focused on client relationship management and strategic project delivery. I've managed international accounts for Volkswagen Group at Credera, leading cross-functional teams and driving initiatives that generated seven-figure annual revenue. Recently completed a sabbatical; available immediately full-time in Barcelona.
 
 ## Skills
 
@@ -27,23 +27,19 @@ My name is Jan Balanyà Scholl and I'm an experienced digital marketing & web an
 
 ## Experience
 
-### Dev - Strom [2025]
-- Built [Strom](https://janbalanya.com/strom-docs/), a Python-based open-source smart heating system optimizing
-energy use through weather and electricity price data.
+### Professional Sabbatical & Independent Projects [OCT 2024 - NOW]
+Personal development and technical projects, including building an open-
+source smart heating system.
 
-### Team & Project Lead Tracking - Credera [2021 - 2024]
-
-- Project lead in data-driven projects for Volkswagen, across markets
-- Schema design for web tracking data layer, ensuring long-term accuracy, integrity, and scalability
-- Team lead for a seven-person tracking & tag management team
-- Client account management & revenue growth
+### Team & Project Lead Tracking - Credera [2021 - OCT 2024]
+Led a team of seven consultants delivering digital projects for the
+Volkswagen Group in Agile environments. Managed cross-functional
+teams and drove strategic initiatives generating seven-figure annual
+revenue, while mentoring junior consultants.
 
 ### Online Marketing Management - Finment [2019 - 2020]
-
-- Marketing controlling & KPI dashboard creation
-- Streamlining & automation of marketing processes
-- Affiliate marketing
-- On-site SEO
+Drove digital marketing growth by improving SEO rankings, developing
+data-driven content strategies with Ahrefs, automating email campai
 
 ## Education
 
