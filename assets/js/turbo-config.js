@@ -1,88 +1,90 @@
 // /assets/js/turbo-config.js
-document.addEventListener("turbo:load", function() {
-  console.log("Page loaded with Turbo!");
-  // This function runs whenever a new page is loaded via Turbo
-});
 
-// Before content changes
-document.addEventListener("turbo:before-render", function() {
-  // Very minimal state change
-  document.body.classList.add("content-changing");
-});
+function onPageLoad() {
+  // --- A. THEME TOGGLE LOGIC ---
+  const toggleButton = document.querySelector('.theme-toggle');
+  const htmlElement = document.documentElement;
 
-// After content changes
-document.addEventListener("turbo:render", function() {
-  // Remove the changing state
-  document.body.classList.remove("content-changing");
-});
+  if (toggleButton) {
+    // 1. Remove old listeners by cloning the button
+    // This ensures we don't have duplicate listeners if Turbo misfires
+    const newBtn = toggleButton.cloneNode(true);
+    toggleButton.parentNode.replaceChild(newBtn, toggleButton);
+    
+    // 2. Add the Click Listener
+    newBtn.addEventListener('click', function() {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = (currentTheme === 'light') ? 'dark' : 'light';
+      
+      // Add transition class for smooth fade (from your original code)
+      htmlElement.classList.add('transition');
+      setTimeout(() => {
+        htmlElement.classList.remove('transition');
+      }, 1000);
 
-// Make forms work with Turbo
-document.addEventListener("turbo:load", function() {
+      // Set the new theme
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
+
+  // --- B. FORM LOGIC ---
   const forms = document.querySelectorAll('form:not([data-turbo="false"])');
-  
   forms.forEach(form => {
     form.addEventListener('submit', function(event) {
-      // For forms that submit to external services
-      if (form.method.toLowerCase() === 'get') {
-        // Let the browser handle GET forms normally
-        return;
-      }
+      if (form.method.toLowerCase() === 'get') return;
       
-      // For forms handled by static site services like Formspree
-      // This prevents full page reload
       if (form.action && !form.action.startsWith(window.location.origin)) {
         event.preventDefault();
-        
         const formData = new FormData(form);
         
         fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
         })
         .then(response => response.json())
         .then(data => {
-          // Handle success - show a message
           const successMessage = document.createElement('div');
           successMessage.classList.add('form-success');
           successMessage.textContent = "Form submitted successfully!";
           form.parentNode.insertBefore(successMessage, form.nextSibling);
           form.reset();
         })
-        .catch(error => {
-          // Handle error
-          console.error('Error:', error);
-        });
+        .catch(error => console.error('Error:', error));
       }
     });
   });
-});
 
-// Img loadin
-document.addEventListener("turbo:load", function() {
-  // Handle image loading
+  // --- C. IMAGE LOADING LOGIC ---
   const images = document.querySelectorAll('img');
-  
   images.forEach(img => {
-    // If image is already loaded
     if (img.complete) {
       img.style.opacity = '1';
     } else {
-      // Set initial state
       img.style.opacity = '0';
       img.style.transition = 'opacity 0.7s ease';
-      
-      // When image loads
-      img.addEventListener('load', function() {
-        img.style.opacity = '1';
-      });
-      
-      // Fallback for errors
-      img.addEventListener('error', function() {
-        img.style.opacity = '0.5'; // Semi-transparent for failed images
-      });
+      img.addEventListener('load', () => img.style.opacity = '1');
+      img.addEventListener('error', () => img.style.opacity = '0.5');
     }
   });
+}
+
+// 1. Run on Turbo Load (Navigations)
+document.addEventListener("turbo:load", onPageLoad);
+
+// 2. Run on Initial Load (First visit)
+// This ensures the button works even if Turbo hasn't "kicked in" yet
+document.addEventListener("DOMContentLoaded", function() {
+    if (!document.documentElement.hasAttribute('data-turbo-preview')) {
+        onPageLoad();
+    }
+});
+
+// 3. Visual Transition States
+document.addEventListener("turbo:before-render", function() {
+  document.body.classList.add("content-changing");
+});
+document.addEventListener("turbo:render", function() {
+  document.body.classList.remove("content-changing");
 });

@@ -154,7 +154,7 @@ html[data-theme="dark"] {
 }
 
 @media (prefers-color-scheme: dark) {
-  body[data-theme="auto"] {
+  html[data-theme="auto"] {
     --bg: var(--dark-bg);
     --bg-secondary: var(--dark-bg-secondary);
     --headings: var(--dark-headings);
@@ -168,7 +168,7 @@ html[data-theme="dark"] {
 }
 
 @media (prefers-color-scheme: light) {
-  body[data-theme="auto"] {
+  html[data-theme="auto"] {
     --bg: var(--light-bg);
     --bg-secondary: var(--light-bg-secondary);
     --headings: var(--light-headings);
