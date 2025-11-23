@@ -1,22 +1,44 @@
 // /assets/js/turbo-config.js
 
 function onPageLoad() {
+  // --- HELPER: Update Safari Top Bar Color ---
+  const updateMetaThemeColor = (theme) => {
+    const metaTag = document.querySelector('meta[name="theme-color"]');
+    // Colors match your CSS variables exactly
+    const color = theme === 'dark' ? '#1f242A' : '#ffffff'; 
+    
+    if (metaTag) {
+      metaTag.setAttribute('content', color);
+    } else {
+      // Create it if it doesn't exist
+      const meta = document.createElement('meta');
+      meta.name = "theme-color";
+      meta.content = color;
+      document.head.appendChild(meta);
+    }
+  };
+
   // --- A. THEME TOGGLE LOGIC ---
   const toggleButton = document.querySelector('.theme-toggle');
   const htmlElement = document.documentElement;
 
+  // 1. Sync Meta Tag on Load
+  // Ensures the top bar matches the theme immediately when navigating
+  if (htmlElement.getAttribute('data-theme')) {
+    updateMetaThemeColor(htmlElement.getAttribute('data-theme'));
+  }
+
   if (toggleButton) {
-    // 1. Remove old listeners by cloning the button
-    // This ensures we don't have duplicate listeners if Turbo misfires
+    // 2. Remove old listeners by cloning the button
     const newBtn = toggleButton.cloneNode(true);
     toggleButton.parentNode.replaceChild(newBtn, toggleButton);
     
-    // 2. Add the Click Listener
+    // 3. Add the Click Listener
     newBtn.addEventListener('click', function() {
       const currentTheme = htmlElement.getAttribute('data-theme');
       const newTheme = (currentTheme === 'light') ? 'dark' : 'light';
       
-      // Add transition class for smooth fade (from your original code)
+      // Add transition class for smooth fade
       htmlElement.classList.add('transition');
       setTimeout(() => {
         htmlElement.classList.remove('transition');
@@ -25,6 +47,9 @@ function onPageLoad() {
       // Set the new theme
       htmlElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
+      
+      // UPDATE THE SAFARI BAR INSTANTLY
+      updateMetaThemeColor(newTheme);
     });
   }
 
@@ -74,7 +99,6 @@ function onPageLoad() {
 document.addEventListener("turbo:load", onPageLoad);
 
 // 2. Run on Initial Load (First visit)
-// This ensures the button works even if Turbo hasn't "kicked in" yet
 document.addEventListener("DOMContentLoaded", function() {
     if (!document.documentElement.hasAttribute('data-turbo-preview')) {
         onPageLoad();
