@@ -17,6 +17,17 @@
     {% endif %}
   </title>
   {% feed_meta %}
+  <script>
+    // Immediately set the theme before the page renders to prevent white flash
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      // Also set the safari bar color instantly here if you want perfection
+      if (theme === 'dark') {
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1f242A');
+      }
+    }
+  </script>
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
@@ -34,7 +45,7 @@
   {%- include custom_head.html -%}
 
   <meta name="theme-color" content="#1f242A">
-  
+
   <!-- Turbo Drive -->
   <script src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.11/dist/turbo.es2017-umd.min.js" integrity="sha384-W9r5irrcU/3NGMyRz5PB5S/eyEznggxjg977tVsr4zjjlntKJLHa1zyFChn/lddk" crossorigin="anonymous"></script>
   <script src="{{ '/assets/js/turbo-config.js' | relative_url }}" defer></script>
