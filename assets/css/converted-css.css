@@ -347,19 +347,10 @@ ul.horizontal-list li a {
   font-weight: normal;
 }
 
-
-/* Responsive cards */
 @media screen and (max-width: 600px) {
-  ul.horizontal-list li.card {
-    width: 100%;
-    display: block;
-    margin-bottom: 1em;
-    margin-left: 1em;
-  }
-  
-  ul.horizontal-list li.card a,
-  ul.horizontal-list li.card .header {
-    font-size: 1em;
+  body {
+    font-size: 1.05rem;
+    line-height: 1.75;
   }
 }
 
