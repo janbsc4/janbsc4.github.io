@@ -1,6 +1,5 @@
 ---
-layout: default
+layout: post
 title: "You are offline"
 ---
-# You are offline
-And this page hasn't been saved yet. Woops.
+This page wasn't saved when you where online. Whoops.
