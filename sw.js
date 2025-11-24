@@ -25,26 +25,35 @@ self.addEventListener('fetch', event => {
 	if (event.request.method !== 'GET') return;
 
 	event.respondWith(
-		fetch(event.request)
-		.then(response => {
-			if (!response || response.status !== 200 || response.type !== 'basic') {
-				return response;
+		caches.match(event.request).then(cachedResponse => {
+			if (cachedResponse) {
+				return cachedResponse;
 			}
-			const responseToCache = response.clone();
-			caches.open(CACHE_NAME).then(cache => {
-				cache.put(event.request, responseToCache);
-			});
-			return response;
-		})
-		.catch(() => {
-			return caches.match(event.request).then(cachedResponse => {
-				if (cachedResponse) {
-					return cachedResponse;
-				}
-				if (event.request.headers.get('accept').includes('text/html')) {
-					return caches.match(OFFLINE_URL);
-				}
-			});
+			
+			return fetch(event.request)
+				.then(response => {
+					if (!response || response.status !== 200 || response.type !== 'basic') {
+						return response;
+					}
+					const responseToCache = response.clone();
+					caches.open(CACHE_NAME).then(cache => {
+						cache.put(event.request, responseToCache);
+					});
+					return response;
+				})
+				.catch(() => {
+					if (event.request.headers.get('accept')?.includes('text/html')) {
+						return caches.match(OFFLINE_URL);
+					}
+					// Return a proper response for non-HTML requests
+					return new Response('Offline - resource not available', {
+						status: 503,
+						statusText: 'Service Unavailable',
+						headers: new Headers({
+							'Content-Type': 'text/plain'
+						})
+					});
+				});
 		})
 	);
 });
