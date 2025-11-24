@@ -22,39 +22,31 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') return;
+	if (event.request.method !== 'GET') return;
 
-  event.respondWith(
-    fetch(event.request)
-      .then(response => {
-        // Cache successful responses, including cross-origin (relax type check)
-        // Only skip if no response, non-200, or opaque (uncacheable)
-        if (response && response.status === 200 && response.type !== 'opaque') {
-          const responseToCache = response.clone();
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseToCache);
-          });
-        }
-        return response;
-      })
-      .catch(() => {
-        // Always resolve to a Response, even on full failure
-        return caches.match(event.request).then(cachedResponse => {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-          // HTML fallback
-          if (event.request.headers.get('accept')?.includes('text/html')) {
-            return caches.match(OFFLINE_URL).then(offlineResponse => offlineResponse || new Response('Offline', { status: 503 }));
-          }
-          // Non-HTML miss: Return a 404 (script/image/etc. will fail gracefully)
-          return new Response('', { status: 404, statusText: 'Not Found' });
-        }).catch(() => {
-          // Cache access failed (rare): 500
-          return new Response('Service Unavailable', { status: 503 });
-        });
-      })
-  );
+	event.respondWith(
+		fetch(event.request)
+		.then(response => {
+			if (!response || response.status !== 200 || response.type !== 'basic') {
+				return response;
+			}
+			const responseToCache = response.clone();
+			caches.open(CACHE_NAME).then(cache => {
+				cache.put(event.request, responseToCache);
+			});
+			return response;
+		})
+		.catch(() => {
+			return caches.match(event.request).then(cachedResponse => {
+				if (cachedResponse) {
+					return cachedResponse;
+				}
+				if (event.request.headers.get('accept').includes('text/html')) {
+					return caches.match(OFFLINE_URL);
+				}
+			});
+		})
+	);
 });
 
 self.addEventListener('activate', event => {
