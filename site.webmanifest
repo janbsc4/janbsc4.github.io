@@ -1,6 +1,6 @@
 {
-    "name": "Janbalanya",
-    "short_name": "Janb",
+    "name": "JanBalanya",
+    "short_name": "JanB",
     "start_url": "/",
     "scope": "/",
     "display": "standalone",
@@ -17,6 +17,6 @@
             "src": "/assets/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
-        }
+        } 
     ]
 }
