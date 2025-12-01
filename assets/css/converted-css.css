@@ -1,386 +1,386 @@
 /* ==========================================================================
-   1. VARIABLES & CONFIGURATION
-   ========================================================================== */
+	 1. VARIABLES & CONFIGURATION
+	 ========================================================================== */
 
 :root {
-  /* Typography */
-  --font-sans: -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
-  --font-mono: "Courier New", monospace;
-  
-  /* Light Theme Palette */
-  --light-bg: #FFF;
-  --light-bg-secondary: #f3f4f6;
-  --light-headings: #1e293b;
-  --light-text: #374151;
-  --light-text-secondary: #6b7280;
-  --light-links: #6366f1;
-  --light-highlight: #FFECB2;
-  --light-code-text: #9D174D;
-  --light-share-text: #999;
-  
-  /* Dark Theme Palette */
-  --dark-bg: #1f242A;
-  --dark-bg-secondary: #323945;
-  --dark-headings: #74c0fc;
-  --dark-text: #adb5bd;
-  --dark-text-secondary: #9CA3AF;
-  --dark-links: #91A7FF;
-  --dark-highlight: #ffd966;
-  --dark-code-text: #91A7FF;
-  --dark-share-text: #C4C4C4;
+	/* Typography */
+	--font-sans: -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
+	--font-mono: "Courier New", monospace;
+	
+	/* Light Theme Palette */
+	--light-bg: #FFF;
+	--light-bg-secondary: #f3f4f6;
+	--light-headings: #1e293b;
+	--light-text: #374151;
+	--light-text-secondary: #6b7280;
+	--light-links: #6366f1;
+	--light-highlight: #FFECB2;
+	--light-code-text: #9D174D;
+	--light-share-text: #999;
+	
+	/* Dark Theme Palette */
+	--dark-bg: #1f242A;
+	--dark-bg-secondary: #323945;
+	--dark-headings: #74c0fc;
+	--dark-text: #adb5bd;
+	--dark-text-secondary: #9CA3AF;
+	--dark-links: #91A7FF;
+	--dark-highlight: #ffd966;
+	--dark-code-text: #91A7FF;
+	--dark-share-text: #C4C4C4;
 }
 
 /* ==========================================================================
-   2. THEME LOGIC (MAPPING)
-   Define how variables map to generic theme variables based on attributes
-   ========================================================================== */
+	 2. THEME LOGIC (MAPPING)
+	 Define how variables map to generic theme variables based on attributes
+	 ========================================================================== */
 
 /* Light Theme Mapping */
 html[data-theme="light"] {
-  --bg: var(--light-bg);
-  --bg-secondary: var(--light-bg-secondary);
-  --headings: var(--light-headings);
-  --text: var(--light-text);
-  --text-secondary: var(--light-text-secondary);
-  --links: var(--light-links);
-  --highlight: var(--light-highlight);
-  --code-text: var(--light-code-text);
-  --share-text: var(--light-share-text);
+	--bg: var(--light-bg);
+	--bg-secondary: var(--light-bg-secondary);
+	--headings: var(--light-headings);
+	--text: var(--light-text);
+	--text-secondary: var(--light-text-secondary);
+	--links: var(--light-links);
+	--highlight: var(--light-highlight);
+	--code-text: var(--light-code-text);
+	--share-text: var(--light-share-text);
 }
 
 /* Dark Theme Mapping */
 html[data-theme="dark"] {
-  --bg: var(--dark-bg);
-  --bg-secondary: var(--dark-bg-secondary);
-  --headings: var(--dark-headings);
-  --text: var(--dark-text);
-  --text-secondary: var(--dark-text-secondary);
-  --links: var(--dark-links);
-  --highlight: var(--dark-highlight);
-  --code-text: var(--dark-code-text);
-  --share-text: var(--dark-share-text);
+	--bg: var(--dark-bg);
+	--bg-secondary: var(--dark-bg-secondary);
+	--headings: var(--dark-headings);
+	--text: var(--dark-text);
+	--text-secondary: var(--dark-text-secondary);
+	--links: var(--dark-links);
+	--highlight: var(--dark-highlight);
+	--code-text: var(--dark-code-text);
+	--share-text: var(--dark-share-text);
 }
 
 /* Auto Theme (System Preference) */
 @media (prefers-color-scheme: dark) {
-  html[data-theme="auto"] {
-    --bg: var(--dark-bg);
-    --bg-secondary: var(--dark-bg-secondary);
-    --headings: var(--dark-headings);
-    --text: var(--dark-text);
-    --text-secondary: var(--dark-text-secondary);
-    --links: var(--dark-links);
-    --highlight: var(--dark-highlight);
-    --code-text: var(--dark-code-text);
-    --share-text: var(--dark-share-text);
-  }
+	html[data-theme="auto"] {
+		--bg: var(--dark-bg);
+		--bg-secondary: var(--dark-bg-secondary);
+		--headings: var(--dark-headings);
+		--text: var(--dark-text);
+		--text-secondary: var(--dark-text-secondary);
+		--links: var(--dark-links);
+		--highlight: var(--dark-highlight);
+		--code-text: var(--dark-code-text);
+		--share-text: var(--dark-share-text);
+	}
 }
 
 @media (prefers-color-scheme: light) {
-  html[data-theme="auto"] {
-    --bg: var(--light-bg);
-    --bg-secondary: var(--light-bg-secondary);
-    --headings: var(--light-headings);
-    --text: var(--light-text);
-    --text-secondary: var(--light-text-secondary);
-    --links: var(--light-links);
-    --highlight: var(--light-highlight);
-    --code-text: var(--light-code-text);
-    --share-text: var(--light-share-text);
-  }
+	html[data-theme="auto"] {
+		--bg: var(--light-bg);
+		--bg-secondary: var(--light-bg-secondary);
+		--headings: var(--light-headings);
+		--text: var(--light-text);
+		--text-secondary: var(--light-text-secondary);
+		--links: var(--light-links);
+		--highlight: var(--light-highlight);
+		--code-text: var(--light-code-text);
+		--share-text: var(--light-share-text);
+	}
 }
 
 /* ==========================================================================
-   3. GLOBAL THEME APPLICATION
-   Applying the generic variables to HTML elements
-   ========================================================================== */
+	 3. GLOBAL THEME APPLICATION
+	 Applying the generic variables to HTML elements
+	 ========================================================================== */
 
 html, body {
-  background-color: var(--bg);
-  color: var(--text);
+	background-color: var(--bg);
+	color: var(--text);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--headings);
+	color: var(--headings);
 }
 
 h1 {
-  padding-bottom: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
 h2 a {
-  color: var(--text);
-  text-decoration: none;
+	color: var(--text);
+	text-decoration: none;
 }
 
 p, strong, b, em, small, li, hr, table {
-  color: var(--text);
+	color: var(--text);
 }
 
 figcaption {
-  font-style: italic;
-  text-align: center;
-  color: var(--dark-text-secondary);
+	font-style: italic;
+	text-align: center;
+	color: var(--dark-text-secondary);
 }
 
 a {
-  color: var(--links);
+	color: var(--links);
 }
 
 *:target { 
-  background-color: var(--bg-secondary); 
+	background-color: var(--bg-secondary); 
 }
 
 /* ==========================================================================
-   4. BASE STYLES & RESET
-   ========================================================================== */
+	 4. BASE STYLES & RESET
+	 ========================================================================== */
 
 html { 
-  height: 100%; 
-  scrollbar-gutter: stable;
+	height: 100%; 
+	scrollbar-gutter: stable;
 }
 
 body {
-  font-family: var(--font-sans);
-  font-size: 1.13rem;
-  line-height: 2;
-  margin: 0;
-  min-height: 100%;
+	font-family: var(--font-sans);
+	font-size: 1.13rem;
+	line-height: 2;
+	margin: 0;
+	min-height: 100%;
 }
 
 h2, h3, h4, h5 { 
-  margin-top: 1.5em; 
+	margin-top: 1.5em; 
 }
 
 p { 
-  margin: 1em 0; 
+	margin: 1em 0; 
 }
 
 li { 
-  margin: 0.4em 0; 
+	margin: 0.4em 0; 
 }
 
 /* ==========================================================================
-   5. CONTENT ELEMENTS (Typography, Tables, Images, Code)
-   ========================================================================== */
+	 5. CONTENT ELEMENTS (Typography, Tables, Images, Code)
+	 ========================================================================== */
 
 /* Horizontal Rules */
 hr { 
-  margin: 3em 0; 
-  border: none;
-  border-top: 1px solid var(--share-text);
-  height: 0;
+	margin: 3em 0; 
+	border: none;
+	border-top: 1px solid var(--share-text);
+	height: 0;
 }
 
 hr.page-break {
-  text-align: center;
-  border: 0;
+	text-align: center;
+	border: 0;
 }
 
 hr.page-break:before { 
-  content: '-----'; 
+	content: '-----'; 
 }
 
 hr.page-break:after { 
-  content: attr(data-content) '-----'; 
+	content: attr(data-content) '-----'; 
 }
 
 /* Tables */
 table, th, td {
-  width: 100%;
-  border: thin solid black;
-  border-collapse: collapse;
-  padding: 0.4em;
+	width: 100%;
+	border: thin solid black;
+	border-collapse: collapse;
+	padding: 0.4em;
 }
 
 /* Blockquotes */
 blockquote {
-  padding-left: 1em;
-  margin: 1em 0.4em;
-  border-left: 1.5px solid var(--text-secondary);
+	padding-left: 1em;
+	margin: 1em 0.4em;
+	border-left: 1.5px solid var(--text-secondary);
 }
 
 blockquote p { 
-  margin: 0 0 1em 0; 
+	margin: 0 0 1em 0; 
 }
 
 blockquote p:last-child { 
-  margin-bottom: 0; 
+	margin-bottom: 0; 
 }
 
 /* Images */
 img {
-  max-width: 50%;
-  display: block;
-  margin: 1.5rem auto;
-  border-radius: 16px;
+	max-width: 50%;
+	display: block;
+	margin: 1.5rem auto;
+	border-radius: 16px;
 }
 
 .big-image {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 /* Code Blocks */
 pre, code {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
+	font-family: var(--font-mono);
+	font-size: 0.9rem;
 }
 
 div.highlighter-rouge pre code, 
 pre code.highlighter-rouge {
-  display: block;
-  overflow-x: auto;
-  padding: 1em;
+	display: block;
+	overflow-x: auto;
+	padding: 1em;
 }
 
 .highlight, pre code {
-  border-radius: 0.5em;
+	border-radius: 0.5em;
 }
 
 p code, li code {
-  background-color: var(--bg-secondary);
-  padding: 0.2rem;
-  color: var(--code-text);
-  font-weight: bold;
+	background-color: var(--bg-secondary);
+	padding: 0.2rem;
+	color: var(--code-text);
+	font-weight: bold;
 }
 
 /* ==========================================================================
-   6. LAYOUT & CONTAINERS
-   ========================================================================== */
+	 6. LAYOUT & CONTAINERS
+	 ========================================================================== */
 
 .w {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 1em;
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 1em;
 }
 
 footer {
-  margin-top: 4rem;
+	margin-top: 4rem;
 }
 
 /* ==========================================================================
-   7. COMPONENTS
-   ========================================================================== */
+	 7. COMPONENTS
+	 ========================================================================== */
 
 /* Theme Toggle Button */
 .theme-toggle {
-  color: var(--text);
-  background-color: transparent;
-  padding: 4px;
-  cursor: pointer;
-  margin: 1em;
-  position: fixed;
-  right: 0;
-  top: 0;
-  border: 2px transparent solid;
-  outline: none;
+	color: var(--text);
+	background-color: transparent;
+	padding: 4px;
+	cursor: pointer;
+	margin: 1em;
+	position: fixed;
+	right: 0;
+	top: 0;
+	border: 2px transparent solid;
+	outline: none;
 }
 
 .theme-toggle:hover {
-  color: var(--links);
+	color: var(--links);
 }
 
 .theme-toggle:focus {
-  outline: none;
+	outline: none;
 }
 
 /* Post & Project Styles */
 .post-date {
-  color: var(--text-secondary);
-  margin-top: 1.1rem;
-  font-size: 0.8em;
-  font-family: var(--font-mono);
+	color: var(--text-secondary);
+	margin-top: 1.1rem;
+	font-size: 0.8em;
+	font-family: var(--font-mono);
 }
 
 .home-date {
-  font-family: var(--font-mono);
+	font-family: var(--font-mono);
 }
 
 .post-list-item a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .post-title {
-  margin-bottom: -1.5rem;
+	margin-bottom: -1.5rem;
 }
 
 .project-title {
-  margin-bottom: 0.8rem;
+	margin-bottom: 0.8rem;
 }
 
 .see-more a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /* Tags */
 .tag {
-  font-family: var(--font-mono);
-  color: var(--text-secondary);
-  padding: 0.4em 1em;
-  margin-right: 0.5em;
-  border-radius: 1em;
-  background-color: var(--bg-secondary);
-  font-size: 0.7em;
-  font-weight: bold;
-  text-transform: lowercase;
+	font-family: var(--font-mono);
+	color: var(--text-secondary);
+	padding: 0.4em 1em;
+	margin-right: 0.5em;
+	border-radius: 1em;
+	background-color: var(--bg-secondary);
+	font-size: 0.7em;
+	font-weight: bold;
+	text-transform: lowercase;
 }
 
 /* Lists */
 ul.horizontal-list {
-  display: flex;
-  margin-top: 0em;
-  margin-left: -40px;
-  flex-wrap: wrap;
+	display: flex;
+	margin-top: 0em;
+	margin-left: -40px;
+	flex-wrap: wrap;
 }
 
 ul.horizontal-list li {
-  display: inline;
-  margin-right: 1em;
+	display: inline;
+	margin-right: 1em;
 }
 
 ul.horizontal-list li a {
-  text-decoration: none;
-  font-weight: normal;
+	text-decoration: none;
+	font-weight: normal;
 }
 
 /* Credits */
 .credits {
-  font-size: 0.8em;
-  color: var(--text);
-  margin: 8em auto -4em auto;
-  text-align: center;
+	font-size: 0.8em;
+	color: var(--text);
+	margin: 8em auto -4em auto;
+	text-align: center;
 }
 
 .credits a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: bold;
+	color: var(--text);
+	text-decoration: none;
+	font-weight: bold;
 }
 
 .credits a:hover {
-  color: var(--links);
+	color: var(--links);
 }
 
 /* ==========================================================================
-   8. UTILITY CLASSES
-   ========================================================================== */
+	 8. UTILITY CLASSES
+	 ========================================================================== */
 
 .dashed {
-  border-top: 1px var(--text) dashed;
-  margin: 0.5em 0;
+	border-top: 1px var(--text) dashed;
+	margin: 0.5em 0;
 }
 
 mark {
-  background-color: var(--highlight);
+	background-color: var(--highlight);
 }
 
 .text-bold {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .text-upcase {
-  text-transform: uppercase;
-  letter-spacing: 1px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 /* Theme Transition Utility */
@@ -388,83 +388,79 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: all 250ms !important;
-  transition-delay: 0 !important;
+	transition: all 250ms !important;
+	transition-delay: 0 !important;
 }
 
 /* ==========================================================================
-   9. ANIMATIONS & LOADING
-   ========================================================================== */
+	 9. ANIMATIONS & LOADING
+	 ========================================================================== */
 
 /* Turbo Progress Bar */
 .turbo-progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 2px;
-  background-color: #6366f1;
-  z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 2px;
+	background-color: #6366f1;
+	z-index: 9999;
 }
 
 /* Content Fading */
 .content-changing main,
 .content-changing .content,
 .content-changing article {
-  opacity: 0.85; /* Slightly more pronounced fade */
-  transition: opacity 0.25s ease; /* Extended from 0.15s to 0.25s */
+	opacity: 0.85; /* Slightly more pronounced fade */
+	transition: opacity 0.25s ease; /* Extended from 0.15s to 0.25s */
 }
 
 .page-exiting,
 .page-entering,
 .turbo-loading {
-  /* Reset any previously defined styles */
+	/* Reset any previously defined styles */
 }
 
 @keyframes fadeIn {
-  from { opacity: 0.85; }
-  to { opacity: 1; }
+	from { opacity: 0.85; }
+	to { opacity: 1; }
 }
 
 /* ==========================================================================
-   10. MEDIA QUERIES
-   ========================================================================== */
+	 10. MEDIA QUERIES
+	 ========================================================================== */
 
 @media screen and (max-width: 600px) {
-  body {
-    font-size: 1.05rem;
-    line-height: 1.75;
-  }
-  .home-date {
-    display: none;
-  }
+	body {
+		font-size: 1.05rem;
+		line-height: 1.75;
+	}
+	.home-date {
+		display: none;
+	}
 }
 
+@media screen and (min-width: 600px) {
+	.wave {
+			max-width: 100%;
+			stroke: var(--links);
+			stroke-width: 4px;
+			fill: none;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			position: absolute;
+			/* The core properties for the dash-based animation */
+			stroke-dasharray: 1000px;
+			stroke-dashoffset: 1000px; /* Starts completely hidden (offset equals array length) */
+			/* Defines the animation speed and curve */
+			transition: stroke-dashoffset 1.5s cubic-bezier(0.16, 0, 0.1, 0.99);
+			margin-top: 24px;
+	}
 
-/* ==========================================================================
-   11. SQUIGGLY UNDERLINE
-   ========================================================================== */
-
-
-.wave {
-    max-width: 100%;
-    stroke: var(--links);
-    stroke-width: 4px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    position: absolute;
-    /* The core properties for the dash-based animation */
-    stroke-dasharray: 1000px;
-    stroke-dashoffset: 1000px; /* Starts completely hidden (offset equals array length) */
-    /* Defines the animation speed and curve */
-    transition: stroke-dashoffset 1.5s cubic-bezier(0.16, 0, 0.1, 0.99);
-    margin-top: 24px;
-}
-
-.menu .wave {
-    margin-left: -5px;
-}
-.menu:hover .wave {
-    /* Animates the line to appear by reducing the offset */
-    stroke-dashoffset: 850px;
+	.menu .wave {
+			margin-left: -5px;
+	}
+	.menu:hover .wave {
+			/* Animates the line to appear by reducing the offset */
+			stroke-dashoffset: 850px;
+	}
 }
