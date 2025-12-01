@@ -438,3 +438,33 @@ html.transition *:after {
     display: none;
   }
 }
+
+
+/* ==========================================================================
+   11. SQUIGGLY UNDERLINE
+   ========================================================================== */
+
+
+.wave {
+    max-width: 100%;
+    stroke: var(--links);
+    stroke-width: 4px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    position: absolute;
+    /* The core properties for the dash-based animation */
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px; /* Starts completely hidden (offset equals array length) */
+    /* Defines the animation speed and curve */
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.16, 0, 0.1, 0.99);
+    margin-top: 24px;
+}
+
+.menu .wave {
+    margin-left: -5px;
+}
+.menu:hover .wave {
+    /* Animates the line to appear by reducing the offset */
+    stroke-dashoffset: 850px;
+}
