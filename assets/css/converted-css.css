@@ -464,3 +464,13 @@ html.transition *:after {
 			stroke-dashoffset: 850px;
 	}
 }
+
+@media print {
+  body {
+    font-size: 1rem;
+    color: black;
+  }
+  .w {
+	max-width: 600px;
+	}
+ }
