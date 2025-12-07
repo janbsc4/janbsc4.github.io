@@ -11,8 +11,8 @@
 	--light-bg: #FFF;
 	--light-bg-secondary: #f3f4f6;
 	--light-headings: #1e293b;
-	--light-text: #374151;
-	--light-text-secondary: #6b7280;
+	--light-text: #2d3542;
+	--light-text-secondary: #4c5a6f;
 	--light-links: #6366f1;
 	--light-highlight: #FFECB2;
 	--light-code-text: #9D174D;
@@ -120,7 +120,7 @@ p, strong, b, em, small, li, hr, table {
 figcaption {
 	font-style: italic;
 	text-align: center;
-	color: var(--dark-text-secondary);
+	color: var(--text-secondary);
 }
 
 a {
