@@ -118,7 +118,6 @@ p, strong, b, em, small, li, hr, table {
 }
 
 figcaption {
-	font-style: italic;
 	text-align: center;
 	color: var(--text-secondary);
 }
