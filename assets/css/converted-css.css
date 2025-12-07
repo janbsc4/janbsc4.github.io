@@ -466,11 +466,11 @@ html.transition *:after {
 }
 
 @media print {
-  body {
-    font-size: 1rem;
-    color: black;
-  }
-  .w {
+	body {
+		font-size: 12px;
+		color: black;
+	}
+	.w {
 	max-width: 600px;
 	}
  }
