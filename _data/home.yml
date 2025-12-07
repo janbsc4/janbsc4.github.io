@@ -51,7 +51,7 @@ footer_entries:
   - title: rss
     url: feed.xml
     
-  - title: rss?
+  - title: follow
     url: how-to-follow-a-blog
 
 misc_entries:
