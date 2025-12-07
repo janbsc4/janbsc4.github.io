@@ -6,7 +6,7 @@ permalink: /cache-list.json
 	"/",
 	"/assets/css/converted-css.css",
 	"/assets/js/turbo-config.js",
-	"/assets/favicon/site.webmanifest"
+	"/site.webmanifest"
 	{%- for page in site.pages -%}
 		{%- if page.url -%}
 			,"{{ page.url | relative_url }}"
