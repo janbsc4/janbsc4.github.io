@@ -466,10 +466,13 @@ html.transition *:after {
 
 @media print {
 	body {
-		font-size: 12px;
+		font-size: 13px;
 		color: black;
 	}
 	.w {
 	max-width: 600px;
+	}
+	.theme-toggle {
+		display: none;
 	}
  }
