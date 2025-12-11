@@ -360,6 +360,12 @@ ul.horizontal-list li a {
 	color: var(--links);
 }
 
+
+.wave-path {
+  stroke: none;
+  fill: none;
+}
+
 /* ==========================================================================
 	 8. UTILITY CLASSES
 	 ========================================================================== */
@@ -442,7 +448,7 @@ html.transition *:after {
 	.wave {
 			max-width: 100%;
 			stroke: var(--links);
-			stroke-width: 4px;
+			stroke-width: 3px;
 			fill: none;
 			stroke-linecap: round;
 			stroke-linejoin: round;
@@ -454,7 +460,6 @@ html.transition *:after {
 			transition: stroke-dashoffset 1.5s cubic-bezier(0.16, 0, 0.1, 0.99);
 			margin-top: 24px;
 	}
-
 	.menu .wave {
 			margin-left: -5px;
 	}
