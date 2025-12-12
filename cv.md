@@ -2,7 +2,7 @@
 layout: post
 title: CV
 ---
-Experienced account manager and team lead focused on client relationship management and strategic project delivery. I've managed international accounts for Volkswagen Group at Credera, leading cross-functional teams and driving initiatives that generated seven-figure annual revenue. Recently completed a sabbatical; available immediately full-time in Barcelona.
+Experienced account manager and team lead focused on client relationship management and strategic project delivery. I've managed international accounts for Volkswagen Group at [Credera](https://www.credera.com), leading cross-functional teams and driving initiatives that generated seven-figure annual revenue. Recently completed a sabbatical; available immediately full-time in Barcelona.
 
 ## Skills
 
