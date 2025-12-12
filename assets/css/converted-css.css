@@ -467,9 +467,10 @@ html.transition *:after {
 	body {
 		font-size: 13px;
 		color: black;
+		line-height: 1.6;
 	}
 	.w {
-	max-width: 600px;
+	max-width: 580px;
 	}
 	.theme-toggle {
 		display: none;
