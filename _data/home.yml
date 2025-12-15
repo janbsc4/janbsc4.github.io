@@ -47,9 +47,6 @@ footer_entries:
 
   - title: github
     url: https://github.com/janbsc4
-
-  - title: rss
-    url: feed.xml
     
   - title: follow
     url: how-to-follow-a-blog
