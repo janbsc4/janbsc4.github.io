@@ -60,4 +60,12 @@
 
   <!-- Goatcounter -->
   <script data-goatcounter="https://jan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+  {% if page.ref %}
+  {% assign posts=site.posts | where:"ref", page.ref %}
+  {% for post in posts %}
+    <link rel="alternate" hreflang="{{ post.lang }}" href="{{ site.url }}{{ post.url }}" />
+  {% endfor %}
+  {% endif %}
 </head>

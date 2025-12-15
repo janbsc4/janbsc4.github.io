@@ -4,17 +4,47 @@ layout: default
 
 <header>
 {% if site.theme_config.show_navbar == true %}
-  {% include horizontal_list.html collection=site.data.home.navbar_entries %}
-  <div class="dashed"></div>
+	{% include horizontal_list.html collection=site.data.home.navbar_entries %}
+	<div class="dashed"></div>
 {% endif %}
 </header>
 <h1 class="post-title">{{ page.title }}</h1>
 {% include date_and_social_share.html %}
 {{ content }}
 
+{% if page.ref %}
+	{% assign translations = site.posts | where:"ref", page.ref | sort: 'lang' %}
+	{% assign has_translation = false %}
+	{% for post in translations %}
+		{% if post.lang != page.lang %}
+			{% assign has_translation = true %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+	{% if has_translation %}
+		<div class="language-switcher">
+			{% for post in translations %}
+				{% if post.lang != page.lang %}
+					{% case post.lang %}
+					{% when 'en' %}
+						{% assign flag_emoji = "🇬🇧" %}
+						{% assign read_in_message = "Read in " %}						
+					{% when 'es' %}
+						{% assign flag_emoji = "🇪🇸" %}
+						{% assign read_in_message = "Leer en " %}
+					{% else %}
+						{% assign flag_emoji = post.lang | upcase %} 
+					{% endcase %}
+					<a href="{{ post.url }}" class="{{ post.lang }}">{{ read_in_message }}{{ post.lang | upcase }} {{ flag_emoji }}</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+	{% endif %}
+{% endif %}
+
 {% if site.theme_config.show_footer == true %}
-  <footer>
-    <div class="dashed"></div>
-    {% include horizontal_list.html collection=site.data.home.footer_entries %}
-  </footer>
+	<footer>
+		<div class="dashed"></div>
+		{% include horizontal_list.html collection=site.data.home.footer_entries %}
+	</footer>
 {% endif %}

@@ -42,3 +42,17 @@ plugins:
 
 feed:
   path: feed.xml
+
+defaults:
+  # Default for English (root _posts)
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      lang: "en"
+  # Default for Spanish (inside _posts/es/)
+  - scope:
+      path: "_posts/es"
+    values:
+      lang: "es"
+      permalink: /es/:title/
