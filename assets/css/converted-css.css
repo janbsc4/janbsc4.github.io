@@ -105,6 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+	line-height: 1.4em;
 	padding-bottom: 0.5rem;
 }
 
@@ -451,11 +452,15 @@ html.transition *:after {
 		font-size: 1.05rem;
 		line-height: 1.75;
 	}
-	.home-date {
-		display: none;
+
+	h1 {
+		line-height: 1.3em;
 	}
 	img {
 	max-width: 100%;
+	}
+	.home-date {
+		display: none;
 	}
 }
 
@@ -464,7 +469,6 @@ html.transition *:after {
 				transform: scaleX(1);
 		}
 }
-
 
 @media print {
 	body {
