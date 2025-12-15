@@ -48,6 +48,6 @@ If you have blog recommendations for me, please send them over.
 
 Happy reading!
 
-<hr>
+---
 [^1]: Maybe you don’t have or don't want the particular social media that a blog uses. Maybe the blog posts would get buried by the algorithm. Maybe you would miss them if you didn't check in on the app at the right time.
 [^2]: For Substack you need to make sure you are on the correct URL when you share. It should look like username.substack.com
