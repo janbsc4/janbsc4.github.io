@@ -3,10 +3,10 @@ navbar_entries:
     url: /
 
   - title: blog
-    url: blog
+    url: /blog
 
   - title: cv
-    url: cv
+    url: /cv
 
 project_entries:
   - title: Strom
@@ -49,7 +49,7 @@ footer_entries:
     url: https://github.com/janbsc4
     
   - title: follow
-    url: how-to-follow-a-blog
+    url: /how-to-follow-a-blog
 
 misc_entries:
   - title: this is an example vertical list
