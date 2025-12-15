@@ -209,7 +209,7 @@ blockquote p:last-child {
 
 /* Images */
 img {
-	max-width: 50%;
+	max-width: 60%;
 	display: block;
 	margin: 1.5rem auto;
 	border-radius: 16px;
@@ -453,6 +453,9 @@ html.transition *:after {
 	}
 	.home-date {
 		display: none;
+	}
+	img {
+	max-width: 100%;
 	}
 }
 
