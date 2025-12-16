@@ -35,7 +35,7 @@ layout: default
 					{% else %}
 						{% assign flag_emoji = post.lang | upcase %} 
 					{% endcase %}
-					<a href="{{ post.url }}" class="{{ post.lang }}">{{ read_in_message }}{{ post.lang | upcase }} {{ flag_emoji }}</a>
+					<a href="{{ post.url }}" class="{{ post.lang }}">{{ read_in_message }}{{ post.lang | upcase }} {{ flag_emoji }}</a><br>
 				{% endif %}
 			{% endfor %}
 		</div>
