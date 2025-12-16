@@ -37,11 +37,11 @@ Leftist hyper-liberals and classical liberals have common ancestors and they mig
 
 Gray even argues in his book *The New Leviathans*, that that the root of liberalism is Christianism, which goes back 2.000 years. He argues that the defining ideas of liberal thought are continuations of Christian monotheism. 
 
-In Christianity, greed is treated as a serious moral failing. Therefore, accounting for the Christian roots of liberalism, it doesn’t seem so surprising if the scapegoat that hyper-liberals found could be accused of greed.
-
 > The love of money is the root of all kinds of evil.
 > 
 > New Testament 1 Timothy 6:10
+
+In Christianity, greed is treated as a serious moral failing. Given the Christian roots of liberalism and the tendency for ritualistic scapegoating to reinforce ingroup unity, a scapegoat accused of greed would be politically irresistible.
 
 We now have all the components for a better answer to our initial question: why did Barcelona implement a rent-control policy that was doomed to fail? Why did opinion leaders omit the toxic side effects of previous rent-control implementations? And what about our monkeys—have they noticed the tutorial videos?
 

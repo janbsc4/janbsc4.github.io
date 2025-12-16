@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Draft: Do No Economic Harm"
+title: "DRAFT: Do No Economic Harm"
 category: hidden
 ---
 The economy is often treated as a giant mechanism to be managed and controlled, but this view requires a monumental level of intellectual hubris. Economic intervention, like imposing price controls or handing out subsidies, inevitably stems from the naive belief that one person or small group can grasp and manipulate a system of billions of variables. As we proceed, we will challenge this belief and demonstrate why the humility to not intervene is the highest form of economic wisdom.
