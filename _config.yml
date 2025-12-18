@@ -56,3 +56,13 @@ defaults:
     values:
       lang: "es"
       permalink: /es/:title/
+  - scope:
+      path: "_posts/de"
+    values:
+      lang: "de"
+      permalink: /de/:title/
+  - scope:
+      path: "_posts/cat"
+    values:
+      lang: "cat"
+      permalink: /cat/:title/
