@@ -22,20 +22,32 @@ layout: default
 		{% endif %}
 	{% endfor %}
 	{% if has_translation %}
+	<hr>
 		<div class="language-switcher">
+			{% assign translation_count = 0 %}
 			{% for post in translations %}
 				{% if post.lang != page.lang %}
+					{% assign translation_count = translation_count | plus: 1 %}
+				{% endif %}
+			{% endfor %}
+			
+			{% assign current_index = 0 %}
+			{% for post in translations %}
+				{% if post.lang != page.lang %}
+					{% assign current_index = current_index | plus: 1 %}
 					{% case post.lang %}
 					{% when 'en' %}
-						{% assign flag_emoji = "🇬🇧" %}
-						{% assign read_in_message = "Read in " %}						
+						{% assign read_in_message = "Read in English" %}
+					{% when 'de' %}
+						{% assign read_in_message = "Auf Deutsch lesen" %}
 					{% when 'es' %}
-						{% assign flag_emoji = "🇪🇸" %}
-						{% assign read_in_message = "Leer en " %}
+						{% assign read_in_message = "Leer en Castellano" %}
+					{% when 'cat' %}
+						{% assign read_in_message = "Llegir en Català" %}
 					{% else %}
-						{% assign flag_emoji = post.lang | upcase %} 
+						{% assign read_in_message = post.lang | upcase %}
 					{% endcase %}
-					<a href="{{ post.url }}" class="{{ post.lang }}">{{ read_in_message }}{{ post.lang | upcase }} {{ flag_emoji }}</a><br>
+					<a href="{{ post.url }}" class="{{ post.lang }}">{{ read_in_message }}</a>{% if current_index < translation_count %} - {% endif %}
 				{% endif %}
 			{% endfor %}
 		</div>
