@@ -1,18 +1,18 @@
-{% if site.posts.size > 0 %}
+{%- assign visible_posts = site.posts | where_exp: "item", "item.category != 'hidden'" -%}
+
+{% if visible_posts.size > 0 %}
   <ul>
-    {% for post in site.posts limit: 5 %}
-      {% unless post.categories contains "hidden" %}
+    {% for post in visible_posts limit: 5 %}
       <li class="post-list-item">
         <span class="home-date">
           {{ post.date | date: site.theme_config.date_format }}:
         </span>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </li>
-      {% endunless %}
     {% endfor %}
   </ul>
   
-  {% if site.posts.size > 5 %}
+  {% if visible_posts.size > 5 %}
     <p class="see-more">
       <a href="/blog" class="menu wave-link">See all posts →</a>
     </p>
