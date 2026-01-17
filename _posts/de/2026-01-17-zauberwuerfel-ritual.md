@@ -30,6 +30,7 @@ Während ich das Links-Rechts politische Paar mimetischer Doppelgänger erkannte
 In meinem Kopf waren die Unterschiede zwischen Linken und klassischen Liberalen so groß, dass ich nicht auf die Idee gekommen wäre zu untersuchen, was sie gemeinsam haben. Und das, obwohl – peinlicherweise – in den USA beide „Liberals“ genannt werden. Das änderte sich erst, als ich kürzlich auf den zeitgenössischen Philosophen John Gray stieß. Gray untersucht deren gemeinsame Wurzeln in seinen neueren Büchern und Essays. Er identifiziert die Philosophie von John Stuart Mill (1806-1873) als eine der gemeinsamen Wurzeln von klassischen Liberalen und linken Hyperliberalen.
 
 > „Teile seines Werks ‚Über die Freiheit‘ (1859) lesen sich wie die Fantasie eines Übermenschen, betrachtet durch ein gutbürgerlich-moralisierendes Prisma. Für Mill bedeutete Fortschritt die Förderung eines höheren Menschentyps, der ‚Individualität‘ an den Tag legte. Das Ziel für jeden war es, sich als einzigartige Persönlichkeit zu verwirklichen. Übertragen durch die Bloomsbury-Intelligenzija und widerhallend in der Kulturrevolution der Sechzigerjahre, ist Selbstverwirklichung zum zentralen liberalen Wert geworden. Menschen müssen in der Lage sein, aus sich zu machen, was immer sie wollen.“
+>
 > – John Gray in [Why I am not a post-liberal](https://www.newstatesman.com/ideas/2025/10/how-to-save-british-liberalism)
 
 Linke Hyperliberale und klassische Liberale haben gemeinsame intellektuelle Vorfahren und könnten in der Gegenwart mimetische Doppelgänger sein. Beide Lager teilen einen fundamentalen, fast religiösen Glauben an den Rationalismus und den Fortschritt – die Idee, dass die Geschichte eine Richtung hat. Sie unterscheiden sich darin, wie sie diesen Fortschritt fördern wollen, aber sie glauben beide fest daran.
@@ -37,6 +38,7 @@ Linke Hyperliberale und klassische Liberale haben gemeinsame intellektuelle Vorf
 Gray argumentiert in seinem Buch *The New Leviathans* sogar, dass die Wurzel des Liberalismus das Christentum ist, was über 2.000 Jahre zurückreicht. Er behauptet, dass die prägenden Ideen des liberalen Denkens Fortsetzungen des christlichen Monotheismus sind.
 
 > „Denn Geldgier ist eine Wurzel alles Bösen.“
+>
 > — 1. Timotheus 6,10 (Luth)
 
 Im Christentum wird Habgier als schwerwiegendes moralisches Versagen behandelt. Da der Liberalismus aus einem christlichen Moralsystem hervorgegangen ist und da das rituelle Sündenbock-Prinzip eine mächtige Kraft bleibt, wird jemand, dem man Gier vorwerfen kann, zum idealen Sündenbock Kandidaten.

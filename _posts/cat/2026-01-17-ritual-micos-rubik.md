@@ -30,6 +30,7 @@ Mentre reconeixia la parella política esquerra-dreta com a dobles mimètics, pe
 Al meu cap, les diferències entre l'esquerra i els liberals clàssics eren tan grans que no se m'hauria acudit investigar què tenen en comú. I això que, per vergonya meva, als EUA tots dos reben el nom de "liberals". Això no va canviar fins que fa poc vaig descobrir el filòsof contemporani John Gray. Gray investiga les arrels comunes entre els d'esquerres i els liberals clàssics en els seus llibres i assajos més recents. Identifica la filosofia de John Stuart Mill (1806-1873) com una de les arrels comunes.
 
 > "Parts de la seva obra 'Sobre la llibertat' (1859) es llegeixen com la fantasia d'un superhome, vista a través d'un prisma moralitzador de classe mitjana. Per a Mill, el progrés significava el foment d'un tipus d'home superior que demostrava 'individualitat'. L'objectiu de cadascú era realitzar-se com a personalitat única. Transmesa a través de la intel·lectualitat de Bloomsbury i ressonant en la revolució cultural dels seixanta, l'autorealització s'ha convertit en el valor liberal central. La gent ha de ser capaç de fer de si mateixa el que vulgui."
+>
 > – John Gray a [Why I am not a post-liberal](https://www.newstatesman.com/ideas/2025/10/how-to-save-british-liberalism)
 
 Els hiperliberals d'esquerres i els liberals clàssics tenen avantpassats intel·lectuals comuns i podrien ser dobles mimètics en el present. Ambdós bàndols comparteixen una fe fonamental, gairebé religiosa, en el racionalisme i el progrés: la idea que la història té una direcció. Es diferencien en com volen fomentar aquest progrés, però tots dos hi creuen fermament.
@@ -37,6 +38,7 @@ Els hiperliberals d'esquerres i els liberals clàssics tenen avantpassats intel�
 Gray fins i tot argumenta en el seu llibre *The New Leviathans* que l'arrel del liberalisme és el cristianisme, que es remunta a més de 2.000 anys. Afirma que les idees formadores del pensament liberal són continuacions del monoteisme cristià.
 
 > "L’amor als diners és l’arrel de tots els mals."
+>
 > — 1 Timoteu 6,10
 
 En el cristianisme, la cobdícia es tracta com un fracàs moral greu. Com que el liberalisme ha sorgit d'un sistema moral cristià i com que el principi del boc expiatori ritual continua sent una força poderosa, algú a qui se li pugui retreure la cobdícia es converteix en el candidat ideal a boc expiatori.
