@@ -2,7 +2,7 @@
 layout: post
 title: "El Cubo de Rubik Político"
 lang: es
-ref: no
+ref: politics-rubiks
 category: hidden
 ---
 Cuando vivía en Berlín, la ciudad introdujo una legislación para controlar los precios del alquiler. Como consecuencia, la oferta de viviendas en alquiler cayó y se volvió cada vez más difícil encontrar apartamento. El problema llegó al punto de que, por cada piso nuevo en el mercado, cientos de personas solicitaban alquilarlo. He estado en tantas visitas de pisos donde, al llegar, ya se estaba formando una [cola](https://www.reddit.com/r/germany/comments/te5wfz/just_a_normal_line_for_an_apartment_viewing_in/) que llegaba hasta la calle. Cuando el mercado legal no puede satisfacer la demanda, la gente encuentra "soluciones creativas". Quienes tenían apartamentos para alquilar podían elegir entre tantos solicitantes que las exigencias no monetarias aumentaron. Esto conduce al abuso: ¿Quieres el piso? Tienes que pagar la reforma de tu bolsillo antes de mudarte. Aparecieron mercados negros donde se puede alquilar ilegalmente, por ejemplo, un sótano mohoso por precios astronómicos. La situación es desesperada.
