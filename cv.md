@@ -2,7 +2,7 @@
 layout: post
 title: CV
 ---
-Experienced account manager and team lead focused on client relationship management and strategic project delivery. I've managed international accounts for Volkswagen Group at [Credera](https://www.credera.com), leading cross-functional teams and driving initiatives that generated seven-figure annual revenue. Recently completed a sabbatical; available immediately full-time in Barcelona.
+Experienced account manager and team lead focused on client relationship management and strategic project delivery. I've managed international accounts for Volkswagen Group at [Credera](https://www.credera.com), leading cross-functional teams and driving initiatives that generated seven-figure annual revenue. Recently started a new position as Account Manager at [Service Club](https://serviceclub.com).
 
 ## Skills
 
@@ -27,19 +27,17 @@ Experienced account manager and team lead focused on client relationship managem
 
 ## Experience
 
-### Professional Sabbatical & Independent Projects [OCT 2024 - NOW]
-Personal development and technical projects, including building an open-
-source smart heating system.
+### Account Manager DACH - [Service Club](https://serviceclub.com) [JAN 2026 - NOW]
+Expanding operations into the German market.
 
-### Team & Project Lead Tracking - Credera [2021 - OCT 2024]
-Led a team of seven consultants delivering digital projects for the
-Volkswagen Group in Agile environments. Managed cross-functional
-teams and drove strategic initiatives generating seven-figure annual
-revenue, while mentoring junior consultants.
+### Professional Sabbatical & Independent Projects [OCT 2024 - JAN 2026]
+Personal development and technical projects, including building an open-source smart heating system.
+
+### Team & Project Lead Tracking - [Credera](https://www.credera.com) [2021 - OCT 2024]
+Led a team of seven consultants delivering digital projects for the Volkswagen Group in Agile environments. Managed cross-functional teams and drove strategic initiatives generating seven-figure annual revenue, while mentoring junior consultants.
 
 ### Online Marketing Management - Finment [2019 - 2020]
-Drove digital marketing growth by improving SEO rankings, developing
-data-driven content strategies with Ahrefs, automating email campai
+Drove digital marketing growth by improving SEO rankings, developing data-driven content strategies with Ahrefs, automating email campai
 
 ## Education
 
