@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "El Cubo de Rubik Político"
+title: "★ El ritual de los monos con cubo de Rubik"
 lang: es
 ref: politics-rubiks
 category: hidden
