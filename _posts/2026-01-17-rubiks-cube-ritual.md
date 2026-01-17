@@ -3,7 +3,6 @@ layout: post
 title: "&#9733; The Rubik’s Cube Monkey Ritual"
 lang: en
 ref: politics-rubiks
-category: hidden
 ---
 When I lived in Berlin, the city introduced legislation to control rent prices. As a consequence, the supply of housing for rent fell, and it became increasingly hard to find an apartment. The problem became that for every new apartment on the market, hundreds of people applied to rent it. I’ve been to so many flat viewings where, when I arrived, a [queue](https://www.reddit.com/r/germany/comments/te5wfz/just_a_normal_line_for_an_apartment_viewing_in/) was already forming all the way to the street. When the legal market can’t satisfy demand, people find "creative workarounds". The people who had apartments to rent out could pick among so many applicants, and so the non-monetary demands increased. This leads to abuse: You want the flat? You have to renovate out of your pocket before moving in. Black markets appeared, where you can illegally rent, for example, a moldy cellar for astronomical prices. The situation is desperate.
 
