@@ -6,18 +6,18 @@ Experienced account manager and team lead focused on client relationship managem
 
 ## Skills
 
+### Project Management
+- Stakeholder Relations
+- Account Management
+- Project Leadership
+- Team Leadership
+
 ### Digital Marketing & Analytics
 - Custom web analytics implementation (Adobe & Google)
 - Data integration
 - Web personalization and testing
 - Tag management governance
 - Search engine optimization (Ahrefs)
-
-### Project Management
-- Stakeholder Relations
-- Account Management
-- Project Leadership
-- Team Leadership
 
 ### Languages
 - German (Native)
