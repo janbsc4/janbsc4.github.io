@@ -2,7 +2,7 @@
 layout: landing
 title: "Pearl River Delta Trip 2026"
 ---
-<h1>珠三角<br>Pear River Delta Trip</h1>
+<h1>珠三角<br>Pearl River Delta Trip</h1>
 
 <p class="gear">Sony &Alpha;6000 - Vilrox AF 56/1.7 E</p>
 
