@@ -95,7 +95,7 @@ title: "Pearl River Delta Trip 2026"
   <a href="{{ site.baseurl }}/assets/images/2026-Pearl-River-Delta/DSC02997.webp" class="gallery">
     <img class="gallery" src="{{ site.baseurl }}/assets/images/2026-Pearl-River-Delta/DSC02997.webp" alt="placeholder">
   </a>
-  <figcaption>香港黑店 - Hong Kong sketchy hotel</figcaption>
+  <figcaption>香港奇怪酒店 - Hong Kong sketchy hotel</figcaption>
 </figure>
 
 <figure>
@@ -140,12 +140,12 @@ title: "Pearl River Delta Trip 2026"
   <figcaption>小洲村 - Xiaozhou Village</figcaption>
 </figure>
 
-<figure>
+<!-- <figure>
   <a href="{{ site.baseurl }}/assets/images/2026-Pearl-River-Delta/DSC03125.webp" class="gallery">
     <img class="gallery" src="{{ site.baseurl }}/assets/images/2026-Pearl-River-Delta/DSC03125.webp" alt="placeholder">
   </a>
   <figcaption>小洲村 - Xiaozhou Village</figcaption>
-</figure>
+</figure> -->
 
 <figure>
   <a href="{{ site.baseurl }}/assets/images/2026-Pearl-River-Delta/DSC03126.webp" class="gallery">
