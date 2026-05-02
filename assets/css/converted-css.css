@@ -494,14 +494,17 @@ html.transition *:after {
 	}
 	.landing figure {
 		padding: 0;
+		margin: 0;
 	}
 	.landing h1 {
 	font-size: 3rem;
 	text-align: center;
 	font-family: serif;
 	padding-bottom: 2rem;	
-}
-
+	}
+	.gallery {
+		max-height: none;
+	}
 }
 
 @media (hover: hover) and (pointer: fine) {
