@@ -1,6 +1,6 @@
 /* ==========================================================================
-	 1. VARIABLES & CONFIGURATION
-	 ========================================================================== */
+		1. VARIABLES & CONFIGURATION
+		========================================================================== */
 
 :root {
 	/* Typography */
@@ -31,9 +31,9 @@
 }
 
 /* ==========================================================================
-	 2. THEME LOGIC (MAPPING)
-	 Define how variables map to generic theme variables based on attributes
-	 ========================================================================== */
+		2. THEME LOGIC (MAPPING)
+		Define how variables map to generic theme variables based on attributes
+		========================================================================== */
 
 /* Light Theme Mapping */
 html[data-theme="light"] {
@@ -91,9 +91,8 @@ html[data-theme="dark"] {
 }
 
 /* ==========================================================================
-	 3. GLOBAL THEME APPLICATION
-	 Applying the generic variables to HTML elements
-	 ========================================================================== */
+		3. GLOBAL THEME APPLICATION
+		========================================================================== */
 
 html, body {
 	background-color: var(--bg);
@@ -102,29 +101,27 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--headings);
+	margin-top: 1.5em; 
 }
 
 h1 {
 	line-height: 1.4em;
 	padding-bottom: 1rem;
+	margin-top: revert; 
 }
 
-h2 a {
-	color: var(--text);
+h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: var(--headings);
 	text-decoration: none;
 }
 
-p, strong, b, em, small, li, hr, table {
+/*em, small, li, hr, table {
 	color: var(--text);
-}
+}*/
 
 figcaption {
-	text-align: center;
+	/*text-align: center;*/
 	color: var(--text-secondary);
-}
-
-.landing figure {
-	padding: 3em;
 }
 
 a {
@@ -132,19 +129,12 @@ a {
 }
 
 *:target { 
-	background-color: var(--bg-secondary); 
-}
-
-.landing h1 {
-	font-size: 5rem;
-	text-align: center;
-	font-family: serif;
-	padding-bottom: 5rem;	
+	background-color: var(--highlight); 
 }
 
 /* ==========================================================================
-	 4. BASE STYLES & RESET
-	 ========================================================================== */
+		4. BASE STYLES
+		========================================================================== */
 
 html { 
 	height: 100%; 
@@ -159,10 +149,6 @@ body {
 	min-height: 100%;
 }
 
-h2, h3, h4, h5 { 
-	margin-top: 1.5em; 
-}
-
 p { 
 	margin: 1em 0; 
 }
@@ -172,8 +158,8 @@ li {
 }
 
 /* ==========================================================================
-	 5. CONTENT ELEMENTS (Typography, Tables, Images, Code)
-	 ========================================================================== */
+		5. CONTENT ELEMENTS
+		========================================================================== */
 
 /* Horizontal Rules */
 hr { 
@@ -221,20 +207,21 @@ blockquote p:last-child {
 
 /* Images */
 img {
-	max-width: 60%;
-	display: block;
-	margin: 1.5rem auto;
-	border-radius: 16px;
-}
-
-.big-image {
 	max-width: 100%;
 }
 
-.gallery {
-	max-width: 100%;
-	max-height: 50em;
-	border-radius: 0;	
+figure{
+	margin-left: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: top;
+	gap: 1em;
+}
+
+.in-text-figure img {
+	max-width: 40%;
+	border-radius: 10px;
+	margin-left: 0;
 }
 
 /* Code Blocks */
@@ -261,9 +248,30 @@ p code, li code {
 	font-weight: bold;
 }
 
+/* Landing page elements */
+
+.landing figure {
+	padding: 3em;
+	margin: 1.5rem auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.landing h1 {
+	font-size: 5rem;
+	text-align: center;
+	font-family: serif;
+	padding-bottom: 5rem;   
+}
+
+.landing img {
+	max-height: 50em;
+}
+
 /* ==========================================================================
-	 6. LAYOUT & CONTAINERS
-	 ========================================================================== */
+		6. LAYOUT & CONTAINERS
+		========================================================================== */
 
 .w {
 	max-width: 720px;
@@ -274,7 +282,7 @@ p code, li code {
 .landing {
 	max-width: 1300px;
 	margin: 0 auto;
-	padding: 1em;	
+	padding: 1em;   
 }
 
 footer {
@@ -282,8 +290,8 @@ footer {
 }
 
 /* ==========================================================================
-	 7. COMPONENTS
-	 ========================================================================== */
+		7. COMPONENTS
+		========================================================================== */
 
 /* Theme Toggle Button */
 .theme-toggle {
@@ -409,8 +417,8 @@ ul.horizontal-list li a {
 }
 
 /* ==========================================================================
-	 8. UTILITY CLASSES
-	 ========================================================================== */
+		8. UTILITY CLASSES
+		========================================================================== */
 
 .dashed {
 	border-top: 1px var(--text) dashed;
@@ -440,8 +448,8 @@ html.transition *:after {
 }
 
 /* ==========================================================================
-	 9. ANIMATIONS & LOADING
-	 ========================================================================== */
+		9. ANIMATIONS & LOADING
+		========================================================================== */
 
 /* Turbo Progress Bar */
 .turbo-progress-bar {
@@ -473,8 +481,8 @@ html.transition *:after {
 }
 
 /* ==========================================================================
-	 10. MEDIA QUERIES
-	 ========================================================================== */
+		10. MEDIA QUERIES
+		========================================================================== */
 
 @media screen and (max-width: 600px) {
 	body {
@@ -486,24 +494,37 @@ html.transition *:after {
 		line-height: 1.3em;
 		padding-bottom: 0.5rem;
 	}
-	img {
-	max-width: 100%;
+
+	figure {
+		flex-direction: column;
 	}
+
+	.in-text-figure {
+		align-items: flex-start;
+	}
+
+	.in-text-figure img {
+		max-width: 70%;
+	}
+
 	.home-date {
 		display: none;
 	}
+
 	.landing figure {
 		padding: 0;
 		margin: 0;
 		margin-bottom: 3em;
 	}
+	
 	.landing h1 {
 	font-size: 3rem;
 	text-align: center;
 	font-family: serif;
-	padding-bottom: 2rem;	
+	padding-bottom: 2rem;   
 	}
-	.gallery {
+	
+	.landing img {
 		max-height: none;
 	}
 }
@@ -526,4 +547,4 @@ html.transition *:after {
 	.theme-toggle {
 		display: none;
 	}
- }
+	}

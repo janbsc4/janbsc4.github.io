@@ -9,27 +9,27 @@ On some blogs, you can leave your email address and they will email you all thei
 
 There is a convenient way to follow most blogs (including all blogs on Substack[^2], Medium, Bluesky and Mastodon). It’s an old technology called RSS. Think of it as podcasts for reading.
 
-<figure>
+<figure class="in-text-figure">
 	<img
 	src="{{ site.baseurl }}/assets/images/2025-06-09-how-to-follow-a-blog/how-to-follow-blog-3.jpeg"
 	alt="Screenshot of NetNewsWire with some Blogs followed">
-	<figcaption class="image-caption">NetNewsWire with some followed blogs</figcaption>
+	<figcaption>NetNewsWire with some followed blogs</figcaption>
 </figure>
 
 A great RSS app for Apple devices is [NetNewsWire](https://apps.apple.com/us/app/netnewswire-rss-reader/id1480640210). With NetNewsWire installed, following a new blog is as simple as sharing the webpage of the blog to NetNewsWire from your browser.
 
-<figure>
+<figure class="in-text-figure">
 	<img
 	src="{{ site.baseurl }}/assets/images/2025-06-09-how-to-follow-a-blog/how-to-follow-blog-1.jpeg"
 	alt="Screenshot of the iOS share menu opened from Safari on a blog showing the NetNewsWire app icon">
-	<figcaption class="image-caption">1) Tap the share button when visiting a blog you like, then select your RSS app. If it doesn't appear in the list, tap the three dots on the right to find it.</figcaption>
+	<figcaption>1) Tap the share button when visiting a blog you like, then select your RSS app. If it doesn't appear in the list, tap the three dots on the right to find it.</figcaption>
 </figure>
 
-<figure>
+<figure class="in-text-figure">
 	<img
 	src="{{ site.baseurl }}/assets/images/2025-06-09-how-to-follow-a-blog/how-to-follow-blog-2.jpeg"
 	alt="Screenshot of the pop-up menu to add a new feed to NetNewsWire">
-	<figcaption class="image-caption">2) Tap "Add Feed" in the pop-up menu</figcaption>
+	<figcaption>2) Tap "Add Feed" in the pop-up menu</figcaption>
 </figure>
 
 
