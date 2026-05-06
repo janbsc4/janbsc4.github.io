@@ -115,12 +115,7 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
 	text-decoration: none;
 }
 
-/*em, small, li, hr, table {
-	color: var(--text);
-}*/
-
 figcaption {
-	/*text-align: center;*/
 	color: var(--text-secondary);
 }
 
@@ -161,6 +156,10 @@ li {
 		5. CONTENT ELEMENTS
 		========================================================================== */
 
+footer {
+	margin-top: 4rem;
+}
+
 /* Horizontal Rules */
 hr { 
 	margin: 3em 0; 
@@ -183,7 +182,7 @@ hr.page-break:after {
 }
 
 /* Tables */
-table, th, td {
+table {
 	width: 100%;
 	border: thin solid black;
 	border-collapse: collapse;
@@ -213,15 +212,12 @@ img {
 figure{
 	margin-left: 0;
 	display: flex;
-	flex-direction: row;
-	align-items: top;
 	gap: 1em;
 }
 
 .in-text-figure img {
 	max-width: 40%;
 	border-radius: 10px;
-	margin-left: 0;
 }
 
 /* Code Blocks */
@@ -249,11 +245,9 @@ p code, li code {
 }
 
 /* Landing page elements */
-
 .landing figure {
 	padding: 3em;
 	margin: 1.5rem auto;
-	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
@@ -285,10 +279,6 @@ p code, li code {
 	padding: 1em;   
 }
 
-footer {
-	margin-top: 4rem;
-}
-
 /* ==========================================================================
 		7. COMPONENTS
 		========================================================================== */
@@ -304,15 +294,10 @@ footer {
 	right: 0;
 	top: 0;
 	border: 2px transparent solid;
-	outline: none;
 }
 
 .theme-toggle:hover {
 	color: var(--links);
-}
-
-.theme-toggle:focus {
-	outline: none;
 }
 
 /* Post & Project Styles */
@@ -365,7 +350,7 @@ footer {
 /* Lists */
 ul.horizontal-list {
 	display: flex;
-	margin-top: 0em;
+	margin-top: 0;
 	margin-left: -40px;
 	flex-wrap: wrap;
 }
@@ -379,25 +364,6 @@ ul.horizontal-list li a {
 	text-decoration: none;
 	font-weight: normal;
 }
-
-/* Credits */
-.credits {
-	font-size: 0.8em;
-	color: var(--text);
-	margin: 8em auto -4em auto;
-	text-align: center;
-}
-
-.credits a {
-	color: var(--text);
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.credits a:hover {
-	color: var(--links);
-}
-
 
 .menu {
 		position: relative;
@@ -439,45 +405,20 @@ mark {
 }
 
 /* Theme Transition Utility */
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-	transition: all 250ms !important;
-	transition-delay: 0 !important;
-}
-
-/* ==========================================================================
-		9. ANIMATIONS & LOADING
-		========================================================================== */
-
-/* Turbo Progress Bar */
-.turbo-progress-bar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 2px;
-	background-color: #6366f1;
-	z-index: 9999;
-}
-
-/* Content Fading */
-.content-changing main,
-.content-changing .content,
-.content-changing article {
-	opacity: 0.85; /* Slightly more pronounced fade */
-	transition: opacity 0.25s ease; /* Extended from 0.15s to 0.25s */
-}
-
-.page-exiting,
-.page-entering,
-.turbo-loading {
-	/* Reset any previously defined styles */
-}
-
-@keyframes fadeIn {
-	from { opacity: 0.85; }
-	to { opacity: 1; }
+html.transition body,
+html.transition h1,
+html.transition h2,
+html.transition h3,
+html.transition h4,
+html.transition h5,
+html.transition h6,
+html.transition p,
+html.transition a,
+html.transition code,
+html.transition blockquote,
+html.transition hr,
+html.transition mark {
+  transition: background-color 500ms ease, color 150ms ease;
 }
 
 /* ==========================================================================
@@ -499,10 +440,6 @@ html.transition *:after {
 		flex-direction: column;
 	}
 
-	.in-text-figure {
-		align-items: flex-start;
-	}
-
 	.in-text-figure img {
 		max-width: 70%;
 	}
@@ -518,10 +455,10 @@ html.transition *:after {
 	}
 	
 	.landing h1 {
-	font-size: 3rem;
-	text-align: center;
-	font-family: serif;
-	padding-bottom: 2rem;   
+		font-size: 3rem;
+		text-align: center;
+		font-family: serif;
+		padding-bottom: 2rem;   
 	}
 	
 	.landing img {
