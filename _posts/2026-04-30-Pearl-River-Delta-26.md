@@ -1,6 +1,6 @@
 ---
 layout: landing
-title: "Pearl River Delta Trip 2026"
+title: "&#9733; Pearl River Delta Trip 2026"
 ---
 <h1>珠三角<br>Pearl River Delta Trip</h1>
 
