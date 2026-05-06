@@ -1,11 +1,10 @@
 ---
 layout: landing
-title: "&#9733; Pearl River Delta Trip 2026"
+title: "&#x2708; Pearl River Delta Trip 2026"
 ---
 <h1>珠三角<br>Pearl River Delta Trip</h1>
 
 <p class="gear">Sony &Alpha;6000 - Vilrox AF 56/1.7 E</p>
-
 
 <figure>
   <a href="{{ site.baseurl }}/assets/images/2026-Pearl-River-Delta/DSC02849.webp" class="gallery">
