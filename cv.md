@@ -4,43 +4,46 @@ title: CV
 ---
 Experienced account manager and team lead focused on client relationship management and strategic project delivery. I've managed international accounts for Volkswagen Group at [Credera](https://www.credera.com), leading cross-functional teams and driving initiatives that generated seven-figure annual revenue. Recently started a new position as Account Manager at [Service Club](https://serviceclub.com).
 
-## Skills
+## Core Strengths
 
-### Project Management
-- Stakeholder Relations
-- Account Management
-- Project Leadership
-- Team Leadership
-
-### Digital Marketing & Analytics
-- Custom web analytics implementation (Adobe & Google)
-- Data integration
-- Web personalization and testing
-- Tag management governance
-- Search engine optimization (Ahrefs)
-
-### Languages
-- German (Native)
-- Spanish (Native)
-- Catalan (Native)
-- English (Native)
+- Digital marketing and SEO
+- Account management and client growth
+- Marketing analytics and experimentation
+- Team leadership and project delivery
+- Stakeholder communication
 
 ## Experience
 
-### Account Manager DACH - [Service Club](https://serviceclub.com) [JAN 2026 - NOW]
-Expanding operations into the German market.
+### Account Manager, [Service Club](https://serviceclub.com)
+Jan 2026 - Present
+- Supporting growth in the German market
+- Managing client relationships and strategic account development
 
-### Professional Sabbatical & Independent Projects [OCT 2024 - JAN 2026]
-Personal development and technical projects, including building an open-source smart heating system.
+### Professional Sabbatical & Independent Projects
+Oct 2024 - Jan 2026
+- Built personal projects focused on product thinking, systems, and technical experimentation
 
-### Team & Project Lead Tracking - [Credera](https://www.credera.com) [2021 - OCT 2024]
-Led a team of seven consultants delivering digital projects for the Volkswagen Group in Agile environments. Managed cross-functional teams and drove strategic initiatives generating seven-figure annual revenue, while mentoring junior consultants.
+### Team & Project Lead, [Credera](https://www.credera.com)
+2021 - Oct 2024
+- Led a team of seven consultants delivering digital initiatives for Volkswagen Group
+- Managed cross-functional delivery in Agile environments
+- Drove strategic work that contributed to seven-figure annual revenue
+- Mentored junior consultants and supported team growth
 
-### Online Marketing Management - Finment [2019 - 2020]
-Drove digital marketing growth by improving SEO rankings, developing data-driven content strategies with Ahrefs, automating email campai
+### Online Marketing Manager, Finment
+2019 - 2020
+- Improved SEO performance and organic visibility
+- Developed data-informed content strategies using Ahrefs
+- Contributed to digital marketing growth through targeted execution
 
 ## Education
 
-**B.Sc. in Business Administration** - Freie Universität Berlin - 2018
+- B.Sc. in Business Administration, Freie Universität Berlin, 2018
+- High School Diploma, German School of Barcelona, 2013
 
-**High School Diploma** - German School of Barcelona - 2013
+## Languages
+
+- German — Native
+- Spanish — Native
+- Catalan — Native
+- English — Native
