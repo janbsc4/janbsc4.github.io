@@ -2,7 +2,7 @@
 layout: post
 title: CV
 ---
-Experienced account manager and team lead focused on client relationship management and strategic project delivery. I've managed international accounts for Volkswagen Group at [Credera](https://www.credera.com), leading cross-functional teams and driving initiatives that generated seven-figure annual revenue. Recently started a new position as Account Manager at [Service Club](https://serviceclub.com).
+Marketing-focused account manager and team lead with experience in client growth, digital strategy, and cross-functional delivery. I have managed international accounts for Volkswagen Group at [Credera](https://www.credera.com), led teams in agile environments, and contributed to initiatives that generated seven-figure annual revenue. I am currently expanding my work in marketing and account management at [Service Club](https://serviceclub.com).
 
 ## Core Strengths
 
