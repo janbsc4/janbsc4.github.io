@@ -47,6 +47,7 @@
   --light-ink: #241a18;
   --light-ink-muted: #6d5048;
   --light-accent: #9c382a;
+  --light-selection: rgb(156 56 42 / 28%);
   --light-rule: #b97867;
   --light-focus: #0c5a52;
   --light-media: #ead8cb;
@@ -57,6 +58,7 @@
   --dark-ink: #f8eee5;
   --dark-ink-muted: #c7afa6;
   --dark-accent: #ff9d86;
+  --dark-selection: rgb(255 157 134 / 32%);
   --dark-rule: #6f4b43;
   --dark-focus: #73d1c1;
   --dark-media: #181311;
@@ -70,6 +72,7 @@ html[data-theme="light"] {
   --ink: var(--light-ink);
   --ink-muted: var(--light-ink-muted);
   --accent: var(--light-accent);
+  --selection: var(--light-selection);
   --rule: var(--light-rule);
   --focus: var(--light-focus);
   --media: var(--light-media);
@@ -83,6 +86,7 @@ html[data-theme="dark"] {
   --ink: var(--dark-ink);
   --ink-muted: var(--dark-ink-muted);
   --accent: var(--dark-accent);
+  --selection: var(--dark-selection);
   --rule: var(--dark-rule);
   --focus: var(--dark-focus);
   --media: var(--dark-media);
@@ -97,6 +101,7 @@ html[data-theme="dark"] {
     --ink: var(--dark-ink);
     --ink-muted: var(--dark-ink-muted);
     --accent: var(--dark-accent);
+    --selection: var(--dark-selection);
     --rule: var(--dark-rule);
     --focus: var(--dark-focus);
     --media: var(--dark-media);
@@ -112,6 +117,7 @@ html[data-theme="dark"] {
     --ink: var(--light-ink);
     --ink-muted: var(--light-ink-muted);
     --accent: var(--light-accent);
+    --selection: var(--light-selection);
     --rule: var(--light-rule);
     --focus: var(--light-focus);
     --media: var(--light-media);
@@ -143,8 +149,8 @@ body {
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--surface);
+  background: var(--selection);
+  color: inherit;
 }
 
 .site-shell {
