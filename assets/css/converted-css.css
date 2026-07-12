@@ -36,7 +36,7 @@
   --font-editorial: "Newsreader", Georgia, "Times New Roman", serif;
   --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
-  --shell-width: 880px;
+  --shell-width: 960px;
   --wide-shell-width: 1320px;
   --reading-width: 66ch;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -554,7 +554,8 @@ html[data-theme="dark"] .theme-toggle__rays {
 }
 
 .post-list-item .title-symbol--essay {
-  font-size: 0.64em;
+  font-size: 0.78em;
+  vertical-align: 0.08em;
 }
 
 .post-list-item .title-symbol--trip {
@@ -772,23 +773,23 @@ li code {
   text-transform: uppercase;
 }
 
-/* CV and portfolio */
-.page-cv .post-body h2 {
+/* About and portfolio */
+.page-about .post-body h2 {
   padding-bottom: 0.55rem;
   border-bottom: 1px solid var(--ink);
 }
 
-.page-cv .post-body h3 {
+.page-about .post-body h3 {
   margin-bottom: 0.25rem;
 }
 
-.page-cv .post-body h3 + p {
+.page-about .post-body h3 + p {
   margin-bottom: 0.5rem;
   color: var(--accent);
   font: 600 0.72rem/1.5 var(--font-mono);
 }
 
-.page-cv .post-body h3 + p + ul {
+.page-about .post-body h3 + p + ul {
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--rule);
 }
@@ -828,7 +829,7 @@ li code {
   margin-bottom: 0;
 }
 
-.page-cv .post-body > p:first-child:first-letter,
+.page-about .post-body > p:first-child:first-letter,
 .page-you-are-offline .post-body > p:first-child:first-letter {
   float: none;
   margin: 0;

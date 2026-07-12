@@ -1,9 +1,58 @@
 ---
 layout: post
 title: About
+description: About Jan Balanyà Scholl, a marketer and account manager based in Barcelona.
 ---
-I'm a marketer and armchair economist based in Barcelona. Purveyor of dubious takes. I like hamburgers and building nice websites. Together with friends I work on [Strom](https://janbalanya.com/strom-docs/).
+I was born in Barcelona and went to the German School of Barcelona. After graduating, I moved to Berlin, where I studied, lived, and worked for ten years before returning to Barcelona in 2023. In 2025, I met the amazing [Feifei](https://yingfeilu.github.io).
 
-You can find me on [LinkedIN](https://linkedin.com/in/jan-balanya-scholl) or check out my [CV](/cv).
+Professionally, I like taking things that are messy and making them work. That has been the throughline of my career so far.
 
-![Patapon Gif](/assets/images/ponpon.gif){: .ponpon width="341" height="341" loading="lazy" decoding="async"}
+At [Credera](https://www.credera.com), I managed international accounts for Volkswagen Group. Much of the job involved translating big strategic ideas into things that could survive contact with a sprint board and the legal department, while leading a team and helping my teammates develop.
+
+These days I am doing the same kind of work at [Service Club](https://serviceclub.com), building out marketing and account management as the company grows. I have a good eye for detail and an even better instinct for spotting the small thing that is about to become a big problem before it is too late.
+
+## Core Strengths
+
+- Digital marketing
+- Marketing analytics
+- Team leadership & project delivery
+- Account management & client growth
+- Stakeholder communication
+
+## Experience
+
+### Account Manager, [Service Club](https://serviceclub.com)
+Jan 2026 - Present
+- Supporting growth in the German market
+- Managing client relationships and strategic account development
+
+### Professional Sabbatical & Independent Projects
+Oct 2024 - Jan 2026
+- Built personal projects focused on product thinking, systems, and technical experimentation
+
+### Team & Project Lead, [Credera](https://www.credera.com)
+2021 - Oct 2024
+- Led a team of seven consultants delivering digital initiatives for Volkswagen Group
+- Managed cross-functional delivery in Agile environments
+- Drove strategic work that contributed to seven-figure annual revenue
+- Mentored junior consultants and supported team growth
+
+### Online Marketing Manager, Finment
+2019 - 2020
+- Improved SEO performance and organic visibility
+- Developed data-informed content strategies using Ahrefs
+- Contributed to digital marketing growth through targeted execution
+
+## Education
+
+- B.Sc. in Business Administration, Freie Universität Berlin, 2018
+- High School Diploma, German School of Barcelona, 2013
+
+## Languages
+
+- German, native
+- Spanish, native
+- Catalan, native
+- English, native
+
+You can also find me on [LinkedIn](https://linkedin.com/in/jan-balanya-scholl).
