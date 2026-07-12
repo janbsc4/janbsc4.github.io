@@ -7,7 +7,8 @@ title: "Attitudes towards Capitalism"
 ><figure>
 	  <img
 	  src="https://onlinelibrary.wiley.com/cms/asset/2b72fa75-119e-400c-b021-b64ef3f3a38c/ecaf12591-fig-0002-m.jpg"
-	  alt="Overall coefficient on attitudes towards capitalism in 34 countries." class="big-image">
+	  width="1200" height="800" loading="lazy" decoding="async"
+	  alt="Overall coefficient on attitudes towards capitalism in 34 countries." class="big-image externally-sized-image">
 	  <figcaption class="image-caption">Overall coefficient on attitudes towards capitalism in 34 countries. Note: The lower the coefficient, the stronger is the anti-capitalist attitude.</figcaption>
 	</figure>
 

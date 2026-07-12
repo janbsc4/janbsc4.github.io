@@ -13,6 +13,7 @@ There is a convenient way to follow most blogs (including all blogs on Substack[
 <figure class="in-text-figure">
 	<img
 	src="{{ site.baseurl }}/assets/images/2025-06-09-how-to-follow-a-blog/how-to-follow-blog-3.jpeg"
+	width="649" height="1280" loading="lazy" decoding="async"
 	alt="Screenshot of NetNewsWire with some Blogs followed">
 	<figcaption>NetNewsWire with some followed blogs</figcaption>
 </figure>
@@ -22,6 +23,7 @@ A great RSS app for Apple devices is [NetNewsWire](https://apps.apple.com/us/app
 <figure class="in-text-figure">
 	<img
 	src="{{ site.baseurl }}/assets/images/2025-06-09-how-to-follow-a-blog/how-to-follow-blog-1.jpeg"
+	width="591" height="1162" loading="lazy" decoding="async"
 	alt="Screenshot of the iOS share menu opened from Safari on a blog showing the NetNewsWire app icon">
 	<figcaption>1) Tap the share button when visiting a blog you like, then select your RSS app. If it doesn't appear in the list, tap the three dots on the right to find it.</figcaption>
 </figure>
@@ -29,6 +31,7 @@ A great RSS app for Apple devices is [NetNewsWire](https://apps.apple.com/us/app
 <figure class="in-text-figure">
 	<img
 	src="{{ site.baseurl }}/assets/images/2025-06-09-how-to-follow-a-blog/how-to-follow-blog-2.jpeg"
+	width="591" height="1180" loading="lazy" decoding="async"
 	alt="Screenshot of the pop-up menu to add a new feed to NetNewsWire">
 	<figcaption>2) Tap "Add Feed" in the pop-up menu</figcaption>
 </figure>

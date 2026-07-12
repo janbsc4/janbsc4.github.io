@@ -6,4 +6,4 @@ I'm a marketer and armchair economist based in Barcelona. Purveyor of dubious ta
 
 You can find me on [LinkedIN](https://linkedin.com/in/jan-balanya-scholl) or check out my [CV](/cv).
 
-![Patapon Gif](/assets/images/ponpon.gif){: .ponpon}
+![Patapon Gif](/assets/images/ponpon.gif){: .ponpon width="341" height="341" loading="lazy" decoding="async"}

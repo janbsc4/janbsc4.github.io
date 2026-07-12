@@ -672,6 +672,13 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  background-color: var(--media);
+}
+
+.externally-sized-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
 }
 
 img.image-error {
@@ -788,7 +795,7 @@ li code {
 
 .portfolio-item {
   display: grid;
-  grid-template-columns: minmax(10rem, 0.72fr) minmax(0, 1.28fr);
+  grid-template-columns: 1fr;
   gap: clamp(1.5rem, 6vw, 3rem);
   padding: clamp(2rem, 6vw, 3.5rem) 0;
   border-top: 1px solid var(--rule);

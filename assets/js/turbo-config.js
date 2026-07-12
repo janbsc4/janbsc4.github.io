@@ -101,9 +101,15 @@ function onPageLoad() {
     } else if (img.complete) {
       markImageError();
     } else {
-      img.style.opacity = '0';
-      img.style.transition = 'opacity 0.7s ease';
-      img.addEventListener('load', () => img.style.opacity = '1');
+      img.addEventListener('load', () => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!reduceMotion && typeof img.animate === 'function') {
+          img.animate(
+            [{ opacity: 0 }, { opacity: 1 }],
+            { duration: 450, easing: 'ease-out' }
+          );
+        }
+      });
       img.addEventListener('error', markImageError);
     }
   });

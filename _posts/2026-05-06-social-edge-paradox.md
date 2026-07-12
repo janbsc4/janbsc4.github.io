@@ -6,6 +6,7 @@ title: "Social Edge Paradox"
 ><figure>
 	<img
 	  src="https://www.theideasletter.org/wp-content/uploads/2026/04/Picture2.png"
+	  width="777" height="610" loading="lazy" decoding="async"
 	alt="COGNITIVE OVERLOADING, OVERCONFIDENCE, UNDEREXPLORATION & FRONTIER AI REGRESSION" class="big-image">
 	</figure>
 
