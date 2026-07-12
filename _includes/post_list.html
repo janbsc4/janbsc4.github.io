@@ -6,10 +6,9 @@
           <span class="home-date">
             {{ post.date | date: site.theme_config.date_format }}:
           </span>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <a href="{{ post.url | relative_url }}">{% include post_title.html post=post %}</a>
         </li>
       {% endunless %}
     {% endfor %}
   </ul>
 {% endif %}
-

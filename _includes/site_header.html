@@ -1,0 +1,32 @@
+<header class="site-header">
+  <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} — home">
+    <span class="site-brand__mark" aria-hidden="true"></span>
+    <span class="site-brand__name">{{ site.title }}</span>
+  </a>
+
+  <div class="site-header__actions">
+    {% if site.theme_config.show_navbar == true %}
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          {% assign current_path = page.url | remove: '.html' %}
+          {% for item in site.data.home.navbar_entries %}
+            {% assign item_path = item.url | remove: '.html' %}
+            {% assign is_current = false %}
+            {% if current_path == item_path %}
+              {% assign is_current = true %}
+            {% elsif page.collection == 'posts' and item_path == '/blog' %}
+              {% assign is_current = true %}
+            {% endif %}
+            <li>
+              <a href="{{ item.url | relative_url }}"{% if is_current %} aria-current="page"{% endif %}>{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
+    {% if site.theme_config.appearance_toggle %}
+      {% include toggle_theme_button.html %}
+    {% endif %}
+  </div>
+</header>

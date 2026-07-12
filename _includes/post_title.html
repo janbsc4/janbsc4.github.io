@@ -1,0 +1,11 @@
+{%- assign title_text = include.post.title | remove: '&#9733;' | remove: '&#x2708;' | remove: '★' | strip -%}
+{%- assign title_symbol = '' -%}
+{%- assign title_symbol_class = '' -%}
+{%- if include.post.post_type == 'essay' -%}
+  {%- assign title_symbol = '✦' -%}
+  {%- assign title_symbol_class = 'title-symbol--essay' -%}
+{%- elsif include.post.layout == 'landing' -%}
+  {%- assign title_symbol = '✈' -%}
+  {%- assign title_symbol_class = 'title-symbol--trip' -%}
+{%- endif -%}
+{%- if title_symbol != '' -%}<span class="title-symbol {{ title_symbol_class }}" aria-hidden="true">{{ title_symbol }}</span>{%- endif -%}<span class="title-text">{{ title_text }}</span>

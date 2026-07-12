@@ -1,10 +1,9 @@
-<ul class="horizontal-list">
+<ul class="horizontal-list{% if include.class_name %} {{ include.class_name }}{% endif %}">
   {% for item in include.collection %}
     <li>
       <a href="{{ item.url }}">
         {{ item.title }}
       </a>
-      &nbsp;&nbsp;
     </li>
   {% endfor %}
 </ul>

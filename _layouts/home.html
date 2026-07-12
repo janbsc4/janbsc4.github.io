@@ -2,19 +2,17 @@
 layout: default
 ---
 
-<header>
-{% if site.theme_config.show_navbar == true %}
-  {% include horizontal_list.html collection=site.data.home.navbar_entries %}
-  <div class="dashed"></div>
-{% endif %}
-
+<header class="page-intro home-intro">
+  <p class="eyebrow">Barcelona · Notes &amp; projects</p>
   <h1>{{ site.title }}</h1>
   {% if site.theme_config.show_description == true %}
     <p>{{ site.description }}</p>
   {% endif %}
 </header>
 
-{{ content }}
+<div class="home-deck">
+  {{ content }}
+</div>
 
 {% if site.theme_config.show_projects == true %}
   <h2><a href="/portfolio">{{ site.theme_config.home.title_projects }}</a></h2>
@@ -27,19 +25,16 @@ layout: default
 {% endif %}
 
 {% if site.theme_config.show_blog == true %}
-  <h2><a href="/blog">{{ site.theme_config.home.title_blog }}</a></h2>
-  {% include home_post_list.html %}
+  <section class="home-section" aria-labelledby="recent-writing">
+    <div class="section-heading">
+      <h2 id="recent-writing"><a href="/blog">{{ site.theme_config.home.title_blog }}</a></h2>
+      <span aria-hidden="true">Recent writing</span>
+    </div>
+    {% include home_post_list.html %}
+  </section>
 {% endif %}
 
 {% if site.theme_config.show_old_projects == true %}
   <h2>{{ site.theme_config.home.title_old_projects }}</h2>
   {% include card_list.html collection=site.data.home.old_project_entries %}
-{% endif %}
-
-
-{% if site.theme_config.show_footer == true %}
-  <footer>
-    <div class="dashed"></div>
-    {% include horizontal_list.html collection=site.data.home.footer_entries %}
-  </footer>
 {% endif %}

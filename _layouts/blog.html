@@ -1,22 +1,12 @@
 ---
 layout: default
 ---
-<header>
-{% if site.theme_config.show_navbar == true %}
-  {% include horizontal_list.html collection=site.data.home.navbar_entries %}
-  <div class="dashed"></div>
-{% endif %}
-</header>
-
-<header>
+<header class="page-intro archive-intro">
+  <p class="eyebrow">Archive</p>
   <h1>Blog</h1>
+  <p>Essays, notes, arguments, and the occasional useful tangent.</p>
 </header>
 
-{% include post_list.html %}
-
-{% if site.theme_config.show_footer == true %}
-  <footer>
-    <div class="dashed"></div>
-    {% include horizontal_list.html collection=site.data.home.footer_entries %}
-  </footer>
-{% endif %}
+<section class="post-index" aria-label="All posts">
+  {% include post_list.html %}
+</section>

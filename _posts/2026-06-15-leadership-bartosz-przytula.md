@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "&#9733; Learning from Bartosz"
+post_type: essay
 ---
 I met [Bartosz Przytula](https://www.linkedin.com/in/bprzytula) at the end of 2020 when I was interviewing for a job at Credera, formerly Smart Digital.
 

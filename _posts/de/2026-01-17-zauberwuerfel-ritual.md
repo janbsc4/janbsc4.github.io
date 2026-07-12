@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "★ Das Zauberwürfel-Affen-Ritual"
+post_type: essay
 lang: de
 ref: politics-rubiks
 category: hidden

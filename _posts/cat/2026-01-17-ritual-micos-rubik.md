@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "★ El ritual dels micos amb cub de Rubik"
+post_type: essay
 lang: cat
 ref: politics-rubiks
 category: hidden

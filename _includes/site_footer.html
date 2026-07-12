@@ -1,0 +1,10 @@
+{% if site.theme_config.show_footer == true %}
+  <footer class="site-footer">
+    <p class="site-footer__colophon">Written and assembled in Barcelona.</p>
+    {% if site.data.home.footer_entries.size > 0 %}
+      <nav aria-label="External links">
+        {% include horizontal_list.html collection=site.data.home.footer_entries class_name='footer-links' %}
+      </nav>
+    {% endif %}
+  </footer>
+{% endif %}
