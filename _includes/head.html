@@ -12,7 +12,7 @@
   
   <title>
     {% if page.title %}
-      {{ page.title }}
+      {{ page.title | remove: '&#9733;' | remove: '&#x2708;' | remove: '★' | remove: '✈' | strip }}
     {% else %}
       {{ site.title }}
     {% endif %}

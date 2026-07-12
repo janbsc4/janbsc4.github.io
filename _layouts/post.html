@@ -5,8 +5,8 @@ layout: default
 	{% if page.title %}
 	<header class="post-header">
 		{% if page.collection == 'posts' %}
-		{% assign post_type_label = page.post_type | default: 'note' | append: 's' %}
-		<p class="eyebrow">Filed under: {{ post_type_label }}</p>
+		{% assign post_type_label = page.post_type | default: 'note' %}
+		<p class="eyebrow">{{ post_type_label | capitalize }}</p>
 		{% endif %}
 		<h1 class="post-title">{% include post_title.html post=page %}</h1>
 		{% if page.collection == 'posts' or page.author or page.date %}

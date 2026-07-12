@@ -3,10 +3,8 @@
     {% for post in site.posts %}
       {% unless post.categories contains "hidden" %}
         <li class="post-list-item">
-          <span class="home-date">
-            {{ post.date | date: site.theme_config.date_format }}:
-          </span>
-          <a href="{{ post.url | relative_url }}">{% include post_title.html post=post %}</a>
+          {% include post_list_meta.html post=post %}
+          <a href="{{ post.url | relative_url }}">{% include post_title.html post=post show_kind=true %}</a>
         </li>
       {% endunless %}
     {% endfor %}

@@ -523,10 +523,27 @@ html[data-theme="dark"] .theme-toggle__rays {
   border-bottom: 1px solid var(--rule);
 }
 
-.post-list-item .home-date {
+.post-list-meta {
+  display: block;
+}
+
+.post-list-meta .home-date {
   color: var(--ink-muted);
   font: 500 0.68rem/1.4 var(--font-mono);
   letter-spacing: 0.02em;
+}
+
+.post-kind {
+  display: inline-block;
+  margin-left: 0.7em;
+  padding-left: 0.7em;
+  border-left: 1px solid var(--rule);
+  color: var(--accent);
+  font: 650 0.62rem/1.35 var(--font-ui);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  vertical-align: 0.12em;
+  white-space: nowrap;
 }
 
 .post-list-item > a {
@@ -537,36 +554,6 @@ html[data-theme="dark"] .theme-toggle__rays {
   line-height: 1.25;
   text-decoration: none;
   transition: color 180ms ease, transform 180ms var(--ease-out);
-}
-
-.title-symbol {
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.22em;
-  color: var(--accent);
-  font-family: var(--font-ui);
-  font-size: 0.48em;
-  font-weight: 500;
-  line-height: 1;
-  text-align: center;
-  vertical-align: 0.38em;
-}
-
-.post-list-item .title-symbol {
-  width: 1.1em;
-  margin-right: 0.3em;
-  font-size: 0.68em;
-  vertical-align: 0.12em;
-}
-
-.post-list-item .title-symbol--essay {
-  font-size: 0.78em;
-  vertical-align: 0.08em;
-}
-
-.post-list-item .title-symbol--trip {
-  font-size: 0.68em;
-  transform: rotate(-5deg);
 }
 
 .post-list-item > a::after {
@@ -617,13 +604,6 @@ html[data-theme="dark"] .theme-toggle__rays {
 .post-title {
   font-size: clamp(2.8rem, 8vw, 5.25rem);
   overflow-wrap: anywhere;
-}
-
-.post-title .title-symbol--essay {
-  width: 0.85em;
-  margin-right: 0.18em;
-  font-size: 0.38em;
-  vertical-align: 0.72em;
 }
 
 .post-date {
