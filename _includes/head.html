@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#1f242A">
+  <meta name="theme-color" content="#EFA58F">
   {% if page.description %}
     <meta name="description" content="{{ page.description }}">
   {% elsif site.description %}
@@ -19,18 +19,25 @@
   </title>
   {% feed_meta %}
   <script>
-    // Immediately set the theme before the page renders to prevent white flash
-    const theme = localStorage.getItem('theme');
-    if (theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      // Also set the safari bar color instantly here if you want perfection
-      if (theme === 'dark') {
-        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1f242A');
-      }
-    }
+    // Resolve the theme before styles render to avoid a light/dark flash.
+    (function () {
+      var savedTheme = null;
+      try { savedTheme = localStorage.getItem('theme'); } catch (error) {}
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var resolvedTheme = savedTheme === 'light' || savedTheme === 'dark'
+        ? savedTheme
+        : (systemDark ? 'dark' : 'light');
+
+      document.documentElement.setAttribute('data-theme', resolvedTheme);
+      document.querySelector('meta[name="theme-color"]').setAttribute(
+        'content',
+        resolvedTheme === 'dark' ? '#140F0E' : '#EFA58F'
+      );
+    })();
   </script>
 
   <!-- Favicon -->
+  <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
@@ -38,10 +45,6 @@
   <!-- Favicon -->
 
   <link rel="stylesheet" href="{{"/assets/css/converted-css.css" | relative_url }}" data-turbo-track="reload"/>
-
-  {% if site.theme_config.appearance_toggle %}
-    {% include toggle_theme_js.html %}
-  {% endif %}
 
   {%- include custom_head.html -%}
   <script>

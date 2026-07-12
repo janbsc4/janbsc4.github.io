@@ -1,16 +1,14 @@
 // /assets/js/turbo-config.js
 
 function onPageLoad() {
-  // --- HELPER: Update Safari Top Bar Color ---
+  // Keep browser chrome and the accessible control in sync with the CSS theme.
   const updateMetaThemeColor = (theme) => {
     const metaTag = document.querySelector('meta[name="theme-color"]');
-    // Colors match your CSS variables exactly
-    const color = theme === 'dark' ? '#1f242A' : '#ffffff'; 
+    const color = theme === 'dark' ? '#140F0E' : '#EFA58F';
     
     if (metaTag) {
       metaTag.setAttribute('content', color);
     } else {
-      // Create it if it doesn't exist
       const meta = document.createElement('meta');
       meta.name = "theme-color";
       meta.content = color;
@@ -18,38 +16,41 @@ function onPageLoad() {
     }
   };
 
+  const updateToggleState = (button, theme) => {
+    const isDark = theme === 'dark';
+    const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+    button.setAttribute('aria-label', label);
+    button.setAttribute('aria-pressed', String(isDark));
+    button.setAttribute('title', label);
+  };
+
   // --- A. THEME TOGGLE LOGIC ---
   const toggleButton = document.querySelector('.theme-toggle');
   const htmlElement = document.documentElement;
 
-  // 1. Sync Meta Tag on Load
-  // Ensures the top bar matches the theme immediately when navigating
   if (htmlElement.getAttribute('data-theme')) {
     updateMetaThemeColor(htmlElement.getAttribute('data-theme'));
   }
 
   if (toggleButton) {
-    // 2. Remove old listeners by cloning the button
     const newBtn = toggleButton.cloneNode(true);
     toggleButton.parentNode.replaceChild(newBtn, toggleButton);
+    updateToggleState(newBtn, htmlElement.getAttribute('data-theme'));
     
-    // 3. Add the Click Listener
     newBtn.addEventListener('click', function() {
       const currentTheme = htmlElement.getAttribute('data-theme');
       const newTheme = (currentTheme === 'light') ? 'dark' : 'light';
       
-      // Add transition class for smooth fade
       htmlElement.classList.add('transition');
       setTimeout(() => {
         htmlElement.classList.remove('transition');
-      }, 1000);
+      }, 240);
 
-      // Set the new theme
       htmlElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
+      try { localStorage.setItem('theme', newTheme); } catch (error) {}
       
-      // UPDATE THE SAFARI BAR INSTANTLY
       updateMetaThemeColor(newTheme);
+      updateToggleState(newBtn, newTheme);
     });
   }
 
@@ -81,16 +82,29 @@ function onPageLoad() {
     });
   });
 
-  // --- C. IMAGE LOADING LOGIC ---
+  // Fade loaded images in and collapse missing portfolio artwork cleanly.
   const images = document.querySelectorAll('img');
   images.forEach(img => {
-    if (img.complete) {
+    const markImageError = () => {
+      img.classList.add('image-error');
+      img.setAttribute('aria-hidden', 'true');
+      const portfolioItem = img.closest('.portfolio-item');
+      if (portfolioItem) {
+        portfolioItem.classList.add('portfolio-item--text-only');
+        const mediaLink = img.closest('a');
+        if (mediaLink) mediaLink.hidden = true;
+      }
+    };
+
+    if (img.complete && img.naturalWidth > 0) {
       img.style.opacity = '1';
+    } else if (img.complete) {
+      markImageError();
     } else {
       img.style.opacity = '0';
       img.style.transition = 'opacity 0.7s ease';
       img.addEventListener('load', () => img.style.opacity = '1');
-      img.addEventListener('error', () => img.style.opacity = '0.5');
+      img.addEventListener('error', markImageError);
     }
   });
 }
