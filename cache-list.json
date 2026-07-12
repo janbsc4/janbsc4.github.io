@@ -10,12 +10,12 @@ permalink: /cache-list.json
 	"/assets/fonts/Newsreader/newsreader-latin-ext-variable-italic.woff2",
 	"/assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf",
 	"/assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf",
-	"/assets/favicon/favicon-16x16.png",
-	"/assets/favicon/favicon-32x32.png",
+	"/assets/favicon/favicon-16x16.png?v=2",
+	"/assets/favicon/favicon-32x32.png?v=2",
 	"/assets/favicon/apple-touch-icon.png",
 	"/assets/favicon/android-chrome-192x192.png",
 	"/assets/favicon/android-chrome-512x512.png",
-	"/assets/favicon/favicon.ico",
+	"/assets/favicon/favicon.ico?v=2",
 	"/assets/favicon/frog-header-mark.png",
 	"/site.webmanifest"
 	{%- for page in site.pages -%}
