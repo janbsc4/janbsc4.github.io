@@ -9,7 +9,7 @@ Professionally, I like taking things that are messy and making them work. That h
 
 At [Credera](https://www.credera.com), I managed international accounts for Volkswagen Group. Much of the job involved translating big strategic ideas into things that could survive contact with a sprint board and the legal department, while leading a team and helping my teammates develop.
 
-These days I am doing the same kind of work at [Service Club](https://serviceclub.com), building out marketing and account management as the company grows. I have a good eye for detail and an even better instinct for spotting the small thing that is about to become a big problem before it is too late.
+These days I am doing the same kind of work at [Service Club](https://serviceclub.com), building out marketing and account management as the company grows. I have a good eye for detail and an even better instinct for spotting the small thing that is about to become a big problem.
 
 ## Core Strengths
 
