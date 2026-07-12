@@ -963,6 +963,12 @@ hr.page-break::before {
 }
 
 /* Turbo and theme transitions */
+.turbo-progress-bar {
+  height: 2px !important;
+  background: var(--accent) !important;
+  box-shadow: none !important;
+}
+
 body.content-changing .page-content {
   opacity: 0.35;
   transform: translateY(4px);
