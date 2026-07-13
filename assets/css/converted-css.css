@@ -760,6 +760,10 @@ li code {
 }
 
 /* About and portfolio */
+.page-about .person-name-link {
+  color: var(--ink);
+}
+
 .page-about .post-body h2 {
   padding-bottom: 0.55rem;
   border-bottom: 1px solid var(--ink);
