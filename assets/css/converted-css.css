@@ -1010,6 +1010,11 @@ html.transition blockquote {
     padding-bottom: 4.5rem;
   }
 
+  .page-content--post {
+    padding-right: clamp(1rem, 4vw, 1.25rem);
+    padding-left: clamp(1rem, 4vw, 1.25rem);
+  }
+
   .post-list-item {
     grid-template-columns: 1fr;
     gap: 0.3rem;
