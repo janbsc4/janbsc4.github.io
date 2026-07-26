@@ -18,6 +18,8 @@ These days, I help [Service Club](https://serviceclub.com) shape and execute its
 - Team leadership & project delivery
 - Account management & client growth
 - Stakeholder communication
+- AI-assisted development
+- SEO
 
 ## Experience
 
