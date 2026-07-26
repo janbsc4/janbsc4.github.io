@@ -7,7 +7,7 @@ I was born in Barcelona and went to the German School of Barcelona. After gradua
 
 Professionally, I like taking things that are messy and making them work. That has been the throughline of my career so far.
 
-At [Credera](https://www.credera.com), I managed international accounts for Volkswagen Group. Much of the job involved translating big strategic ideas into things that could survive contact with a sprint board and the legal department, while leading a team and helping my teammates develop.
+At [Credera](https://www.credera.com/de-de), I managed international accounts for Volkswagen Group. Much of the job involved translating big strategic ideas into things that could survive contact with a sprint board and the legal department, while leading a team and helping my teammates develop.
 
 These days, I help [Service Club](https://serviceclub.com) shape and execute its go-to-market approach for new markets, including Germany. That means building the marketing capabilities behind the expansion while managing client relationships as the company grows. I have a good eye for detail and an even better instinct for spotting the small thing that is about to become a big problem.
 
@@ -21,17 +21,16 @@ These days, I help [Service Club](https://serviceclub.com) shape and execute its
 
 ## Experience
 
-### Account Manager, [Service Club](https://serviceclub.com)
+### Marketing GTM, [Service Club](https://serviceclub.com)
 Jan 2026 - Present
 - Helping shape and execute go-to-market strategy for new markets, including Germany
 - Building the marketing capabilities and channel mix needed to support expansion
-- Managing client relationships and supporting account growth
 
 ### Professional Sabbatical & Independent Projects
 Oct 2024 - Jan 2026
 - Built personal projects focused on product thinking, systems, and technical experimentation
 
-### Team & Project Lead, [Credera](https://www.credera.com)
+### Team & Project Lead, [Credera](https://www.credera.com/de-de)
 2021 - Oct 2024
 - Led a team of seven consultants delivering digital initiatives for Volkswagen Group
 - Managed cross-functional delivery in Agile environments
