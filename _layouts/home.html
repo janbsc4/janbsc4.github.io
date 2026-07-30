@@ -5,24 +5,11 @@ layout: default
 <header class="page-intro home-intro">
   <p class="eyebrow">Barcelona · Notes &amp; projects</p>
   <h1>{{ site.title }}</h1>
-  {% if site.theme_config.show_description == true %}
-    <p>{{ site.description }}</p>
-  {% endif %}
 </header>
 
 <div class="home-deck">
   {{ content }}
 </div>
-
-{% if site.theme_config.show_projects == true %}
-  <h2><a href="/portfolio">{{ site.theme_config.home.title_projects }}</a></h2>
-  {% include card_list.html collection=site.data.home.project_entries %}
-{% endif %}
-
-{% if site.theme_config.show_misc_list == true %}
-  <h2>{{ site.theme_config.home.title_misc_list }}</h2>
-  {% include vertical_list.html collection=site.data.home.misc_entries %}
-{% endif %}
 
 {% if site.theme_config.show_blog == true %}
   <section class="home-section" aria-labelledby="recent-writing">
@@ -32,9 +19,4 @@ layout: default
     </div>
     {% include home_post_list.html %}
   </section>
-{% endif %}
-
-{% if site.theme_config.show_old_projects == true %}
-  <h2>{{ site.theme_config.home.title_old_projects }}</h2>
-  {% include card_list.html collection=site.data.home.old_project_entries %}
 {% endif %}

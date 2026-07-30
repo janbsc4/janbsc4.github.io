@@ -1,4 +1,4 @@
-/* Editorial Salmon — shared site system */
+/* Editorial Salmon — hand-maintained shared site system */
 
 @font-face {
   font-family: "Newsreader";
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("../fonts/Inter/inter-latin-ext-variable.woff2") format("woff2");
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: "Roboto Mono";
-  src: url("../fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/Roboto_Mono/roboto-mono-latin-ext-variable.woff2") format("woff2");
   font-style: normal;
   font-weight: 100 700;
   font-display: swap;
@@ -64,6 +64,8 @@
   --dark-rule: #6f4b43;
   --dark-focus: #73d1c1;
   --dark-media: #181311;
+
+  /* Keep canvas colors synchronized with the pre-paint and runtime theme scripts. */
 }
 
 html[data-theme="light"] {
@@ -674,10 +676,6 @@ img {
   object-fit: contain;
 }
 
-img.image-error {
-  display: none;
-}
-
 .in-text-figure {
   display: flex;
   align-items: flex-start;
@@ -739,15 +737,6 @@ li code {
   color: var(--accent);
 }
 
-.tag {
-  display: inline-block;
-  margin: 0 0.35rem 0.35rem 0;
-  padding: 0.25rem 0.55rem;
-  border: 1px solid var(--rule);
-  color: var(--ink-muted);
-  font: 600 0.65rem/1.4 var(--font-mono);
-}
-
 .language-switcher {
   margin-top: -3.5rem;
   padding: 1.2rem 0;
@@ -802,14 +791,6 @@ li code {
   margin-top: 1rem;
 }
 
-.portfolio-item--text-only {
-  grid-template-columns: 1fr;
-}
-
-.portfolio-item--text-only .content {
-  max-width: var(--reading-width);
-}
-
 .portfolio-item img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -826,7 +807,7 @@ li code {
 }
 
 .page-about .post-body > p:first-child:first-letter,
-.page-you-are-offline .post-body > p:first-child:first-letter {
+.page-offline .post-body > p:first-child:first-letter {
   float: none;
   margin: 0;
   color: inherit;
@@ -932,31 +913,6 @@ ul.horizontal-list li a {
 
 .error-page p {
   max-width: 34ch;
-}
-
-.dashed {
-  margin: 0.5rem 0;
-  border-top: 1px solid var(--rule);
-}
-
-.text-bold {
-  font-weight: 650;
-}
-
-.text-upcase {
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-hr.page-break {
-  border: 0;
-  text-align: center;
-}
-
-hr.page-break::before {
-  content: "•••";
-  color: var(--accent);
-  letter-spacing: 0.4em;
 }
 
 /* Turbo and theme transitions */

@@ -1,0 +1,28 @@
+<p class="post-date">
+  {% if page.author %}
+    <span>{{ page.author }}</span>
+    <span aria-hidden="true">/</span>
+  {% endif %}
+  {% if page.date %}
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time>
+  {% endif %}
+
+  {% if site.theme_config.show_reading_time == true %}
+    {% assign word_count = content | strip_html | number_of_words %}
+    {% assign words_per_minute = 180 %}
+    {% assign reading_time_numerator = word_count | plus: words_per_minute | minus: 1 %}
+    {% assign reading_minutes = reading_time_numerator | divided_by: words_per_minute %}
+    {% if reading_minutes < 1 %}
+      {% assign reading_minutes = 1 %}
+    {% endif %}
+    {% assign word_label = "words" %}
+    {% assign minute_label = "minutes" %}
+    {% if word_count == 1 %}
+      {% assign word_label = "word" %}
+    {% endif %}
+    {% if reading_minutes == 1 %}
+      {% assign minute_label = "minute" %}
+    {% endif %}
+    <span>({{ word_count }} {{ word_label }}, {{ reading_minutes }} {{ minute_label }})</span>
+  {% endif %}
+</p>

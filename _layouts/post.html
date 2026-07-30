@@ -8,10 +8,10 @@ layout: default
 		{% assign post_type_label = page.post_type | default: 'note' %}
 		<p class="eyebrow">{{ post_type_label | capitalize }}</p>
 		{% endif %}
-		<h1 class="post-title">{% include post_title.html post=page %}</h1>
-		{% if page.collection == 'posts' or page.author or page.date %}
-			{% include date_and_social_share.html %}
-		{% endif %}
+			<h1 class="post-title">{% include post_title.html post=page %}</h1>
+			{% if page.collection == 'posts' or page.author or page.date %}
+				{% include post_metadata.html %}
+			{% endif %}
 	</header>
 	{% endif %}
 	<div class="post-body">

@@ -1,6 +1,5 @@
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#EFA58F">
@@ -20,6 +19,7 @@
   {% feed_meta %}
   <script>
     // Resolve the theme before styles render to avoid a light/dark flash.
+    // Keep these colors synchronized with the palette tokens in site.css.
     (function () {
       var savedTheme = null;
       try { savedTheme = localStorage.getItem('theme'); } catch (error) {}
@@ -44,25 +44,28 @@
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
   <!-- Favicon -->
 
-  <link rel="stylesheet" href="{{"/assets/css/converted-css.css" | relative_url }}" data-turbo-track="reload"/>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" data-turbo-track="reload"/>
 
-  {%- include custom_head.html -%}
   <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
-        .then(reg => console.log('SW registered:', reg.scope))
-        .catch(err => console.log('SW registration failed:', err));
+        .catch(error => console.error('Service worker registration failed:', error));
     });
   }
 </script>
 
   <!-- Turbo Drive -->
-  <script src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.11/dist/turbo.es2017-umd.min.js" integrity="sha384-W9r5irrcU/3NGMyRz5PB5S/eyEznggxjg977tVsr4zjjlntKJLHa1zyFChn/lddk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.23/dist/turbo.es2017-umd.min.js" integrity="sha384-5I0KXBA3lsT+2m9ls4kWorLwXbFqdQXAfPfVbhLj/lxCq0zdcvpeCwr7xwCW5jqx" crossorigin="anonymous"></script>
   <script src="{{ '/assets/js/turbo-config.js' | relative_url }}" defer></script>
 
-  <!-- Goatcounter -->
-  <script data-goatcounter="https://jan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <!-- GoatCounter page views are counted from turbo:load in turbo-config.js. -->
+  <script
+    id="goatcounter-script"
+    data-goatcounter="https://jan.goatcounter.com/count"
+    data-goatcounter-settings='{"no_onload": true}'
+    async
+    src="//gc.zgo.at/count.js"></script>
 
 
   {% if page.ref %}

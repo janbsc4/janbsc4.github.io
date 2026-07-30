@@ -2,6 +2,7 @@
 layout: post
 title: About
 description: About Jan Balanyà Scholl, a marketer and account manager based in Barcelona.
+body_class: page-about
 ---
 I was born in Barcelona and went to the German School of Barcelona. After graduating, I moved to Berlin, where I studied, lived, and worked for ten years before returning to Barcelona in 2023. In 2025, I met the amazing [Feifei](https://yingfeilu.github.io){:.person-name-link}.
 
