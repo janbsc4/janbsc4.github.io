@@ -1,0 +1,7 @@
+# Local-only overlay used by bin/cv. Keep the production configuration's
+# non-public files excluded while allowing the curriculum pages to render.
+exclude:
+  - AGENTS.md
+  - CODE_AUDIT.md
+  - curriculum/README.md
+  - curriculum/output

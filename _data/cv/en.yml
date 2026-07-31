@@ -1,0 +1,123 @@
+meta:
+  html_lang: en
+  title: CV-en - Jan Balanyà Scholl
+  description: Curriculum vitae of Jan Balanyà Scholl, Senior Marketing Manager.
+  kicker: Curriculum vitae
+  annotation: CV / 2026
+  last_updated: Last updated 2026
+
+identity:
+  name: Jan Balanyà Scholl
+  professional_title: Senior Marketing Manager
+  portrait_alt: Portrait of Jan Balanyà Scholl
+
+controls:
+  skip: Skip to CV content
+  navigation_label: CV languages and printing
+  english: English
+  spanish: Spanish
+  print: Print / Save as PDF
+  checking: Checking A4 fit…
+  fits_normal: Fits one A4 page
+  fits_compact: Fits one A4 page with compact spacing
+  overflow: Possible overflow detected — please check the A4 print preview
+
+contact:
+  aria_label: Contact details
+  location: Barcelona · Spanish & German citizen
+
+sections:
+  profile: Profile
+  experience: Work experience
+  skills: Skills
+  languages: Languages
+  education: Education
+
+profile: >-
+  I'm an experienced marketing manager and team lead. At Credera, I led
+  international analytics and web-tracking initiatives for Volkswagen Group,
+  managing cross-functional teams and supporting critical digital projects
+  that generated over €1 million in annual revenue. At Service Club, I'm
+  heading the Marketing GTM team launching our product in new markets.
+
+experience:
+  - id: service-club
+    company: Service Club
+    title: Marketing GTM Lead
+    dates: 2026 — Now
+    start: "2026"
+    description: >-
+      Leading Marketing GTM efforts for Service Club's expansion into new
+      markets, with end-to-end ownership of localization, SEO, GEO, and organic
+      acquisition strategy. Leveraging AI tools across the stack to move faster
+      and operate leaner, from website development to building new growth
+      funnels through continuous experimentation.
+  - id: sabbatical
+    title: Professional Sabbatical & Personal Projects
+    dates: "2025"
+    start: "2025"
+    quiet: true
+  - id: credera-team-lead
+    company: Credera
+    title: Team Lead & Advanced Consultant
+    dates: 2022 — 2024
+    start: "2022"
+    end: "2024"
+    description: >-
+      Led a team of seven consultants delivering digital projects for the
+      Volkswagen Group in Agile environments. Managed cross-functional teams
+      and drove strategic initiatives generating over €1 million in annual
+      revenue, while mentoring junior consultants.
+  - id: credera-junior
+    company: Credera
+    title: Junior Analytics Consultant
+    dates: 2021 — 2022
+    start: "2021"
+    end: "2022"
+    description: >-
+      Delivered data-driven insights through web analytics and implemented
+      custom web tracking solutions. Led data-driven projects.
+  - id: finment
+    company: Finment
+    title: Online Marketing Manager
+    dates: 2019 — 2020
+    start: "2019"
+    end: "2020"
+    description: >-
+      Drove digital marketing growth by improving SEO rankings, developing
+      data-driven content strategies with Ahrefs, automating email campaigns,
+      and establishing a revenue-generating affiliate marketing program.
+
+skills:
+  - Stakeholder Relations
+  - Project Leadership
+  - Team Leadership
+  - Web Analytics
+  - Web Development
+  - SEO & GEO
+  - Organic Acquisition
+  - AI-Assisted Development
+
+languages:
+  - language: German
+    level: Native
+  - language: Spanish
+    level: Native
+  - language: Catalan
+    level: Native
+  - language: English
+    level: Native
+
+education:
+  - id: university
+    qualification: Bachelor of Business Management
+    institution: Freie Universität Berlin
+    dates: 2014 — 2018
+    start: "2014"
+    end: "2018"
+  - id: school
+    qualification: Abitur (German University Entrance Qualification)
+    institution: German School Barcelona
+    dates: 2001 — 2013
+    start: "2001"
+    end: "2013"

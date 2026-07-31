@@ -1,0 +1,129 @@
+{% assign cv = site.data.cv[page.cv_key] %}
+{% assign private = site.data.cv_private %}
+<!DOCTYPE html>
+<html class="cv-document" data-density="normal" data-fit="checking" data-theme="light" lang="{{ cv.meta.html_lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="{{ cv.meta.description }}">
+    <title>{{ cv.meta.title }}</title>
+    <link rel="stylesheet" href="../assets/css/site.css">
+    <link rel="stylesheet" href="../assets/css/cv.css">
+  </head>
+  <body class="cv-page">
+    <a class="skip-link" href="#cv-content">{{ cv.controls.skip }}</a>
+
+    <nav class="cv-controls" aria-label="{{ cv.controls.navigation_label }}" data-cv-controls>
+      <div class="cv-language-links">
+        <a href="en.html"{% if page.cv_key == 'en' %} aria-current="page"{% endif %}>{{ cv.controls.english }}</a>
+        <a href="es.html"{% if page.cv_key == 'es' %} aria-current="page"{% endif %}>{{ cv.controls.spanish }}</a>
+      </div>
+      <p
+        class="cv-fit-status"
+        data-cv-fit-status
+        data-checking="{{ cv.controls.checking }}"
+        data-normal="{{ cv.controls.fits_normal }}"
+        data-compact="{{ cv.controls.fits_compact }}"
+        data-overflow="{{ cv.controls.overflow }}"
+        role="status"
+      >{{ cv.controls.checking }}</p>
+      <button class="cv-print-button" type="button" data-cv-print>{{ cv.controls.print }}</button>
+    </nav>
+
+    <article class="cv-sheet" aria-labelledby="cv-name" data-cv-sheet>
+      <div class="cv-frame" data-cv-frame>
+        <header class="cv-header">
+          <div class="cv-header-main">
+            <div class="cv-header-copy">
+              <p class="cv-kicker">{{ cv.meta.kicker }}</p>
+              <h1 class="cv-name" id="cv-name">{{ cv.identity.name }}</h1>
+              <p class="cv-professional-title">{{ cv.identity.professional_title }}</p>
+            </div>
+          </div>
+          <div class="cv-header-side">
+            <p class="cv-annotation">{{ cv.meta.annotation }}</p>
+            <div class="cv-photo-wrap">
+              <img class="cv-photo" src="assets/portrait.jpg" alt="{{ cv.identity.portrait_alt }}">
+            </div>
+          </div>
+        </header>
+
+        <address class="cv-contact-bar" aria-label="{{ cv.contact.aria_label }}">
+          <a class="cv-contact-item" href="{{ private.phone.href }}">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7.3 3.8 4.8 5.2c-.8.5-1.1 1.5-.8 2.4 2.2 6.1 6.3 10.2 12.4 12.4.9.3 1.9 0 2.4-.8l1.4-2.5c.4-.8.2-1.8-.6-2.3l-2.9-1.7c-.7-.4-1.6-.3-2.2.3l-1.2 1.2a14 14 0 0 1-3.5-3.5L11 9.5c.6-.6.7-1.5.3-2.2L9.6 4.4c-.5-.8-1.5-1-2.3-.6Z"/></svg>
+            <span>{{ private.phone.display }}</span>
+          </a>
+          <a class="cv-contact-item" href="{{ private.email.href }}">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg>
+            <span>{{ private.email.display }}</span>
+          </a>
+          <div class="cv-contact-item">
+            <span class="cv-location-icon" aria-hidden="true"></span>
+            <span>{{ cv.contact.location }}</span>
+          </div>
+        </address>
+
+        <main class="cv-layout" id="cv-content" data-cv-content>
+          <div class="cv-main">
+            <section class="cv-section" aria-labelledby="profile-heading">
+              <h2 class="cv-section-heading" data-number="01" id="profile-heading">{{ cv.sections.profile }}</h2>
+              <p class="cv-profile">{{ cv.profile }}</p>
+            </section>
+
+            <section class="cv-section cv-experience" aria-labelledby="experience-heading">
+              <h2 class="cv-section-heading" data-number="02" id="experience-heading">{{ cv.sections.experience }}</h2>
+              <ol class="cv-timeline">
+                {% for role in cv.experience %}
+                  <li class="cv-role-entry{% if role.quiet %} cv-role-entry--quiet{% endif %}">
+                    <div class="cv-entry-header">
+                      <h3 class="cv-entry-title">{% if role.company %}{{ role.company }} — {% endif %}{{ role.title }}</h3>
+                      <span class="cv-entry-date">{{ role.dates }}</span>
+                    </div>
+                    {% if role.description %}<p class="cv-entry-description">{{ role.description }}</p>{% endif %}
+                  </li>
+                {% endfor %}
+              </ol>
+            </section>
+          </div>
+
+          <aside class="cv-sidebar" aria-label="{{ cv.sections.skills }}, {{ cv.sections.languages }}, {{ cv.sections.education }}">
+            <section class="cv-section" aria-labelledby="skills-heading">
+              <h2 class="cv-section-heading" data-number="03" id="skills-heading">{{ cv.sections.skills }}</h2>
+              <ul class="cv-tags">
+                {% for skill in cv.skills %}<li>{{ skill }}</li>{% endfor %}
+              </ul>
+            </section>
+
+            <section class="cv-section" aria-labelledby="languages-heading">
+              <h2 class="cv-section-heading" data-number="04" id="languages-heading">{{ cv.sections.languages }}</h2>
+              <ul class="cv-language-list">
+                {% for item in cv.languages %}<li><span>{{ item.language }}</span><span>{{ item.level }}</span></li>{% endfor %}
+              </ul>
+            </section>
+
+            <section class="cv-section" aria-labelledby="education-heading">
+              <h2 class="cv-section-heading" data-number="05" id="education-heading">{{ cv.sections.education }}</h2>
+              <ol class="cv-education-list">
+                {% for item in cv.education %}
+                  <li class="cv-education-item">
+                    <h3 class="cv-education-title">{{ item.qualification }}</h3>
+                    <p class="cv-education-institution">{{ item.institution }}</p>
+                    <p class="cv-education-date">{{ item.dates }}</p>
+                  </li>
+                {% endfor %}
+              </ol>
+            </section>
+          </aside>
+        </main>
+
+        <footer class="cv-footer">
+          <p>{{ cv.identity.name }} · {{ cv.identity.professional_title }}</p>
+          <p>{{ cv.meta.last_updated }}</p>
+        </footer>
+      </div>
+    </article>
+
+    <script src="../assets/js/cv.js"></script>
+  </body>
+</html>

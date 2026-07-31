@@ -11,13 +11,13 @@ Built with:
 
 Install the Ruby dependencies:
 
-```sh
+```zsh
 bin/bootstrap
 ```
 
 Start the local Jekyll server at `http://localhost:4000`:
 
-```sh
+```zsh
 bin/start
 ```
 
@@ -26,7 +26,7 @@ as expected.
 
 Before publishing a change, run:
 
-```sh
+```zsh
 bundle exec jekyll build --trace
 git diff --check
 ```

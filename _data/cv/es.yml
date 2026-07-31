@@ -1,0 +1,128 @@
+meta:
+  html_lang: es
+  title: CV-es - Jan Balanyà Scholl
+  description: Currículum de Jan Balanyà Scholl, responsable sénior de marketing.
+  kicker: Currículum
+  annotation: CV / 2026
+  last_updated: Actualizado en 2026
+
+identity:
+  name: Jan Balanyà Scholl
+  professional_title: Responsable sénior de marketing
+  portrait_alt: Retrato de Jan Balanyà Scholl
+
+controls:
+  skip: Saltar al contenido del currículum
+  navigation_label: Idiomas del currículum e impresión
+  english: Inglés
+  spanish: Español
+  print: Imprimir / Guardar como PDF
+  checking: Comprobando el ajuste en A4…
+  fits_normal: Cabe en una página A4
+  fits_compact: Cabe en una página A4 con espaciado compacto
+  overflow: Es posible que haya desbordamiento; compruébalo en la vista previa de impresión A4
+
+contact:
+  aria_label: Datos de contacto
+  location: Barcelona · Ciudadano español y alemán
+
+sections:
+  profile: Perfil
+  experience: Experiencia profesional
+  skills: Competencias
+  languages: Idiomas
+  education: Formación
+
+profile: >-
+  Soy un profesional sénior del marketing y responsable de equipos con amplia
+  experiencia. En Credera lideré iniciativas internacionales de analítica y
+  medición web para Volkswagen Group, gestionando equipos multidisciplinares y
+  apoyando proyectos digitales estratégicos que generaron más de un millón de
+  euros de ingresos anuales. En Service Club dirijo el equipo de marketing
+  encargado de lanzar nuestro producto en nuevos mercados.
+
+experience:
+  - id: service-club
+    company: Service Club
+    title: Responsable de estrategia de entrada a nuevos mercados
+    dates: 2026 — Actualidad
+    start: "2026"
+    description: >-
+      Lidero la estrategia de marketing para la expansión de Service Club a
+      nuevos mercados, con responsabilidad integral sobre localización, SEO,
+      GEO y adquisición orgánica. Aprovecho herramientas de IA en todo el
+      proceso para avanzar más rápido y operar con mayor eficiencia, desde el
+      desarrollo web hasta la creación de nuevos embudos de crecimiento
+      mediante la experimentación continua.
+  - id: sabbatical
+    title: Año sabático profesional y proyectos personales
+    dates: "2025"
+    start: "2025"
+    quiet: true
+  - id: credera-team-lead
+    company: Credera
+    title: Responsable de equipo y consultor avanzado
+    dates: 2022 — 2024
+    start: "2022"
+    end: "2024"
+    description: >-
+      Lideré un equipo de siete consultores que desarrollaba proyectos
+      digitales para Volkswagen Group en entornos ágiles. Gestioné equipos
+      multidisciplinares e impulsé iniciativas estratégicas que generaron más
+      de un millón de euros de ingresos anuales, además de acompañar el
+      desarrollo de consultores júnior.
+  - id: credera-junior
+    company: Credera
+    title: Consultor júnior de analítica
+    dates: 2021 — 2022
+    start: "2021"
+    end: "2022"
+    description: >-
+      Generé conclusiones basadas en datos mediante analítica web e implementé
+      soluciones de medición web a medida. Lideré proyectos orientados por
+      datos.
+  - id: finment
+    company: Finment
+    title: Responsable de marketing digital
+    dates: 2019 — 2020
+    start: "2019"
+    end: "2020"
+    description: >-
+      Impulsé el crecimiento digital mejorando el posicionamiento SEO,
+      desarrollando estrategias de contenido basadas en datos con Ahrefs,
+      automatizando campañas de correo electrónico y creando un programa de
+      marketing de afiliación que generaba ingresos.
+
+skills:
+  - Gestión de grupos de interés
+  - Liderazgo de proyectos
+  - Liderazgo de equipos
+  - Analítica web
+  - Desarrollo web
+  - SEO y GEO
+  - Adquisición orgánica
+  - Desarrollo asistido por IA
+
+languages:
+  - language: Alemán
+    level: Nativo
+  - language: Español
+    level: Nativo
+  - language: Catalán
+    level: Nativo
+  - language: Inglés
+    level: Nativo
+
+education:
+  - id: university
+    qualification: Grado en Administración y Dirección de Empresas
+    institution: Freie Universität Berlin
+    dates: 2014 — 2018
+    start: "2014"
+    end: "2018"
+  - id: school
+    qualification: Abitur (título alemán de acceso a la universidad)
+    institution: Colegio Alemán de Barcelona
+    dates: 2001 — 2013
+    start: "2001"
+    end: "2013"

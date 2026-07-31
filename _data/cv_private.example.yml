@@ -1,0 +1,9 @@
+# Copy this file to _data/cv_private.yml and replace the example values.
+# The real file is ignored by Git.
+phone:
+  display: "+34 600 000 000"
+  href: "tel:+34600000000"
+email:
+  display: "name@example.com"
+  href: "mailto:name@example.com"
+portrait_path: curriculum/assets/portrait.jpg
