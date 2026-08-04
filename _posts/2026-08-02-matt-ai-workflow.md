@@ -2,7 +2,7 @@
 layout: post
 title: "Matt's AI Workflow"
 ---
-I just tested [Matt Pocock’s skill-based AI workflow](https://www.youtube.com/watch?v=M6mYodf0dJM) on my Chinese-learning app, [Yuwenke](https://janbalanya.com/yuwenke/), and it was excellent.
+I just tested [Matt Pocock’s skill-based AI workflow](https://www.youtube.com/watch?v=M6mYodf0dJM) on my Chinese-learning app, [Yuwenke](https://janbalanya.com/yuwenke/) (which now features card packs!), and it was excellent.
 
 His *grill-me-with-docs* skill creates a shared-language document with the AI. It establishes the specific terminology of the project, giving the AI a much clearer understanding of what you mean.
 
