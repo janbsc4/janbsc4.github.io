@@ -6,20 +6,20 @@ title: "Portfolio"
 <div class="portfolio-item">
   <div class="content">
     <h2><a href="https://janbalanya.com/strom-docs">Strom</a></h2>
-    <p>Intelligent system that controls heating based on weather forecasts and electricity prices. Uses convex optimization to find cost-effective heating schedules while maintaining comfort, automatically controlling smart plugs to save energy costs.</p>
+    <p>An intelligent heating system that uses weather forecasts, electricity prices, and convex optimization to find cost-effective schedules while maintaining comfort. I co-created the project, defining the problem and product direction and helping develop it with friends using AI-assisted coding.</p>
   </div>
 </div>
 
 <div class="portfolio-item">
   <div class="content">
-    <h2><a href="https://github.com/janbsc4/defaultCSS">DefaultCSS</a></h2>
-    <p>Enables you to quickly get a new web project started without having to worry about CSS. DefaultCSS is CSS file that acts as a starting point for new web projects and includes minimal styling for the most used HTML tags. Responsive design & dark mode included.</p>
+    <h2><a href="https://janbalanya.com/yuwenke/">Yuwenke</a></h2>
+    <p>A personal Chinese-learning app built around my in-person class, with custom flashcards, card packs, and saved progress. I conceived the product, set its direction, and built and continue to improve it through AI-assisted development.</p>
   </div>
 </div>
 
 <div class="portfolio-item">
   <div class="content">
-    <h2><a href="https://github.com/NuriaHB/hanae-y-la-reliquia-del-dragon">Hanae</a></h2>
-    <p>Webpage for a friends art project, built with <a href="https://jekyllrb.com">Jekyll</a>, deployed on Github Pages.</p>
+    <h2><a href="https://yingfeilu.github.io">Yingfei Lu</a></h2>
+    <p>A personal website for the amazing linguist and researcher Yingfei Lu. I designed and built the site, turning her work into a clear, responsive online presentation.</p>
   </div>
 </div>
