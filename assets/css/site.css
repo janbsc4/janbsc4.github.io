@@ -802,6 +802,16 @@ li code {
   margin: 0 0 0.65rem;
 }
 
+.portfolio-tag {
+  display: inline-block;
+  margin-left: 0.35rem;
+  color: var(--ink-muted);
+  font: 500 0.42em/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
 .portfolio-item p:last-child {
   margin-bottom: 0;
 }
