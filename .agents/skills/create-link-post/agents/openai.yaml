@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Link Post"
+  short_description: "Create a sourced Jekyll link post"
+  default_prompt: "Use $create-link-post to create a new post from this article."
