@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "★ Das Zauberwürfel-Affen-Ritual"
+title: "Das Zauberwürfel-Affen-Ritual"
 post_type: essay
 lang: de
 ref: politics-rubiks

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "&#9733; Inertia Management"
+title: "Inertia Management"
 post_type: essay
 ---
 

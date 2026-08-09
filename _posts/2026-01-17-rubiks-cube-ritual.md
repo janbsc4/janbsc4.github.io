@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "&#9733; The Rubik’s Cube Monkey Ritual"
+title: "The Rubik’s Cube Monkey Ritual"
 post_type: essay
 lang: en
 ref: politics-rubiks

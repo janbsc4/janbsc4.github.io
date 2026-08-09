@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "&#9733; How to Follow a Blog"
+title: "How to Follow a Blog"
 post_type: essay
 description: "Easy guide on how to follow almost any blog with RSS like Substack, Bluesky or Medium. Includes blog recommendations to get started. Read it now!"
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "★ El ritual de los monos con cubo de Rubik"
+title: "El ritual de los monos con cubo de Rubik"
 post_type: essay
 lang: es
 ref: politics-rubiks

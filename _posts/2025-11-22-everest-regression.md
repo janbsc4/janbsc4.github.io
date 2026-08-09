@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "&#9733; Everest Regression"
+title: "Everest Regression"
 post_type: essay
 ---
 The Everest Regression Fallacy is a logical fallacy in statistical modelling that comes from over-controlling for variables.
