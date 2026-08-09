@@ -41,7 +41,7 @@
 	{% capture recommendation_items %}
 		{% if related_essay %}
 			<li>
-				<a href="{{ related_essay.url | relative_url }}"><span class="title-text"{% if related_essay.lang != page.lang %} lang="{{ related_essay.lang }}"{% endif %}>{{ related_essay.title }}</span><span class="post-kind"{% unless page.lang == 'en' %} lang="en"{% endunless %}>Essay</span>{% if related_essay.lang != page.lang %}<span class="post-language post-kind">{{ related_essay.lang | upcase }}</span>{% endif %}</a>
+				<a href="{{ related_essay.url | relative_url }}"><span class="title-text"{% if related_essay.lang != page.lang %} lang="{{ related_essay.lang }}"{% endif %}>{{ related_essay.title }}</span>{% if related_essay.lang != page.lang %}<span class="post-language post-kind">{{ related_essay.lang | upcase }}</span>{% endif %}</a>
 			</li>
 			{% assign recommendation_count = 1 %}
 			{% assign selected_urls = selected_urls | push: related_essay.url %}
@@ -50,7 +50,7 @@
 			{% unless discovery_essay.url == page.url or selected_urls contains discovery_essay.url %}
 				{% if recommendation_count < 3 %}
 					<li>
-						<a href="{{ discovery_essay.url | relative_url }}"><span class="title-text"{% if discovery_essay.lang != page.lang %} lang="{{ discovery_essay.lang }}"{% endif %}>{{ discovery_essay.title }}</span><span class="post-kind"{% unless page.lang == 'en' %} lang="en"{% endunless %}>Essay</span>{% if discovery_essay.lang != page.lang %}<span class="post-language post-kind">{{ discovery_essay.lang | upcase }}</span>{% endif %}</a>
+						<a href="{{ discovery_essay.url | relative_url }}"><span class="title-text"{% if discovery_essay.lang != page.lang %} lang="{{ discovery_essay.lang }}"{% endif %}>{{ discovery_essay.title }}</span>{% if discovery_essay.lang != page.lang %}<span class="post-language post-kind">{{ discovery_essay.lang | upcase }}</span>{% endif %}</a>
 					</li>
 					{% assign recommendation_count = recommendation_count | plus: 1 %}
 					{% assign selected_urls = selected_urls | push: discovery_essay.url %}
