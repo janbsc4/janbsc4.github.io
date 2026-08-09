@@ -1,0 +1,26 @@
+{% if page.collection == 'posts' and page.lang == 'en' %}
+	{% assign discovery_pool = site.posts | where: 'lang', 'en' | where: 'post_type', 'essay' %}
+	{% assign discovery_sample_size = discovery_pool.size | plus: 1 %}
+	{% assign discovery_candidates = discovery_pool | sample: discovery_sample_size %}
+	{% assign discovery_count = 0 %}
+	{% capture discovery_items %}
+		{% for discovery_essay in discovery_candidates %}
+			{% unless discovery_essay.categories contains 'hidden' or discovery_essay.url == page.url %}
+				{% if discovery_count < 3 %}
+					<li>
+						<a href="{{ discovery_essay.url | relative_url }}"><span class="title-text">{{ discovery_essay.title }}</span><span class="post-kind">Essay</span></a>
+					</li>
+					{% assign discovery_count = discovery_count | plus: 1 %}
+				{% endif %}
+			{% endunless %}
+		{% endfor %}
+	{% endcapture %}
+	{% if discovery_count > 0 %}
+	<nav class="read-next" aria-labelledby="read-next-heading">
+		<h2 id="read-next-heading">Read next</h2>
+		<ul class="read-next__list">
+			{{ discovery_items | strip }}
+		</ul>
+	</nav>
+	{% endif %}
+{% endif %}
