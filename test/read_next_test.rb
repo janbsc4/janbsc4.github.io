@@ -131,6 +131,108 @@ class ReadNextTest < Minitest::Test
     end
   end
 
+  def test_translated_essay_falls_back_to_english_after_language_switcher
+    posts = {
+      "2026-01-01-english-version.md" => fixture_post("English Version", essay: true, ref: "translated-essay"),
+      "2026-01-02-ensayo.md" => fixture_post("Ensayo", essay: true, lang: "es", ref: "translated-essay"),
+      "2026-01-03-english-discovery.md" => fixture_post("English Discovery", essay: true),
+      "2026-01-04-hidden-english.md" => fixture_post("Hidden English", essay: true, categories: ["hidden"])
+    }
+
+    with_custom_fixture_site(posts) do |destination|
+      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html")))
+      article = document.at_css("article.post")
+      navigation = article.at_css("nav.read-next")
+
+      refute_nil navigation
+      assert_equal navigation, article.element_children.last
+      assert_operator article.element_children.index(navigation), :>, article.element_children.index(article.at_css(".language-switcher"))
+
+      links = navigation.css(".read-next__list > li > a")
+      urls = links.map { |link| link["href"] }
+      assert_equal ["/english-discovery", "/english-version"].sort, urls.sort
+      assert_equal urls.uniq, urls
+      refute_includes urls, "/hidden-english"
+      assert_equal "/english-version", article.at_css(".language-switcher a")["href"]
+      links.each do |link|
+        assert_equal "en", link.at_css(".title-text")["lang"]
+        assert_equal "EN", link.at_css(".post-language")&.text&.strip
+      end
+    end
+  end
+
+  def test_cross_language_related_essay_does_not_change_translated_discovery_priority
+    posts = {
+      "2026-01-01-ensayo.md" => fixture_post("Ensayo", essay: true, lang: "es", related_essay: "english-related"),
+      "2026-01-02-otro-ensayo.md" => fixture_post("Otro Ensayo", essay: true, lang: "es"),
+      "2026-01-03-tercer-ensayo.md" => fixture_post("Tercer Ensayo", essay: true, lang: "es"),
+      "2026-01-04-english-related.md" => fixture_post("English Related", essay: true),
+      "2026-01-05-english-discovery.md" => fixture_post("English Discovery", essay: true),
+      "2026-01-06-hidden-ensayo.md" => fixture_post("Hidden Ensayo", essay: true, lang: "es", categories: ["hidden"])
+    }
+
+    with_custom_fixture_site(posts) do |destination|
+      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html")))
+      links = document.css(".read-next__list > li > a")
+      urls = links.map { |link| link["href"] }
+
+      assert_equal "/english-related", urls.first
+      assert_equal ["/otro-ensayo", "/tercer-ensayo"].sort, urls.drop(1).sort
+      refute_includes urls, "/english-discovery"
+      refute_includes urls, "/hidden-ensayo"
+      assert_equal "EN", links.first.at_css(".post-language")&.text&.strip
+      links.drop(1).each do |link|
+        assert_nil link.at_css(".title-text")["lang"]
+        assert_nil link.at_css(".post-language")
+      end
+    end
+  end
+
+  def test_translated_essay_small_candidate_pools_render_only_real_choices
+    cases = {
+      none: {},
+      one: {
+        "2026-01-02-english-essay.md" => fixture_post("English Essay", essay: true)
+      },
+      two: {
+        "2026-01-02-otro-ensayo.md" => fixture_post("Otro Ensayo", essay: true, lang: "es"),
+        "2026-01-03-english-essay.md" => fixture_post("English Essay", essay: true)
+      }
+    }
+
+    cases.each do |name, candidates|
+      posts = { "2026-01-01-ensayo.md" => fixture_post("Ensayo", essay: true, lang: "es") }.merge(candidates)
+
+      with_custom_fixture_site(posts) do |destination|
+        document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html")))
+        navigation = document.at_css("nav.read-next")
+
+        if candidates.empty?
+          assert_nil navigation, name.to_s
+        else
+          links = navigation.css(".read-next__list > li > a")
+          assert_equal candidates.length, links.length, name.to_s
+          assert_equal links.map { |link| link["href"] }.uniq.length, links.length, name.to_s
+        end
+      end
+    end
+  end
+
+  def test_translated_essays_select_discovery_essays_independently
+    posts = {
+      "2026-01-01-primer-ensayo.md" => fixture_post("Primer Ensayo", essay: true, lang: "es"),
+      "2026-01-02-segundo-ensayo.md" => fixture_post("Segundo Ensayo", essay: true, lang: "es")
+    }
+
+    with_custom_fixture_site(posts) do |destination|
+      first_urls = Nokogiri::HTML(File.read(File.join(destination, "primer-ensayo.html"))).css(".read-next a").map { |link| link["href"] }
+      second_urls = Nokogiri::HTML(File.read(File.join(destination, "segundo-ensayo.html"))).css(".read-next a").map { |link| link["href"] }
+
+      assert_equal ["/segundo-ensayo"], first_urls
+      assert_equal ["/primer-ensayo"], second_urls
+    end
+  end
+
   def test_invalid_related_essays_fail_the_build_with_actionable_diagnostics
     invalid_cases = {
       unknown: {
@@ -253,7 +355,7 @@ class ReadNextTest < Minitest::Test
     YAML
   end
 
-  def fixture_post(title, essay: false, related_essay: nil, lang: nil, layout: "post", categories: nil, slug: nil)
+  def fixture_post(title, essay: false, related_essay: nil, lang: nil, layout: "post", categories: nil, slug: nil, ref: nil)
     <<~MARKDOWN
       ---
       layout: #{layout}
@@ -262,6 +364,7 @@ class ReadNextTest < Minitest::Test
       #{"lang: #{lang}" if lang}
       #{"categories: [#{categories.join(', ')}]" if categories}
       #{"slug: #{slug}" if slug}
+      #{"ref: #{ref}" if ref}
       #{"related_essay: #{related_essay}" unless related_essay.nil?}
       ---
       Fixture content.

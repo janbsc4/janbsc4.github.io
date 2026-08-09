@@ -1,4 +1,5 @@
-{% if page.collection == 'posts' and page.lang == 'en' %}
+{% if page.collection == 'posts' %}
+{% if page.lang == 'en' or page.post_type == 'essay' %}
 	{% assign essay_candidates = site.posts | where: 'post_type', 'essay' %}
 	{% assign eligible_essays = '' | split: '' %}
 	{% for essay_candidate in essay_candidates %}
@@ -21,24 +22,38 @@
 			{% include invalid-related-essay-{{ page.path }}-{{ page.related_essay }}.html %}
 		{% endunless %}
 	{% endunless %}
-	{% assign discovery_pool = eligible_essays | where: 'lang', 'en' %}
-	{% assign discovery_sample_size = discovery_pool.size | plus: 1 %}
-	{% assign discovery_candidates = discovery_pool | sample: discovery_sample_size %}
+	{% assign current_language_pool = eligible_essays | where: 'lang', page.lang %}
+	{% assign discovery_candidates = '' | split: '' %}
+	{% if current_language_pool.size > 0 %}
+		{% assign current_language_sample_size = current_language_pool.size | plus: 1 %}
+		{% assign discovery_candidates = current_language_pool | sample: current_language_sample_size %}
+	{% endif %}
+	{% unless page.lang == 'en' %}
+		{% assign english_pool = eligible_essays | where: 'lang', 'en' %}
+		{% if english_pool.size > 0 %}
+			{% assign english_sample_size = english_pool.size | plus: 1 %}
+			{% assign english_candidates = english_pool | sample: english_sample_size %}
+			{% assign discovery_candidates = discovery_candidates | concat: english_candidates %}
+		{% endif %}
+	{% endunless %}
 	{% assign recommendation_count = 0 %}
+	{% assign selected_urls = '' | split: '' %}
 	{% capture recommendation_items %}
 		{% if related_essay %}
 			<li>
 				<a href="{{ related_essay.url | relative_url }}"><span class="title-text"{% if related_essay.lang != page.lang %} lang="{{ related_essay.lang }}"{% endif %}>{{ related_essay.title }}</span><span class="post-kind">Essay</span>{% if related_essay.lang != page.lang %}<span class="post-language post-kind">{{ related_essay.lang | upcase }}</span>{% endif %}</a>
 			</li>
 			{% assign recommendation_count = 1 %}
+			{% assign selected_urls = selected_urls | push: related_essay.url %}
 		{% endif %}
 		{% for discovery_essay in discovery_candidates %}
-			{% unless discovery_essay.url == page.url or discovery_essay.url == related_essay.url %}
+			{% unless discovery_essay.url == page.url or selected_urls contains discovery_essay.url %}
 				{% if recommendation_count < 3 %}
 					<li>
-						<a href="{{ discovery_essay.url | relative_url }}"><span class="title-text">{{ discovery_essay.title }}</span><span class="post-kind">Essay</span></a>
+						<a href="{{ discovery_essay.url | relative_url }}"><span class="title-text"{% if discovery_essay.lang != page.lang %} lang="{{ discovery_essay.lang }}"{% endif %}>{{ discovery_essay.title }}</span><span class="post-kind">Essay</span>{% if discovery_essay.lang != page.lang %}<span class="post-language post-kind">{{ discovery_essay.lang | upcase }}</span>{% endif %}</a>
 					</li>
 					{% assign recommendation_count = recommendation_count | plus: 1 %}
+					{% assign selected_urls = selected_urls | push: discovery_essay.url %}
 				{% endif %}
 			{% endunless %}
 		{% endfor %}
@@ -51,4 +66,5 @@
 		</ul>
 	</nav>
 	{% endif %}
+{% endif %}
 {% endif %}
