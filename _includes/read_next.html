@@ -1,25 +1,53 @@
 {% if page.collection == 'posts' and page.lang == 'en' %}
-	{% assign discovery_pool = site.posts | where: 'lang', 'en' | where: 'post_type', 'essay' %}
+	{% assign essay_candidates = site.posts | where: 'post_type', 'essay' %}
+	{% assign eligible_essays = '' | split: '' %}
+	{% for essay_candidate in essay_candidates %}
+		{% unless essay_candidate.categories contains 'hidden' %}
+			{% assign eligible_essays = eligible_essays | push: essay_candidate %}
+		{% endunless %}
+	{% endfor %}
+	{% assign related_essay = nil %}
+	{% unless page.related_essay == nil %}
+		{% assign related_matches = site.posts | where: 'slug', page.related_essay %}
+		{% assign eligible_related_matches = eligible_essays | where: 'slug', page.related_essay %}
+		{% if related_matches.size == 1 and eligible_related_matches.size == 1 %}
+			{% assign related_candidate = related_matches.first %}
+			{% if related_candidate.url != page.url %}
+				{% assign related_essay = related_candidate %}
+			{% endif %}
+		{% endif %}
+		{% unless related_essay %}
+			{% comment %}A missing dynamic include makes safe builds reject the source path and invalid value shown in its filename.{% endcomment %}
+			{% include invalid-related-essay-{{ page.path }}-{{ page.related_essay }}.html %}
+		{% endunless %}
+	{% endunless %}
+	{% assign discovery_pool = eligible_essays | where: 'lang', 'en' %}
 	{% assign discovery_sample_size = discovery_pool.size | plus: 1 %}
 	{% assign discovery_candidates = discovery_pool | sample: discovery_sample_size %}
-	{% assign discovery_count = 0 %}
-	{% capture discovery_items %}
+	{% assign recommendation_count = 0 %}
+	{% capture recommendation_items %}
+		{% if related_essay %}
+			<li>
+				<a href="{{ related_essay.url | relative_url }}"><span class="title-text"{% if related_essay.lang != page.lang %} lang="{{ related_essay.lang }}"{% endif %}>{{ related_essay.title }}</span><span class="post-kind">Essay</span>{% if related_essay.lang != page.lang %}<span class="post-language post-kind">{{ related_essay.lang | upcase }}</span>{% endif %}</a>
+			</li>
+			{% assign recommendation_count = 1 %}
+		{% endif %}
 		{% for discovery_essay in discovery_candidates %}
-			{% unless discovery_essay.categories contains 'hidden' or discovery_essay.url == page.url %}
-				{% if discovery_count < 3 %}
+			{% unless discovery_essay.url == page.url or discovery_essay.url == related_essay.url %}
+				{% if recommendation_count < 3 %}
 					<li>
 						<a href="{{ discovery_essay.url | relative_url }}"><span class="title-text">{{ discovery_essay.title }}</span><span class="post-kind">Essay</span></a>
 					</li>
-					{% assign discovery_count = discovery_count | plus: 1 %}
+					{% assign recommendation_count = recommendation_count | plus: 1 %}
 				{% endif %}
 			{% endunless %}
 		{% endfor %}
 	{% endcapture %}
-	{% if discovery_count > 0 %}
+	{% if recommendation_count > 0 %}
 	<nav class="read-next" aria-labelledby="read-next-heading">
 		<h2 id="read-next-heading">Read next</h2>
 		<ul class="read-next__list">
-			{{ discovery_items | strip }}
+			{{ recommendation_items | strip }}
 		</ul>
 	</nav>
 	{% endif %}
