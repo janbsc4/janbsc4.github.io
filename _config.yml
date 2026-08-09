@@ -28,7 +28,7 @@ feed:
 exclude:
   - AGENTS.md
   - CODE_AUDIT.md
-  # The CV is built only through bin/cv with _config.cv.yml.
+  # The CV is built only through curriculum/cv with curriculum/config.yml.
   - curriculum
 
 defaults:

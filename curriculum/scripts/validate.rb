@@ -4,7 +4,7 @@
 require "pathname"
 require "yaml"
 
-ROOT = Pathname.new(__dir__).join("..").expand_path
+ROOT = Pathname.new(__dir__).join("../..").expand_path
 LOCALES = %w[en es].freeze
 
 def fail_validation(message)
@@ -32,17 +32,17 @@ def require_text(data, path, filename)
   fail_validation("#{filename} has an empty #{path.join('.')}") unless value.is_a?(String) && !value.strip.empty?
 end
 
-private_path = ROOT.join("_data/cv_private.yml")
+private_path = ROOT.join("curriculum/data/private.yml")
 unless private_path.file?
-  fail_validation("_data/cv_private.yml is missing; copy _data/cv_private.example.yml and add your details")
+  fail_validation("curriculum/data/private.yml is missing; copy curriculum/data/private.example.yml and add your details")
 end
 
 private_data = load_yaml(private_path)
 %w[display href].each do |key|
-  require_text(private_data, ["phone", key], "_data/cv_private.yml")
-  require_text(private_data, ["email", key], "_data/cv_private.yml")
+  require_text(private_data, ["phone", key], "curriculum/data/private.yml")
+  require_text(private_data, ["email", key], "curriculum/data/private.yml")
 end
-require_text(private_data, ["portrait_path"], "_data/cv_private.yml")
+require_text(private_data, ["portrait_path"], "curriculum/data/private.yml")
 
 fail_validation("phone.href must start with tel:") unless private_data.dig("phone", "href").start_with?("tel:")
 fail_validation("email.href must start with mailto:") unless private_data.dig("email", "href").start_with?("mailto:")
@@ -73,7 +73,7 @@ required_text_paths = [
 ].freeze
 
 locale_data = LOCALES.to_h do |locale|
-  relative_path = "_data/cv/#{locale}.yml"
+  relative_path = "curriculum/data/#{locale}.yml"
   path = ROOT.join(relative_path)
   fail_validation("#{relative_path} is missing") unless path.file?
 

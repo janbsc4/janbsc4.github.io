@@ -1,5 +1,5 @@
-{% assign cv = site.data.cv[page.cv_key] %}
-{% assign private = site.data.cv_private %}
+{% assign cv = site.data[page.cv_key] %}
+{% assign private = site.data.private %}
 <!DOCTYPE html>
 <html class="cv-document" data-density="normal" data-fit="checking" data-theme="light" lang="{{ cv.meta.html_lang }}">
   <head>
@@ -9,7 +9,7 @@
     <meta name="description" content="{{ cv.meta.description }}">
     <title>{{ cv.meta.title }}</title>
     <link rel="stylesheet" href="../assets/css/site.css">
-    <link rel="stylesheet" href="../assets/css/cv.css">
+    <link rel="stylesheet" href="assets/cv.css">
   </head>
   <body class="cv-page">
     <a class="skip-link" href="#cv-content">{{ cv.controls.skip }}</a>
@@ -124,6 +124,6 @@
       </div>
     </article>
 
-    <script src="../assets/js/cv.js"></script>
+    <script src="assets/cv.js"></script>
   </body>
 </html>

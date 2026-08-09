@@ -1,0 +1,14 @@
+# Local-only overlay used by curriculum/cv. Keep the production configuration's
+# non-public files excluded while allowing the curriculum pages to render.
+data_dir: curriculum/data
+
+exclude:
+  - AGENTS.md
+  - CODE_AUDIT.md
+  - curriculum/README.md
+  - curriculum/config.yml
+  - curriculum/cv
+  - curriculum/data
+  - curriculum/layouts
+  - curriculum/output
+  - curriculum/scripts

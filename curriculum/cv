@@ -9,13 +9,13 @@ command_name="${1:-build}"
 locale="${2:-en}"
 
 show_help() {
-  echo "Usage: bin/cv build"
-  echo "       bin/cv preview [en|es]"
+  echo "Usage: curriculum/cv build"
+  echo "       curriculum/cv preview [en|es]"
 }
 
 build_cv() {
-  bundle exec ruby scripts/validate_cv.rb
-  bundle exec jekyll build --trace --config _config.yml,_config.cv.yml
+  bundle exec ruby curriculum/scripts/validate.rb
+  bundle exec jekyll build --trace --config _config.yml,curriculum/config.yml
 }
 
 case "$command_name" in

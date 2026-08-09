@@ -5,10 +5,12 @@ language, but it is never included in the normal GitHub Pages build.
 
 ## Updating the CV
 
-- Edit `_data/cv/en.yml` and `_data/cv/es.yml` for career content. Keep the
-  `id` and order of equivalent experience and education entries aligned.
-- Edit `_data/cv_private.yml` for phone and email details. This file is ignored
-  by Git. On a new checkout, copy `_data/cv_private.example.yml` first.
+- Edit `curriculum/data/en.yml` and `curriculum/data/es.yml` for career content.
+  Keep the `id` and order of equivalent experience and education entries
+  aligned.
+- Edit `curriculum/data/private.yml` for phone and email details. This file is
+  ignored by Git. On a new checkout, copy
+  `curriculum/data/private.example.yml` first.
 - Replace `curriculum/assets/portrait.jpg` to update the portrait. The image is
   also ignored by Git; use a square or portrait-oriented JPEG with enough
   resolution for a 33 mm printed image.
@@ -18,14 +20,14 @@ language, but it is never included in the normal GitHub Pages build.
 Build the website together with both local CV pages:
 
 ```zsh
-bin/cv build
+curriculum/cv build
 ```
 
 Build and open a language in the default browser:
 
 ```zsh
-bin/cv preview en
-bin/cv preview es
+curriculum/cv preview en
+curriculum/cv preview es
 ```
 
 Wait for the fit status above the page. The layout first uses normal spacing

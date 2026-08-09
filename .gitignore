@@ -4,6 +4,6 @@
 .sass-cache
 _site
 .DS_Store
-_data/cv_private.yml
+curriculum/data/private.yml
 curriculum/assets/portrait.jpg
 curriculum/output/
