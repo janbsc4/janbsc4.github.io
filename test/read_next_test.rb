@@ -47,6 +47,7 @@ class ReadNextTest < Minitest::Test
 
       refute_nil navigation, "expected Read next navigation on #{post.url}"
       assert_equal "Read next", navigation.at_css("#read-next-heading")&.text&.strip
+      assert_nil navigation.at_css("#read-next-heading")["lang"]
 
       links = navigation.css(".read-next__list > li > a")
       urls = links.map { |link| link["href"] }
@@ -56,6 +57,7 @@ class ReadNextTest < Minitest::Test
       assert_empty urls - eligible_urls, "ineligible Discovery essay on #{post.url}"
       assert links.all? { |link| !link.at_css(".title-text")&.text&.strip&.empty? }
       assert links.all? { |link| link.at_css(".post-kind")&.text&.strip == "Essay" }
+      assert links.all? { |link| link.at_css(".post-kind")["lang"].nil? }
       assert_equal navigation, document.at_css("article.post").element_children.last
     end
   end
@@ -147,6 +149,7 @@ class ReadNextTest < Minitest::Test
       refute_nil navigation
       assert_equal navigation, article.element_children.last
       assert_operator article.element_children.index(navigation), :>, article.element_children.index(article.at_css(".language-switcher"))
+      assert_equal "en", navigation.at_css("#read-next-heading")["lang"]
 
       links = navigation.css(".read-next__list > li > a")
       urls = links.map { |link| link["href"] }
@@ -156,6 +159,7 @@ class ReadNextTest < Minitest::Test
       assert_equal "/english-version", article.at_css(".language-switcher a")["href"]
       links.each do |link|
         assert_equal "en", link.at_css(".title-text")["lang"]
+        assert_equal "en", link.at_css(".post-kind:not(.post-language)")["lang"]
         assert_equal "EN", link.at_css(".post-language")&.text&.strip
       end
     end
@@ -181,6 +185,7 @@ class ReadNextTest < Minitest::Test
       refute_includes urls, "/english-discovery"
       refute_includes urls, "/hidden-ensayo"
       assert_equal "EN", links.first.at_css(".post-language")&.text&.strip
+      assert links.all? { |link| link.at_css(".post-kind:not(.post-language)")["lang"] == "en" }
       links.drop(1).each do |link|
         assert_nil link.at_css(".title-text")["lang"]
         assert_nil link.at_css(".post-language")
