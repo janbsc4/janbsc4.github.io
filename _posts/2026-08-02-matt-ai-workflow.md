@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Matt's AI Workflow"
+related_essay: i-directed-app
 ---
 I just tested [Matt Pocock’s skill-based AI workflow](https://www.youtube.com/watch?v=M6mYodf0dJM) on my Chinese-learning app, [Yuwenke](https://janbalanya.com/yuwenke/) (which now features card packs!), and it was excellent.
 

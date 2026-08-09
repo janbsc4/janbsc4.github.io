@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Claude History Teacher"
+related_essay: rubiks-cube-ritual
 ---
 >Claude wanted to describe working people as suffering in a capitalist dystopia. Instead, I wanted data on living standards. And I pointed out that immigrants were flooding here to work in this alleged dystopia.
 

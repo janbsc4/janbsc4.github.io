@@ -2,6 +2,7 @@
 layout: post
 title: "I Directed an App!"
 post_type: essay
+related_essay: leadership-bartosz-przytula
 ---
 A few weeks ago, my colleague [Michiel](https://michieldas.com), our CMO, showed me how to use Claude Code to work on the company website.
 
