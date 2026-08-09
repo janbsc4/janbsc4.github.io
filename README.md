@@ -39,7 +39,7 @@ git diff --check
 - [X] Implement Turbo Drive
 - [X] Fix CSS page transitions
 - [X] Offline support: service worker & manifest
-- [ ] Achieve a 95+ Lighthouse score across the board
+- [X] Achieve a 95+ Lighthouse score across the board
 - [X] Consolidated Gemfile (No Gemspec Dependency)
 
 ## Writing Ideas
