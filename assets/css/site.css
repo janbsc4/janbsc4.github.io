@@ -686,6 +686,15 @@ img {
   max-width: min(42%, 18rem);
 }
 
+.in-text-figure--wide {
+  flex-direction: column;
+}
+
+.in-text-figure.in-text-figure--wide img {
+  width: 100%;
+  max-width: 100%;
+}
+
 iframe {
   display: block;
   width: 100%;
