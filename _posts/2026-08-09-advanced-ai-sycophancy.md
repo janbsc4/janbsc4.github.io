@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Advanced AI sycophancy"
+title: "Advanced AI Sycophancy"
 related_essay: i-directed-app
 ---
 
