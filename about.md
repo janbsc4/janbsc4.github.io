@@ -8,9 +8,9 @@ I was born in Barcelona and went to the German School of Barcelona. After gradua
 
 Professionally, I like taking things that are messy and making them work. That has been the throughline of my career so far.
 
-At [Credera](https://www.credera.com/de-de), I managed international accounts for Volkswagen Group. Much of the job involved translating big strategic ideas into things that could survive contact with a sprint board and the legal department, while leading a team and helping my teammates develop.
+At [Credera](https://www.credera.com/de-de), I managed international accounts for Volkswagen Group. Much of the job involved translating big strategic ideas into things that could survive contact with a sprint board and the legal department. I also really enjoyed leading a team and helping my teammates develop.
 
-These days, I help [Service Club](https://serviceclub.com) shape and execute its go-to-market approach for new markets, including Germany. That means building the marketing capabilities behind the expansion. I have a good eye for detail and an even better instinct for spotting the small thing that is about to become a big problem.
+These days, I help [Service Club](https://serviceclub.com) shape and execute its go-to-market approach for new markets. That means building the marketing capabilities behind the expansion. I have a good eye for detail and enjoy getting teams and projects moving.
 
 ## Core Strengths
 
