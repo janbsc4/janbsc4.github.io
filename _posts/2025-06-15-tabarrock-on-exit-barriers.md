@@ -9,4 +9,4 @@ title: "Alex Tabarrock on Exit Barriers"
 >
 > As a result, European unemployment rates—especially for youth and high-risk groups (minorities, immigrants, the less-educated)—tend to exceed those in the U.S. and dynamism is lower.
 
-[Alex Tabarrock’s article](https://marginalrevolution.com/marginalrevolution/2025/06/no-exit-no-entry.html) on the unintended consequences of some pro-worker laws and other exit barriers.
+[Alex Tabarrock’s article](https://marginalrevolution.com/marginalrevolution/2025/06/no-exit-no-entry.html) on the [unintended consequences of some pro-worker laws]({{ '/spains-productivity-handbrake' | relative_url }}) and other exit barriers.

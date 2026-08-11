@@ -30,7 +30,7 @@ This matters for at least two reasons.
 1. Resource misallocation: Capital and labour can remain in tiny, low‑productivity firms instead of migrating toward better‑run, scale‑hungry ones.
 2. Stunted potential: Some high‑potential start‑ups may remain below the threshold, fragment their operations or migrate abroad.
 
-The 50‑employee threshold does not explain Spain's productivity gap. It is, however, a particularly vivid example of how regulation meant to protect workers can also discourage firms from growing. Other countries show it’s possible to protect workers without erecting regulatory cliff‑edges. One possibility, besides removing it entirely, is to spread regulation across several higher head‑count milestones.
+The 50‑employee threshold does not explain Spain's productivity gap. It is, however, a particularly vivid example of how [regulation meant to protect workers can also discourage firms from growing]({{ '/tabarrock-on-exit-barriers' | relative_url }}). Other countries show it’s possible to protect workers without erecting regulatory cliff‑edges. One possibility, besides removing it entirely, is to spread regulation across several higher head‑count milestones.
 
 Reforming and addressing the 50‑employee cliff would remove one quiet but persistent drag on Spanish productivity. Until that happens, Spain will continue to drive with this particular productivity handbrake engaged.
 

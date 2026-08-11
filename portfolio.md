@@ -6,7 +6,7 @@ title: "Portfolio"
 <div class="portfolio-item">
 	<div class="content">
 		<h2><a href="https://janbalanya.com/yuwenke/">Yuwenke</a></h2>
-		<p>A Chinese-learning app built around my in-person class, with custom flashcards, card packs, and saved progress. I continue to improve and refine it.</p>
+		<p>A Chinese-learning app <a href="{{ '/i-directed-app' | relative_url }}">built around my in-person class</a>, with custom flashcards, card packs, and saved progress. I continue to improve and refine it.</p>
 	</div>
 </div>
 

@@ -6,7 +6,7 @@ related_essay: leadership-bartosz-przytula
 ---
 A few weeks ago, my colleague [Michiel](https://michieldas.com), our CMO, showed me how to use Claude Code to work on the company website.
 
-It blew my mind what Claude Code could do, especially when you put it in its highest-effort mode. It would find and take into account things that were relatively hidden in the repository. It would “think” through implications of changes that I hadn’t considered. What I thought was a simple copy change on one page, for example, triggered a response along the lines of: “Done, but have you considered how this affects similar copy on other pages?” I hadn’t seen this level of “thinking” from an AI before.
+It blew my mind what Claude Code could do, especially when you put it in its highest-effort mode. It would find and take into account things that were relatively hidden in the repository. It would “think” through [implications of changes that I hadn’t considered]({{ '/matt-ai-workflow' | relative_url }}). What I thought was a simple copy change on one page, for example, triggered a response along the lines of: “Done, but have you considered how this affects similar copy on other pages?” I hadn’t seen this level of “thinking” from an AI before.
 
 That reignited my interest in AI.
 
