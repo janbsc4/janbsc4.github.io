@@ -26,13 +26,6 @@ title: "Portfolio"
 
 <div class="portfolio-item">
 	<div class="content">
-		<h2><a href="https://github.com/janbsc4/setup-cv-generator">Setup CV Generator</a> <span class="portfolio-tag">Beta</span></h2>
-		<p>A coding-agent skill that adds an offline CV builder to an existing website. You edit the CV by hand, export a paginated PDF, and reuse the site's styles without changing its normal build or navigation.</p>
-	</div>
-</div>
-
-<div class="portfolio-item">
-	<div class="content">
 		<h2><a href="https://github.com/janbsc4/dev">Agent Skills</a></h2>
 		<p>The skills and hooks I use when coding with agents. The skills stress-test plans, cut robotic prose, and help me write agent instructions. The hooks flag teammates' commits I haven't reviewed and notify me when Claude Code needs my attention.</p>
 	</div>
