@@ -28,6 +28,12 @@ feed:
 exclude:
   - AGENTS.md
   - CODE_AUDIT.md
+  - CONTEXT.md
+  - docs
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - README.md
   - test
   # The CV is built only through curriculum/cv with curriculum/config.yml.
   - curriculum

@@ -68,7 +68,8 @@
   /* Keep canvas colors synchronized with the pre-paint and runtime theme scripts. */
 }
 
-html[data-theme="light"] {
+html[data-theme="light"],
+html[data-theme="auto"] {
   color-scheme: light;
   --canvas: var(--light-canvas);
   --surface: var(--light-surface);
@@ -112,23 +113,6 @@ html[data-theme="dark"] {
     --rule: var(--dark-rule);
     --focus: var(--dark-focus);
     --media: var(--dark-media);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  html[data-theme="auto"] {
-    color-scheme: light;
-    --canvas: var(--light-canvas);
-    --surface: var(--light-surface);
-    --surface-muted: var(--light-surface-muted);
-    --ink: var(--light-ink);
-    --ink-muted: var(--light-ink-muted);
-    --accent: var(--light-accent);
-    --person-name: var(--light-person-name);
-    --selection: var(--light-selection);
-    --rule: var(--light-rule);
-    --focus: var(--light-focus);
-    --media: var(--light-media);
   }
 }
 

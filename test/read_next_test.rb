@@ -6,6 +6,9 @@ require "minitest/autorun"
 require "nokogiri"
 require "tmpdir"
 
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
 class ReadNextTest < Minitest::Test
   REPOSITORY_ROOT = File.expand_path("..", __dir__)
 
@@ -68,7 +71,7 @@ class ReadNextTest < Minitest::Test
     refute_nil photo_essay
     assert_nil generated_document(photo_essay).at_css(".read-next")
 
-    feed = File.read(File.join(self.class.instance_variable_get(:@actual_build), "feed.xml"))
+    feed = File.read(File.join(self.class.instance_variable_get(:@actual_build), "feed.xml"), encoding: "utf-8")
     refute_includes feed, "read-next"
     refute_includes feed, "Read next"
   end
@@ -76,7 +79,7 @@ class ReadNextTest < Minitest::Test
   def test_small_candidate_pools_render_only_real_choices
     { 0 => 0, 1 => 1, 2 => 2 }.each do |essay_count, expected_count|
       with_fixture_site(essay_count) do |destination|
-        document = Nokogiri::HTML(File.read(File.join(destination, "note.html")))
+        document = Nokogiri::HTML(File.read(File.join(destination, "note.html"), encoding: "utf-8"))
         navigation = document.at_css("nav.read-next")
 
         if expected_count.zero?
@@ -101,7 +104,7 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      document = Nokogiri::HTML(File.read(File.join(destination, "note.html")))
+      document = Nokogiri::HTML(File.read(File.join(destination, "note.html"), encoding: "utf-8"))
       links = document.css(".read-next__list > li > a")
       urls = links.map { |link| link["href"] }
 
@@ -120,7 +123,7 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      document = Nokogiri::HTML(File.read(File.join(destination, "note.html")))
+      document = Nokogiri::HTML(File.read(File.join(destination, "note.html"), encoding: "utf-8"))
       links = document.css(".read-next__list > li > a")
 
       assert_equal "/ensayo", links.first["href"]
@@ -141,7 +144,7 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html")))
+      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html"), encoding: "utf-8"))
       article = document.at_css("article.post")
       navigation = article.at_css("nav.read-next")
 
@@ -175,7 +178,7 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html")))
+      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html"), encoding: "utf-8"))
       links = document.css(".read-next__list > li > a")
       urls = links.map { |link| link["href"] }
 
@@ -208,7 +211,7 @@ class ReadNextTest < Minitest::Test
       posts = { "2026-01-01-ensayo.md" => fixture_post("Ensayo", essay: true, lang: "es") }.merge(candidates)
 
       with_custom_fixture_site(posts) do |destination|
-        document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html")))
+        document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html"), encoding: "utf-8"))
         navigation = document.at_css("nav.read-next")
 
         if candidates.empty?
@@ -229,8 +232,8 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      first_urls = Nokogiri::HTML(File.read(File.join(destination, "primer-ensayo.html"))).css(".read-next a").map { |link| link["href"] }
-      second_urls = Nokogiri::HTML(File.read(File.join(destination, "segundo-ensayo.html"))).css(".read-next a").map { |link| link["href"] }
+      first_urls = Nokogiri::HTML(File.read(File.join(destination, "primer-ensayo.html"), encoding: "utf-8")).css(".read-next a").map { |link| link["href"] }
+      second_urls = Nokogiri::HTML(File.read(File.join(destination, "segundo-ensayo.html"), encoding: "utf-8")).css(".read-next a").map { |link| link["href"] }
 
       assert_equal ["/segundo-ensayo"], first_urls
       assert_equal ["/primer-ensayo"], second_urls
@@ -312,7 +315,7 @@ class ReadNextTest < Minitest::Test
     output_path = File.join(destination, post.url.sub(%r{\A/}, ""))
     output_path = File.join(output_path, "index.html") if File.directory?(output_path)
     output_path += ".html" unless File.exist?(output_path)
-    Nokogiri::HTML(File.read(output_path))
+    Nokogiri::HTML(File.read(output_path, encoding: "utf-8"))
   end
 
   def with_fixture_site(essay_count)
