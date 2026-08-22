@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
@@ -11,19 +11,23 @@ layout: none
 		<link>{{ site.url }}/</link>
 		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml"/>
 
-		{% for post in site.posts limit:10 %}
+		{% assign visible_post_count = 0 %}
+		{% for post in site.posts %}
 			{% unless post.categories contains 'hidden' %}
-			<item>
-				<title>{{ post.title | xml_escape }}</title>
-				<link>{{ post.url | absolute_url }}?utm_source=rss</link>
-				<guid isPermaLink="true">{{ post.url | absolute_url }}?utm_source=rss</guid>
-				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-				<description>{{ post.excerpt | strip_html | xml_escape }}</description>
-				<content:encoded><![CDATA[
-					{{ post.content | markdownify }}
-					<p><a href="{{ post.url | absolute_url }}?utm_source=rss&utm_medium=feed&utm_campaign=blog">Read more</a></p>
-				]]></content:encoded>
-			</item>
+				{% if visible_post_count < 10 %}
+					<item>
+						<title>{{ post.title | xml_escape }}</title>
+						<link>{{ post.url | absolute_url }}?utm_source=rss</link>
+						<guid isPermaLink="true">{{ post.url | absolute_url }}?utm_source=rss</guid>
+						<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+						<description>{{ post.excerpt | strip_html | xml_escape }}</description>
+						<content:encoded><![CDATA[
+							{{ post.content | markdownify }}
+							<p><a href="{{ post.url | absolute_url }}?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=blog">Read more</a></p>
+						]]></content:encoded>
+					</item>
+					{% assign visible_post_count = visible_post_count | plus: 1 %}
+				{% endif %}
 			{% endunless %}
 		{% endfor %}
 	</channel>

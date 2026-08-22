@@ -6,6 +6,9 @@ require "minitest/autorun"
 require "nokogiri"
 require "tmpdir"
 
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
 class ReadNextTest < Minitest::Test
   REPOSITORY_ROOT = File.expand_path("..", __dir__)
 
@@ -66,17 +69,58 @@ class ReadNextTest < Minitest::Test
     photo_essay = site.posts.docs.find { |post| post.data["layout"] == "landing" }
 
     refute_nil photo_essay
-    assert_nil generated_document(photo_essay).at_css(".read-next")
+    photo_essay_document = generated_document(photo_essay)
+    assert_nil photo_essay_document.at_css(".read-next")
 
-    feed = File.read(File.join(self.class.instance_variable_get(:@actual_build), "feed.xml"))
+    feed_link = photo_essay_document.at_css('link[rel="alternate"][href$="/feed.xml"]')
+    refute_nil feed_link
+    assert_equal "application/rss+xml", feed_link["type"]
+
+    feed = File.read(File.join(self.class.instance_variable_get(:@actual_build), "feed.xml"), encoding: "utf-8")
+    feed_document = Nokogiri::XML(feed) { |config| config.strict }
+    items = feed_document.xpath("/rss/channel/item")
+
+    assert_equal 10, items.length
     refute_includes feed, "read-next"
     refute_includes feed, "Read next"
+
+    hidden_posts = site.posts.docs.select { |post| post.data.fetch("categories", []).include?("hidden") }
+    feed_urls = items.map { |item| item.at_xpath("link")&.text }
+    hidden_posts.each do |post|
+      assert feed_urls.none? { |url| url&.include?(post.url) }, "hidden URL present in feed: #{post.url}"
+    end
+  end
+
+  def test_hidden_posts_are_noindexed_and_omitted_from_the_sitemap
+    site = self.class.actual_site
+    hidden_posts = site.posts.docs.select do |post|
+      post.data.fetch("categories", []).include?("hidden")
+    end
+
+    refute_empty hidden_posts
+
+    sitemap = File.read(File.join(self.class.instance_variable_get(:@actual_build), "sitemap.xml"), encoding: "utf-8")
+    hidden_posts.each do |post|
+      robots = generated_document(post).at_css('meta[name="robots"]')
+
+      refute_nil robots, "expected noindex metadata on #{post.url}"
+      assert_includes robots["content"].split(/\s*,\s*/), "noindex"
+      refute_includes sitemap, post.url, "hidden URL present in sitemap: #{post.url}"
+    end
+  end
+
+  def test_social_metadata_escapes_post_titles
+    post = self.class.actual_site.posts.docs.find { |candidate| candidate.data["title"] == "Mimics & Scapegoats" }
+
+    refute_nil post
+    assert_includes generated_html(post), 'content="Mimics &amp; Scapegoats"'
+    assert_equal "Mimics & Scapegoats", generated_document(post).at_css('meta[property="og:title"]')["content"]
   end
 
   def test_small_candidate_pools_render_only_real_choices
     { 0 => 0, 1 => 1, 2 => 2 }.each do |essay_count, expected_count|
       with_fixture_site(essay_count) do |destination|
-        document = Nokogiri::HTML(File.read(File.join(destination, "note.html")))
+        document = Nokogiri::HTML(File.read(File.join(destination, "note.html"), encoding: "utf-8"))
         navigation = document.at_css("nav.read-next")
 
         if expected_count.zero?
@@ -101,7 +145,7 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      document = Nokogiri::HTML(File.read(File.join(destination, "note.html")))
+      document = Nokogiri::HTML(File.read(File.join(destination, "note.html"), encoding: "utf-8"))
       links = document.css(".read-next__list > li > a")
       urls = links.map { |link| link["href"] }
 
@@ -120,7 +164,7 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      document = Nokogiri::HTML(File.read(File.join(destination, "note.html")))
+      document = Nokogiri::HTML(File.read(File.join(destination, "note.html"), encoding: "utf-8"))
       links = document.css(".read-next__list > li > a")
 
       assert_equal "/ensayo", links.first["href"]
@@ -141,7 +185,7 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html")))
+      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html"), encoding: "utf-8"))
       article = document.at_css("article.post")
       navigation = article.at_css("nav.read-next")
 
@@ -175,7 +219,7 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html")))
+      document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html"), encoding: "utf-8"))
       links = document.css(".read-next__list > li > a")
       urls = links.map { |link| link["href"] }
 
@@ -208,7 +252,7 @@ class ReadNextTest < Minitest::Test
       posts = { "2026-01-01-ensayo.md" => fixture_post("Ensayo", essay: true, lang: "es") }.merge(candidates)
 
       with_custom_fixture_site(posts) do |destination|
-        document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html")))
+        document = Nokogiri::HTML(File.read(File.join(destination, "ensayo.html"), encoding: "utf-8"))
         navigation = document.at_css("nav.read-next")
 
         if candidates.empty?
@@ -229,8 +273,8 @@ class ReadNextTest < Minitest::Test
     }
 
     with_custom_fixture_site(posts) do |destination|
-      first_urls = Nokogiri::HTML(File.read(File.join(destination, "primer-ensayo.html"))).css(".read-next a").map { |link| link["href"] }
-      second_urls = Nokogiri::HTML(File.read(File.join(destination, "segundo-ensayo.html"))).css(".read-next a").map { |link| link["href"] }
+      first_urls = Nokogiri::HTML(File.read(File.join(destination, "primer-ensayo.html"), encoding: "utf-8")).css(".read-next a").map { |link| link["href"] }
+      second_urls = Nokogiri::HTML(File.read(File.join(destination, "segundo-ensayo.html"), encoding: "utf-8")).css(".read-next a").map { |link| link["href"] }
 
       assert_equal ["/segundo-ensayo"], first_urls
       assert_equal ["/primer-ensayo"], second_urls
@@ -306,13 +350,17 @@ class ReadNextTest < Minitest::Test
       !post.data.fetch("categories", []).include?("hidden")
   end
 
-  def generated_document(post)
+  def generated_html(post)
     self.class.actual_site
     destination = self.class.instance_variable_get(:@actual_build)
     output_path = File.join(destination, post.url.sub(%r{\A/}, ""))
     output_path = File.join(output_path, "index.html") if File.directory?(output_path)
     output_path += ".html" unless File.exist?(output_path)
-    Nokogiri::HTML(File.read(output_path))
+    File.read(output_path, encoding: "utf-8")
+  end
+
+  def generated_document(post)
+    Nokogiri::HTML(generated_html(post))
   end
 
   def with_fixture_site(essay_count)

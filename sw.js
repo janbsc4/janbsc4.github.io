@@ -16,7 +16,8 @@ const MAX_ASSET_ENTRIES = 24;
 const ASSET_PATH_PREFIXES = [
   '/assets/css/',
   '/assets/js/',
-  '/assets/fonts/'
+  '/assets/fonts/',
+  '/assets/favicon/'
 ];
 
 async function installWorker() {

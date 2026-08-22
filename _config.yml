@@ -18,16 +18,15 @@ theme_config:
 
 highlighter: rouge
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-
-feed:
-  path: feed.xml
-
 exclude:
   - AGENTS.md
   - CODE_AUDIT.md
+  - CONTEXT.md
+  - docs
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - README.md
   - test
   # The CV is built only through curriculum/cv with curriculum/config.yml.
   - curriculum

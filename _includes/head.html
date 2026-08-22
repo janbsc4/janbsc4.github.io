@@ -3,20 +3,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#EFA58F">
-  {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-  {% elsif site.description %}
-    <meta name="description" content="{{ site.description }}">
+  {% assign document_title = page.title | default: site.title | remove: '&#9733;' | remove: '&#x2708;' | remove: '★' | remove: '✈' | strip %}
+  {% assign document_description = page.description | default: site.description | strip_html | normalize_whitespace | strip %}
+  {% assign canonical_url = page.url | absolute_url %}
+
+  {% if page.categories contains 'hidden' %}
+    <meta name="robots" content="noindex">
   {% endif %}
-  
-  <title>
-    {% if page.title %}
-      {{ page.title | remove: '&#9733;' | remove: '&#x2708;' | remove: '★' | remove: '✈' | strip }}
-    {% else %}
-      {{ site.title }}
-    {% endif %}
-  </title>
-  {% feed_meta %}
+  {% if document_description != '' %}
+    <meta name="description" content="{{ document_description | escape }}">
+  {% endif %}
+
+  <title>{{ document_title | escape }}</title>
+  <link type="application/rss+xml" rel="alternate" href="{{ '/feed.xml' | absolute_url | escape }}" title="{{ site.title | escape }}">
   <script>
     // Resolve the theme before styles render to avoid a light/dark flash.
     // Keep these colors synchronized with the palette tokens in site.css.
@@ -35,6 +34,24 @@
       );
     })();
   </script>
+
+  <!-- Preload primary variable fonts -->
+  <link rel="preload" href="{{ '/assets/fonts/Newsreader/newsreader-latin-ext-variable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/Inter/inter-latin-ext-variable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+
+  <link rel="canonical" href="{{ canonical_url | escape }}">
+
+  <!-- Open Graph & Social Cards -->
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:title" content="{{ document_title | escape }}">
+  {% if document_description != '' %}
+    <meta property="og:description" content="{{ document_description | escape }}">
+    <meta name="twitter:description" content="{{ document_description | escape }}">
+  {% endif %}
+  <meta property="og:url" content="{{ canonical_url | escape }}">
+  <meta property="og:type" content="{% if page.collection == 'posts' %}article{% else %}website{% endif %}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ document_title | escape }}">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}?v=2">
@@ -65,7 +82,7 @@
     data-goatcounter="https://jan.goatcounter.com/count"
     data-goatcounter-settings='{"no_onload": true}'
     async
-    src="//gc.zgo.at/count.js"></script>
+    src="https://gc.zgo.at/count.js"></script>
 
 
   {% if page.ref %}
