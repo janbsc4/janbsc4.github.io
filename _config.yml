@@ -18,12 +18,6 @@ theme_config:
 
 highlighter: rouge
 
-plugins:
-  - jekyll-feed
-
-feed:
-  path: feed.xml
-
 exclude:
   - AGENTS.md
   - CODE_AUDIT.md

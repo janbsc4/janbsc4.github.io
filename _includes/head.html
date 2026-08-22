@@ -15,7 +15,7 @@
   {% endif %}
 
   <title>{{ document_title | escape }}</title>
-  {% feed_meta %}
+  <link type="application/rss+xml" rel="alternate" href="{{ '/feed.xml' | absolute_url | escape }}" title="{{ site.title | escape }}">
   <script>
     // Resolve the theme before styles render to avoid a light/dark flash.
     // Keep these colors synchronized with the palette tokens in site.css.

@@ -69,11 +69,26 @@ class ReadNextTest < Minitest::Test
     photo_essay = site.posts.docs.find { |post| post.data["layout"] == "landing" }
 
     refute_nil photo_essay
-    assert_nil generated_document(photo_essay).at_css(".read-next")
+    photo_essay_document = generated_document(photo_essay)
+    assert_nil photo_essay_document.at_css(".read-next")
+
+    feed_link = photo_essay_document.at_css('link[rel="alternate"][href$="/feed.xml"]')
+    refute_nil feed_link
+    assert_equal "application/rss+xml", feed_link["type"]
 
     feed = File.read(File.join(self.class.instance_variable_get(:@actual_build), "feed.xml"), encoding: "utf-8")
+    feed_document = Nokogiri::XML(feed) { |config| config.strict }
+    items = feed_document.xpath("/rss/channel/item")
+
+    assert_equal 10, items.length
     refute_includes feed, "read-next"
     refute_includes feed, "Read next"
+
+    hidden_posts = site.posts.docs.select { |post| post.data.fetch("categories", []).include?("hidden") }
+    feed_urls = items.map { |item| item.at_xpath("link")&.text }
+    hidden_posts.each do |post|
+      assert feed_urls.none? { |url| url&.include?(post.url) }, "hidden URL present in feed: #{post.url}"
+    end
   end
 
   def test_hidden_posts_are_noindexed_and_omitted_from_the_sitemap
