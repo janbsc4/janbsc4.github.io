@@ -76,6 +76,32 @@ class ReadNextTest < Minitest::Test
     refute_includes feed, "Read next"
   end
 
+  def test_hidden_posts_are_noindexed_and_omitted_from_the_sitemap
+    site = self.class.actual_site
+    hidden_posts = site.posts.docs.select do |post|
+      post.data.fetch("categories", []).include?("hidden")
+    end
+
+    refute_empty hidden_posts
+
+    sitemap = File.read(File.join(self.class.instance_variable_get(:@actual_build), "sitemap.xml"), encoding: "utf-8")
+    hidden_posts.each do |post|
+      robots = generated_document(post).at_css('meta[name="robots"]')
+
+      refute_nil robots, "expected noindex metadata on #{post.url}"
+      assert_includes robots["content"].split(/\s*,\s*/), "noindex"
+      refute_includes sitemap, post.url, "hidden URL present in sitemap: #{post.url}"
+    end
+  end
+
+  def test_social_metadata_escapes_post_titles
+    post = self.class.actual_site.posts.docs.find { |candidate| candidate.data["title"] == "Mimics & Scapegoats" }
+
+    refute_nil post
+    assert_includes generated_html(post), 'content="Mimics &amp; Scapegoats"'
+    assert_equal "Mimics & Scapegoats", generated_document(post).at_css('meta[property="og:title"]')["content"]
+  end
+
   def test_small_candidate_pools_render_only_real_choices
     { 0 => 0, 1 => 1, 2 => 2 }.each do |essay_count, expected_count|
       with_fixture_site(essay_count) do |destination|
@@ -309,13 +335,17 @@ class ReadNextTest < Minitest::Test
       !post.data.fetch("categories", []).include?("hidden")
   end
 
-  def generated_document(post)
+  def generated_html(post)
     self.class.actual_site
     destination = self.class.instance_variable_get(:@actual_build)
     output_path = File.join(destination, post.url.sub(%r{\A/}, ""))
     output_path = File.join(output_path, "index.html") if File.directory?(output_path)
     output_path += ".html" unless File.exist?(output_path)
-    Nokogiri::HTML(File.read(output_path, encoding: "utf-8"))
+    File.read(output_path, encoding: "utf-8")
+  end
+
+  def generated_document(post)
+    Nokogiri::HTML(generated_html(post))
   end
 
   def with_fixture_site(essay_count)

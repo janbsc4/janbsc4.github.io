@@ -7,3 +7,4 @@ _site
 curriculum/data/private.yml
 curriculum/assets/portrait.jpg
 curriculum/output/
+.kiro/
