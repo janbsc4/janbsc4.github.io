@@ -9,6 +9,15 @@ I just tried to build this website with Ruby 4. Bundler refused. The `github-pag
 
 Downgrading Ruby across my Mac would fix one project and risk breaking another. [Mise](https://mise.jdx.dev/) offers a better way. It manages language versions per project without touching the runtimes installed elsewhere on the Mac.
 
+For the projects in this guide, mise manages every runtime I need:
+
+- Ruby
+- Python
+- Node.js
+- Java
+
+Mise supports many more runtimes and command-line tools through its [registry](https://mise.jdx.dev/registry.html), but these four cover the examples below.
+
 As Stanley Ulili writes in [a comparison of mise and rbenv](https://betterstack.com/community/guides/scaling-ruby/mise-vs-rbenv/):
 
 > Rather than learning different commands for rbenv, nvm, pyenv, and other tools, Mise uses consistent syntax across all languages. This reduces the mental overhead of switching between project types.
@@ -21,14 +30,17 @@ echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 exec zsh
 ```
 
-Then choose a Ruby version inside the project:
+Mise can manage the default Node.js, Ruby, and Python versions across the Mac too:
 
 ```zsh
-cd /Users/jan/janbsc4.github.io
+mise use -g node@latest ruby@latest python@latest
+```
+
+The `-g` flag makes these the global defaults. Projects can still override any of them with their own versions. For this website, I choose Ruby 3.3 inside the project:
+
+```zsh
+cd project-folder
 mise use ruby@3.3
-gem install bundler -v 2.6.3
-bundle install
-bundle exec jekyll serve
 ```
 
 `mise use ruby@3.3` records the choice in the project. When I enter this website's directory, mise selects Ruby 3.3. Other projects can keep using Ruby 4 or any version they need.
@@ -54,3 +66,5 @@ java = "21"
 ```
 
 After running `mise install`, entering the Yuwenke directory selects both runtimes. I can run the app and its Firestore rules tests without checking which Node.js or Java version my terminal picked up. The repository carries that information with it.
+
+I found mise because an AI suggested it while I was trying to untangle the Ruby 4 failure. I am very happy it did. Before this, I used a different version manager for each programming language. The managers, configuration files, and commands piled up until the whole setup became messy. Mise is so much better. I now have one command and one configuration format for all of them.
