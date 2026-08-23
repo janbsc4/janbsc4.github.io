@@ -730,6 +730,78 @@ li code {
   color: var(--accent);
 }
 
+.highlight {
+  position: relative;
+}
+
+.highlight pre {
+  padding-right: 3.5rem;
+}
+
+.copy-code {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.125rem;
+  padding: 0;
+  appearance: none;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+
+.copy-code svg {
+  grid-area: 1 / 1;
+  width: 1.125rem;
+  height: 1.125rem;
+  opacity: 1;
+  transform: scale(1) rotate(0);
+  transition:
+    opacity 120ms ease,
+    transform 180ms ease;
+}
+
+.copy-code .copy-code-check-icon,
+.copy-code .copy-code-failed-icon {
+  opacity: 0;
+  transform: scale(0.55) rotate(-12deg);
+}
+
+.copy-code.is-copied .copy-code-copy-icon,
+.copy-code.is-failed .copy-code-copy-icon {
+  opacity: 0;
+  transform: scale(0.65) rotate(12deg);
+}
+
+.copy-code.is-copied .copy-code-check-icon,
+.copy-code.is-failed .copy-code-failed-icon {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy-code svg {
+    transition: none;
+  }
+}
+
+.copy-code:hover,
+.copy-code.is-copied,
+.copy-code.is-failed {
+  background: var(--surface-muted);
+  color: var(--accent);
+}
+
+.copy-code:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -3px;
+}
+
 .language-switcher {
   margin-top: -3.5rem;
   padding: 1.2rem 0;
