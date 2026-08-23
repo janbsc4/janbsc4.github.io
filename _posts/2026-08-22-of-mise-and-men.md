@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Of Mise and Men"
+post_type: guide
 description: "Use mise to manage Ruby, Python, Node.js, and Java versions per project on macOS."
 ---
 

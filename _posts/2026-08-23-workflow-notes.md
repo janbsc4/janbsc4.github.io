@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Workflow Notes"
+post_type: guide
 description: "A private cheat sheet of terminal commands I keep forgetting."
 categories: [hidden]
 ---

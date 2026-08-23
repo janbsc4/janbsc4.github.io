@@ -1,2 +1,2 @@
 {%- assign title_text = include.post.title | remove: '&#9733;' | remove: '&#x2708;' | remove: '★' | remove: '✈' | strip -%}
-<span class="title-text">{{ title_text }}</span>{% if include.show_kind and include.post.post_type == 'essay' %}<span class="post-kind">Essay</span>{% elsif include.show_kind and include.post.layout == 'landing' %}<span class="post-kind">Photo essay</span>{% endif %}
+<span class="title-text">{{ title_text }}</span>{% if include.show_kind and include.post.post_type == 'essay' %}<span class="post-kind">Essay</span>{% elsif include.show_kind and include.post.post_type == 'guide' %}<span class="post-kind">Guide</span>{% elsif include.show_kind and include.post.layout == 'landing' %}<span class="post-kind">Photo essay</span>{% endif %}

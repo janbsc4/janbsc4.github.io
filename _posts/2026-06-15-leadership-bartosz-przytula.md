@@ -2,7 +2,6 @@
 layout: post
 title: "Learning from Bartosz"
 post_type: essay
-related_essay: how-to-follow-a-blog
 ---
 I met [Bartosz Przytula](https://www.linkedin.com/in/bprzytula) at the end of 2020 when I was interviewing for a job at Credera, formerly Smart Digital.
 

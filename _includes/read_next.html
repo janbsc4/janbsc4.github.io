@@ -1,5 +1,5 @@
 {% if page.collection == 'posts' %}
-{% if page.lang == 'en' or page.post_type == 'essay' %}
+{% if page.lang == 'en' or page.post_type == 'essay' or page.post_type == 'guide' %}
 	{% assign essay_candidates = site.posts | where: 'post_type', 'essay' %}
 	{% assign eligible_essays = '' | split: '' %}
 	{% for essay_candidate in essay_candidates %}

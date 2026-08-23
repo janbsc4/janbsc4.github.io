@@ -34,10 +34,10 @@ class ReadNextTest < Minitest::Test
     FileUtils.remove_entry(@actual_build) if @actual_build
   end
 
-  def test_english_notes_and_essays_render_eligible_discovery_essays
+  def test_english_posts_render_eligible_recommendations
     site = self.class.actual_site
-    eligible_essays = site.posts.docs.select { |post| eligible_essay?(post) }
-    eligible_urls = eligible_essays.map(&:url)
+    eligible_recommendations = site.posts.docs.select { |post| eligible_recommendation?(post) }
+    eligible_urls = eligible_recommendations.map(&:url)
 
     english_posts = site.posts.docs.select do |post|
       post.data.fetch("lang", "en") == "en" && post.data["layout"] == "post"
@@ -107,6 +107,30 @@ class ReadNextTest < Minitest::Test
       assert_includes robots["content"].split(/\s*,\s*/), "noindex"
       refute_includes sitemap, post.url, "hidden URL present in sitemap: #{post.url}"
     end
+  end
+
+  def test_guides_are_labeled_in_the_archive_and_hidden_guides_stay_hidden
+    site = self.class.actual_site
+    guides = site.posts.docs.select { |post| post.data["post_type"] == "guide" }
+    guide_urls = guides.map(&:url)
+
+    assert_equal ["/how-to-follow-a-blog", "/of-mise-and-men", "/workflow-notes"].sort, guide_urls.sort
+
+    workflow_notes = guides.find { |post| post.url == "/workflow-notes" }
+    assert_includes workflow_notes.data.fetch("categories", []), "hidden"
+
+    destination = self.class.instance_variable_get(:@actual_build)
+    archive = Nokogiri::HTML(File.read(File.join(destination, "blog.html"), encoding: "utf-8"))
+    archive_links = archive.css(".post-list-item > a")
+    guide_links = archive_links.select { |link| link.at_css(".post-kind")&.text&.strip == "Guide" }
+
+    assert_equal ["/how-to-follow-a-blog", "/of-mise-and-men"].sort, guide_links.map { |link| link["href"] }.sort
+    refute archive_links.any? { |link| link["href"] == "/workflow-notes" }
+
+    recommended_urls = site.posts.docs.flat_map do |post|
+      generated_document(post).css(".read-next__list > li > a").map { |link| link["href"] }
+    end
+    assert_empty recommended_urls & guide_urls
   end
 
   def test_social_metadata_escapes_post_titles
@@ -344,7 +368,7 @@ class ReadNextTest < Minitest::Test
 
   private
 
-  def eligible_essay?(post)
+  def eligible_recommendation?(post)
     post.data.fetch("lang", "en") == "en" &&
       post.data["post_type"] == "essay" &&
       !post.data.fetch("categories", []).include?("hidden")
