@@ -61,6 +61,12 @@ git config --global user.name "janbsc4"
 git config --global user.email "me@example.com"
 ```
 
+Clone my three development repositories into the root of my home folder:
+
+```zsh
+for repo in dev janbsc4.github.io yuwenke; do gh repo clone "janbsc4/$repo" "$HOME/$repo"; done
+```
+
 ### mise
 
 ```zsh
