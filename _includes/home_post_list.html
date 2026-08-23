@@ -1,4 +1,9 @@
-{%- assign visible_posts = site.posts | where_exp: "item", "item.category != 'hidden'" -%}
+{%- assign visible_posts = '' | split: '' -%}
+{%- for post in site.posts -%}
+  {%- unless post.categories contains 'hidden' -%}
+    {%- assign visible_posts = visible_posts | push: post -%}
+  {%- endunless -%}
+{%- endfor -%}
 
 {% if visible_posts.size > 0 %}
   <ul>
