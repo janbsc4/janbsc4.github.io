@@ -22,6 +22,7 @@ exclude:
   - AGENTS.md
   - CODE_AUDIT.md
   - CONTEXT.md
+  - design.md
   - docs
   - bin
   - Gemfile
