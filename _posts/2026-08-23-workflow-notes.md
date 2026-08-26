@@ -23,7 +23,7 @@ The installer offers to fetch the Xcode command line tools, let it. When it fini
 Formulae are terminal tools. Install the four I use on every Mac in one command:
 
 ```zsh
-brew install git gh mise opencode
+brew install git gh mise uv
 ```
 
 Casks are regular Mac apps. Homebrew can install those together too:
