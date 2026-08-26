@@ -100,6 +100,15 @@ killall Finder
 
 The first command changes the global Finder preference. The second restarts Finder so open windows pick it up immediately.
 
+Show hidden files in Finder:
+
+```zsh
+defaults write com.apple.finder AppleShowAllFiles -bool true
+killall Finder
+```
+
+Finder remembers this setting after restarts. Press `Command-Shift-.` if I only want to toggle hidden files temporarily.
+
 Tap counts as a click on the trackpad:
 
 ```zsh
