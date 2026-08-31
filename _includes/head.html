@@ -53,6 +53,50 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ document_title | escape }}">
 
+  <!-- Structured data (JSON-LD) -->
+  {% assign social_links = site.data.home.footer_entries | where_exp: 'entry', 'entry.url contains "://"' | map: 'url' %}
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": "{{ canonical_url }}",
+      "headline": {{ document_title | jsonify }},
+      "description": {{ document_description | jsonify }},
+      "url": "{{ canonical_url }}",
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},{% endif %}
+      "inLanguage": {{ page.lang | default: 'en' | jsonify }},
+      "author": {
+        "@type": "Person",
+        "name": {{ site.author | jsonify }},
+        "url": {{ site.url | append: '/' | jsonify }},
+        "sameAs": {{ social_links | jsonify }}
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": {{ site.author | jsonify }}
+      }
+    }
+  </script>
+  {% else %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ site.title | jsonify }},
+      "url": {{ site.url | append: '/' | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": {{ page.lang | default: 'en' | jsonify }},
+      "publisher": {
+        "@type": "Person",
+        "name": {{ site.author | jsonify }},
+        "sameAs": {{ social_links | jsonify }}
+      }
+    }
+  </script>
+  {% endif %}
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}?v=2">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">

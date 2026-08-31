@@ -3,7 +3,7 @@ layout: post
 title: "El ritual dels micos amb cub de Rubik"
 description: "Berlín i Barcelona van posar límits al lloguer i van patir la mateixa escassetat. Un assaig sobre l'analfabetisme econòmic com a ritual."
 post_type: essay
-lang: cat
+lang: ca
 ref: politics-rubiks
 category: hidden
 ---

@@ -53,5 +53,5 @@ defaults:
   - scope:
       path: "_posts/cat"
     values:
-      lang: "cat"
+      lang: "ca"
       permalink: /cat/:title/
