@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Matt's AI Workflow"
+description: "Testing Matt Pocock's skill-based AI workflow on Yuwenke: docs-driven planning, a grill-me skill, and better AI-assisted development."
 related_essay: i-directed-app
 ---
 I just tested [Matt Pocock’s skill-based AI workflow](https://www.youtube.com/watch?v=M6mYodf0dJM) on my Chinese-learning app, [Yuwenke](https://janbalanya.com/yuwenke/) (which now features card packs!), and it was excellent.

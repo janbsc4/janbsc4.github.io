@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Portfolio"
+description: "Projects Jan Balanyà Scholl has designed and built: a Chinese-learning app, personal websites, and a heating controller."
 ---
 
 <div class="portfolio-item">

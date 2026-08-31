@@ -1,6 +1,7 @@
 ---
 layout: landing
 title: "&#x2708; Pearl River Delta Trip 2026"
+description: "A photo essay of a 2026 trip through China's Pearl River Delta, shot on a Sony a6000 with a Vilrox 56mm lens."
 ---
 <h1>珠三角<br>Pearl River Delta Trip</h1>
 

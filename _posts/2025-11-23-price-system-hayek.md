@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Price System"
+description: "Hayek on the price system: how prices compress vast knowledge into a single symbol so even the least informed can take the right action."
 ---
 
 >The most significant fact about this (price) system is the economy of knowledge with which it operates, or how little the individual participants need to know in order to be able to take the right action. In abbreviated form, by a kind of symbol, only the most essential information is passed on, and passed on only to those concerned. It is more than a metaphor to describe the price system as a kind of machinery for registering change, or a system of telecommunications which enables individual producers to watch merely the movement of a few pointers, as an engineer might watch the hands of a few dials, in order to adjust their activities to changes of which they may never know more than is reflected in the price movement.

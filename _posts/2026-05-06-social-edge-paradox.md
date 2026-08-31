@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Social Edge Paradox"
+description: "Bright Simons on the social edge paradox: AI learns from our social complexity while its deployment offloads, homogenizes, and erodes it."
 ---
 > If AI capability depends on the social complexity of human language production—and if AI deployment systematically reduces that complexity through cognitive offloading, homogenization of creative output, and the elimination of interaction-dense work—then the technology is gradually undermining the conditions for its own advancement. Its successes, rather than failures, create a spiral: a slow attenuation of the very substrate it feeds on, spelling doom.
 ><figure>

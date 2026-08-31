@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Razones en favor de la Libertad"
+description: "Los argumentos en favor de la libertad descansan en nuestra inevitable ignorancia. Pasaje de La constitución de la libertad de Hayek."
 category: hidden
 ---
 >Los argumentos favorables a la libertad individual descansan principalmente en el reconocimiento de nuestra inevitable ignorancia de muchos de los factores que fundamentan el logro de nuestros fines y de nuestro bienestar.

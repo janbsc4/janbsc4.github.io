@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "El ritual de los monos con cubo de Rubik"
+description: "Berlín y Barcelona pusieron límites al alquiler y sufrieron la misma escasez. Un ensayo sobre el analfabetismo económico como ritual político."
 post_type: essay
 lang: es
 ref: politics-rubiks

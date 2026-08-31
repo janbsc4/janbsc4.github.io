@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Abundance and Freedom Confusion"
+description: "Critics say capital requirements block free entry. Rothbard's reply from Man, Economy, and State on confusing abundance with freedom."
 ---
 > Some critics charge that there is no “real” free entry or free competition in a free market. For how can anyone compete or enter a field when an enormous amount of money is needed to invest in efficient plants and firms? It is easy to “enter” the pushcart peddling “industry” because so little capital is required, but it is almost impossible to establish a new automobile firm, with its heavy requirements of capital.
 > 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Mimics & Scapegoats"
+description: "A summary of mimetic desire from Luke Burgis's Wanting: we imitate the desires of others, compete, and resolve the crisis through scapegoats."
 ---
 <mark>This text summarizes the ideas presented in <a href="https://en.wikipedia.org/wiki/Wanting:_The_Power_of_Mimetic_Desire_in_Everyday_Life">Wanting by Luke Burgis</a>, and the thoughts expressed are not my own.</mark>
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Everest Regression"
+description: "The Everest Regression: a statistical fallacy that comes from over-controlling for variables and stripping a subject of what defines it."
 ---
 The Everest Regression Fallacy is a logical fallacy in statistical modelling that comes from over-controlling for variables.
 

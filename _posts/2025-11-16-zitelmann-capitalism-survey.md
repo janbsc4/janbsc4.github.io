@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Attitudes towards Capitalism"
+description: "A 34-country survey on attitudes towards capitalism: pro-capitalist views dominate in only six countries, led by Poland and the US."
 ---
 
 >The author commissioned a survey on the image of capitalism in 34 countries. In only six of these countries – led by Poland and the United States – do pro-capitalist attitudes dominate. Although approval of capitalism increases when the word ‘capitalism’ is omitted (and instead only described), even then a positive attitude dominates in only seven of 34 countries. The most frequently mentioned criticisms of capitalism are that capitalism is dominated by the rich and that capitalism leads to growing inequality. Respondents with higher incomes and higher levels of education, men, and those who classified themselves as being on the right of the political spectrum are less anti-capitalist or are more pro-capitalist than the population at large in most countries. In 33 countries, anti-capitalists tend to be more conspiracy-minded than pro-capitalists.

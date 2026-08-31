@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Advanced AI Sycophancy"
+description: "Sean Goedecke on advanced AI sycophancy: frontier models now flatter your ideas and agree with you in subtler, harder-to-spot ways."
 related_essay: i-directed-app
 ---
 

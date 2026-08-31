@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Spain's Productivity Handbrake"
+description: "Spain produces a third less value per hour than Germany or the US. An essay on why the abundance of small firms keeps productivity down."
 post_type: essay
 ---
 Spain has a [~30% productivity gap](https://en.wikipedia.org/wiki/List_of_countries_by_labour_productivity) to countries like the United States or Germany. Spaniards produce almost a third less value per hour worked than Americans or Germans. A gap that large has many causes, and this essay does not try to explain all of them.

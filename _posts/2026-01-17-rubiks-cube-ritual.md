@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Rubik’s Cube Monkey Ritual"
+description: "Berlin and Barcelona both tried rent control and got the same shortage. An essay on economic illiteracy as a political ritual."
 post_type: essay
 lang: en
 ref: politics-rubiks

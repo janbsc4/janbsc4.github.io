@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Alex Tabarrock on Exit Barriers"
+description: "Alex Tabarrock on exit barriers: making firing hard makes hiring hard too, like needing marriage to be allowed a date."
 ---
 
 > Portugal’s laws look pro-worker until you realize that making it more difficult to fire also makes it more difficult to get hired: As we write in MP:

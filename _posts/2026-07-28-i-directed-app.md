@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "I Directed an App!"
+description: "How I directed Claude Code like a film director to build Yuwenke, my Chinese-learning app, from spec to shipped product."
 post_type: essay
 related_essay: leadership-bartosz-przytula
 ---

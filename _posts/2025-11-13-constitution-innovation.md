@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Constitution of Innovation"
+description: "A quote on the constitution of innovation: the EU needs no new treaty or powers, just a single-minded focus on economic prosperity."
 ---
 
 >The European Union does not need a new treaty or powers. It just needs a single-minded focus on one goal: economic prosperity. This prosperity is necessary for its own sake and for all the other things we want Europe to be: a bulwark against Russian tyranny, a generous supporter in lifting the world out of poverty, and a champion against climate change.

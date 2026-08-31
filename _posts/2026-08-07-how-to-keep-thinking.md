@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Keep Thinking"
+description: "Sean Goedecke on keeping your thinking sharp in the AI era: write in your own words, because outsourcing writing outsources thinking."
 related_essay: i-directed-app
 ---
 

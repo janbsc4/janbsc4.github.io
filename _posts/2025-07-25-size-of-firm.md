@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Efficient Size of a Firm"
+description: "Rothbard on the efficient size of a firm: only entrepreneurs, not economists, can discover the right size through the market."
 ---
 > Neither economists nor engineers can decide the most efficient size of a firm in any situation. Only the entrepreneurs themselves can determine what size of firm will operate most efficiently, and it is presumptuous and unwarranted for economists or for any other outside observers to attempt to dictate otherwise.
 

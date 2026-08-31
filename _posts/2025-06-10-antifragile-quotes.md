@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Quotes from 'Antifragile' by Nassim Taleb"
+description: "My favourite quotes from Nassim Taleb's Antifragile on rationalism, fraud, disconfirmation, religion, and profiting from disorder."
 category: hidden
 ---
 > (...) Let us not confuse rationalizing with rational — the two are almost always exact opposites.

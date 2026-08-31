@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Inertia Management"
+description: "Why the hardest part of self-improvement is starting: an essay on inertia, comfort zones, and how to build momentum in life and work."
 post_type: essay
 ---
 

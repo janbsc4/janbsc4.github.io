@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Das Zauberwürfel-Affen-Ritual"
+description: "Berlin und Barcelona führten Mietpreisbremsen ein und erhielten dieselbe Knappheit. Ein Essay über ökonomische Analphabetenschaft als Ritual."
 post_type: essay
 lang: de
 ref: politics-rubiks

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ChatGPT Delusion"
+description: "Watch ChatGPT's sycophancy taken to its logical conclusion in a video that shows what happens when an AI flatters without limits."
 ---
 A youtuber follows ChatGPTs insane bootlicking to it's conclusion.   
 Thanks, [Zi](https://zi-huang-upf.github.io), for sending it to me.
