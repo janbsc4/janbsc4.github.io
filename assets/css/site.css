@@ -1236,30 +1236,9 @@ html.transition blockquote {
 }
 
 
-/* Editorial motion: a sheet settling, ink revealing, and a trace that follows reading. */
+/* Editorial motion: a sheet settling and ink revealing. */
 .site-header {
   position: relative;
-}
-
-.post-body h2 {
-  position: relative;
-}
-
-.post-body h2::before {
-  position: absolute;
-  top: 0.53em;
-  right: calc(100% + clamp(0.55rem, 2vw, 1.15rem));
-  width: clamp(0.7rem, 2.5vw, 1.8rem);
-  height: 2px;
-  content: "";
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.post-body h2.is-current-section::before {
-  transform: scaleX(1);
 }
 
 .motion-enhanced.motion-enter .site-shell {
@@ -1318,24 +1297,5 @@ html.transition blockquote {
   }
   86% {
     transform: translateY(-2px) rotate(-4deg);
-  }
-}
-
-@media (max-width: 760px) {
-  .post-body h2::before {
-    right: calc(100% + 0.35rem);
-    width: 0.45rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .post-body h2::before {
-    display: none;
-  }
-}
-
-@media print {
-  .post-body h2::before {
-    display: none;
   }
 }
