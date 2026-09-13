@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Portfolio"
+title: Portfolio
 description: "Projects Jan Balanyà Scholl has designed and built: a Chinese-learning app, a heating controller, and agent tooling."
 ---
 
