@@ -77,7 +77,7 @@ With mise active, entering that directory selects Python 3.13 and creates or act
 
 ## Manage several runtimes in one project
 
-Some projects need more than one runtime. [Yuwenke](https://github.com/janbsc4/yuwenke), my Chinese flashcard app, needs Node.js 22 or newer. Its Firebase Firestore rules tests also need Java 21. Both versions fit in the same `mise.toml` file:
+Some projects need more than one runtime. [Haoly](https://github.com/janbsc4/haoly), my Chinese flashcard app, needs Node.js 22 or newer. Its Firebase Firestore rules tests also need Java 21. Both versions fit in the same `mise.toml` file:
 
 ```toml
 [tools]
@@ -85,7 +85,7 @@ node = "22"
 java = "21"
 ```
 
-After running `mise install`, entering the Yuwenke directory selects both runtimes. I can run the app and its Firestore rules tests without checking which Node.js or Java version my terminal picked up.
+After running `mise install`, entering the Haoly directory selects both runtimes. I can run the app and its Firestore rules tests without checking which Node.js or Java version my terminal picked up.
 
 ## Why I am keeping it
 

@@ -6,7 +6,7 @@ description: "Projects Jan Balanyà Scholl has designed and built: a Chinese-lea
 
 <div class="portfolio-item">
 	<div class="content">
-		<h2><a href="https://janbalanya.com/yuwenke/">Yuwenke</a></h2>
+		<h2><a href="https://haoly.app/">Haoly</a></h2>
 		<p>A Chinese-learning app I <a href="{{ '/i-directed-app' | relative_url }}">built around my weekly in-person class</a>. Students can study custom flashcards and card packs, and their progress carries over between sessions. The class still drives what I build next.</p>
 	</div>
 </div>
