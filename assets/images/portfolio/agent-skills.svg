@@ -1,15 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 13" shape-rendering="crispEdges">
-  <rect x="3" y="1" width="10" height="6" fill="#d97757"/>
-  <g fill="#1f1a14">
-    <rect x="5" y="3" width="1" height="2"/>
-    <rect x="10" y="3" width="1" height="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <defs>
+    <linearGradient id="clay-front" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e48562"/>
+      <stop offset="1" stop-color="#bf5f3d"/>
+    </linearGradient>
+    <linearGradient id="clay-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f0a585"/>
+      <stop offset="1" stop-color="#e18d6b"/>
+    </linearGradient>
+    <linearGradient id="clay-side" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9522f"/>
+      <stop offset="1" stop-color="#8a3f23"/>
+    </linearGradient>
+    <linearGradient id="screen-light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe4bd" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffe4bd" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="eye" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#140d09"/>
+      <stop offset="1" stop-color="#33231a"/>
+    </linearGradient>
+    <linearGradient id="alu-front" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6e0d8"/>
+      <stop offset="1" stop-color="#b3a99d"/>
+    </linearGradient>
+    <linearGradient id="alu-side" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9e9488"/>
+      <stop offset="1" stop-color="#83796e"/>
+    </linearGradient>
+    <filter id="matte" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.12 0" result="grain"/>
+      <feComposite in="grain" in2="SourceGraphic" operator="in" result="texture"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="texture"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-20%" y="-100%" width="140%" height="300%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="102" cy="168" rx="80" ry="8" fill="#2c1a10" opacity="0.28" filter="url(#soft)"/>
+
+  <g filter="url(#matte)">
+    <path d="M12 92 20 86h24l-8 6Z" fill="url(#clay-top)"/>
+    <rect x="12" y="92" width="28" height="18" rx="4" fill="url(#clay-front)"/>
+
+    <path d="M34 48 46 39h104l-12 9Z" fill="url(#clay-top)"/>
+    <path d="M138 48 150 39v80l-12 9Z" fill="url(#clay-side)"/>
+    <rect x="34" y="48" width="104" height="80" rx="4" fill="url(#clay-front)"/>
+    <rect x="34" y="88" width="104" height="40" fill="url(#screen-light)"/>
+    <rect x="34.5" y="48.5" width="103" height="79" rx="3.5" fill="none" stroke="#5a2410" stroke-opacity="0.2"/>
+    <rect x="37" y="48" width="98" height="1.5" rx="0.75" fill="#f8bb9e" opacity="0.8"/>
+
+    <path d="M146 86 154 80h22l-8 6Z" fill="url(#clay-top)"/>
+    <path d="M168 86 176 80v18l-8 6Z" fill="url(#clay-side)"/>
+    <rect x="146" y="86" width="22" height="18" rx="3" fill="url(#clay-front)"/>
+
+    <rect x="60" y="66" width="10" height="22" rx="3" fill="url(#eye)"/>
+    <rect x="102" y="66" width="10" height="22" rx="3" fill="url(#eye)"/>
+    <rect x="61" y="88" width="8" height="1.5" rx="0.75" fill="#f6b393" opacity="0.7"/>
+    <rect x="103" y="88" width="8" height="1.5" rx="0.75" fill="#f6b393" opacity="0.7"/>
+
+    <path d="M20 162 42 146h128l-22 16Z" fill="#d3cbc1"/>
+    <path d="M26 106 32 101h116l-6 5Z" fill="#f1ece5"/>
+    <path d="M142 106 148 101v57l-6 4Z" fill="url(#alu-side)"/>
+    <rect x="26" y="106" width="116" height="56" rx="4" fill="url(#alu-front)"/>
+    <rect x="26.5" y="106.5" width="115" height="55" rx="3.5" fill="none" stroke="#fff" stroke-opacity="0.45"/>
+    <circle cx="84" cy="134" r="7" fill="#b9afa3"/>
+    <circle cx="84" cy="134.8" r="6.2" fill="#d8d1c8"/>
+
+    <path d="M148 162 170 146v5l-22 16Z" fill="url(#alu-side)"/>
+    <rect x="20" y="162" width="128" height="5" rx="2" fill="#a2978a"/>
   </g>
-  <rect x="2" y="6" width="12" height="5" fill="#b9aa98"/>
-  <rect x="2" y="6" width="12" height="1" fill="#cfc3b4"/>
-  <rect x="1" y="11" width="14" height="1" fill="#8a7c6e"/>
-  <g fill="#d97757">
-    <rect x="1" y="5" width="2" height="2"/>
-    <rect x="13" y="5" width="2" height="2"/>
-  </g>
-  <rect x="7" y="8" width="2" height="2" fill="#cfc3b4"/>
 </svg>
