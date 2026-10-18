@@ -12,7 +12,7 @@ At [Credera](https://www.credera.com/de-de), I managed international accounts fo
 
 These days, I work as a GTM marketing engineer at [Service Club](https://serviceclub.com), helping shape and execute its go-to-market approach for new markets. I build the marketing systems behind that expansion and use data, automation, and AI-assisted development to turn ideas into working tools and workflows.
 
-[This description of the marketing engineer role](https://www.usegrowthos.com/blog/what-is-a-marketing-engineer-role) is close to how I think about the work. It sits between marketing and engineering: understand the commercial problem, then build what the team needs. I like that it takes me from strategy into implementation and lets me keep improving both the system and the team around it.
+I wrote about [what a marketing engineer does]({{ '/what-does-a-marketing-engineer-do' | relative_url }}) and how I think about the work. In short, it sits between marketing and engineering: understand the commercial problem, then build what the team needs. What I like most is helping a small team achieve the results of a much bigger one.
 
 ## Core Strengths
 
