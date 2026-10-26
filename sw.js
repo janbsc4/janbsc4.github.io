@@ -10,7 +10,7 @@ const CURRENT_CACHES = [SHELL_CACHE, ASSET_CACHE];
 const OFFLINE_URL = '/offline.html';
 const SHELL_URLS = [
   OFFLINE_URL,
-  '/assets/css/site.css'
+  '/assets/css/site.css?v=' + CACHE_VERSION
 ];
 const MAX_ASSET_ENTRIES = 24;
 const ASSET_PATH_PREFIXES = [
@@ -52,12 +52,6 @@ function isStaticAsset(url) {
   return ASSET_PATH_PREFIXES.some((prefix) => url.pathname.startsWith(prefix));
 }
 
-function assetCacheKey(request) {
-  const url = new URL(request.url);
-  url.search = '';
-  return url.toString();
-}
-
 async function trimCache(cache, maxEntries) {
   const keys = await cache.keys();
   const excess = keys.length - maxEntries;
@@ -91,7 +85,7 @@ async function matchCachedAsset(cacheKey) {
 }
 
 function staleWhileRevalidate(event) {
-  const cacheKey = assetCacheKey(event.request);
+  const cacheKey = event.request.url;
   const networkResponse = fetchAndCacheAsset(event.request, cacheKey);
 
   event.waitUntil(networkResponse.then(() => undefined, () => undefined));
