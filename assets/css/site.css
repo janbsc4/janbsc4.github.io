@@ -32,7 +32,7 @@
   --light-ink-muted: #75604d;
   --light-accent: #984423;
   --light-person-name: #984423;
-  --light-selection: rgb(156 56 42 / 28%);
+  --light-selection: #f8d98c;
   --light-rule: #d7bba0;
   --light-focus: #0c5a52;
   --light-media: #f0deca;
@@ -44,7 +44,7 @@
   --dark-ink-muted: #cbbb9f;
   --dark-accent: #f3ab80;
   --dark-person-name: #f3ab80;
-  --dark-selection: rgb(255 157 134 / 32%);
+  --dark-selection: #6b5221;
   --dark-rule: #66503d;
   --dark-focus: #73d1c1;
   --dark-media: #1c1813;
@@ -575,6 +575,13 @@ html[data-theme="dark"] .theme-toggle__rays {
 .post {
   max-width: var(--reading-width);
   margin: 0 auto;
+}
+
+/* Safari stretches selection highlights to the nearest selection root, which is
+   the page body by default; clipping overflow makes the article that root. */
+.post-body {
+  overflow: clip;
+  overflow-clip-margin: 0.5rem;
 }
 
 .post-header {
